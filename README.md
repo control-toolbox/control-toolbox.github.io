@@ -1,2 +1,2 @@
-# control-toolbox.github.io
-ct: control toolbox
+# Welcome to the control-toolbox ecosystem!
+
