@@ -6,14 +6,14 @@
    id="layer"
    x="0px"
    y="0px"
-   viewBox="0 0 425104 425104"
+   viewBox="0 0 650 280"
    xml:space="preserve"
    sodipodi:docname="inria.svg"
    inkscape:export-filename="inria.svg"
-   inkscape:export-xdpi="95.940788"
-   inkscape:export-ydpi="95.940788"
-   width="425104"
-   height="425104"
+   inkscape:export-xdpi="44.17178"
+   inkscape:export-ydpi="44.17178"
+   width="650"
+   height="280"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -34,9 +34,13 @@
 	.st0{fill:#E63312;}
 </style>
 <g
-   id="Calque_2">
+   id="Calque_2"
+   inkscape:export-filename="./Calque_2.svg"
+   inkscape:export-xdpi="95.940788"
+   inkscape:export-ydpi="95.940788">
 	<g
-   id="Calque_1-2">
+   id="Calque_1-2"
+   transform="matrix(1.0082075,0,0,1.0082075,0.97025953,-187.61058)">
 		<path
    id="path4603"
    class="st0"
