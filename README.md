@@ -1,5 +1,3 @@
-# Welcome to the control-toolbox ecosystem!
-
 <p>
   <a href="https://github.com/control-toolbox"><img width="100" align='left' src="ct-crop.svg"></a>
 </p>
@@ -34,5 +32,4 @@ and other constraints such as
 
 ## Installation
 
-See the [Installation page](https://github.com/control-toolbox#installation).
-
+See the [organisation README](https://github.com/control-toolbox#installation).
