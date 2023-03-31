@@ -1,4 +1,4 @@
-<p>
+<p> 
   <a href="https://github.com/control-toolbox"><img width="100" align='left' src="ct-crop.svg"></a>
 </p>
 
