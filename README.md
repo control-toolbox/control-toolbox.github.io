@@ -11,31 +11,25 @@ The control-toolbox ecosystem gathers `Julia` packages for mathematical control 
 An optimal control problem can be described as minimising the cost functional
 
 ```math
-{\large
 g(t_0, x(t_0), t_f, x(t_f)) + \int_{t_0}^{t_f} f^{0}(t, x(t), u(t))~\mathrm{d}t
-}
 ```
 
 where the state $\large{x}$ and the control $\large{u}$ are functions subject, for $\large{t \in [t_0, t_f]}$,
 to the differential constraint
 
 ```math
-{\large
    \dot{x}(t) = f(t, x(t), u(t))
-}
 ```
 
 and other constraints such as
 
 ```math
-{\large
 \begin{array}{llcll}
 ~\xi_l  &\le& \xi(t, u(t))        &\le& \xi_u, \\
 \eta_l &\le& \eta(t, x(t))       &\le& \eta_u, \\
 \psi_l &\le& \psi(t, x(t), u(t)) &\le& \psi_u, \\
 \phi_l &\le& \phi(t_0, x(t_0), t_f, x(t_f)) &\le& \phi_u.
 \end{array}
-}
 ```
 
 ## Installation
