@@ -11,3 +11,10 @@ The control-toolbox ecosystem gathers `Julia` packages for mathematical control 
 ## Installation
 
 See the [installation page](https://github.com/control-toolbox#installation).
+
+## Partners
+
+<a href="https://www.inria.fr"><img height="100" align='left' src="inria.svg"></a>
+<a href="https://www.cnrs.fr"><img height="100" align='left' src="LogoCNRS.svg"></a>
+<a href="https://www.univ-toulouse.fr"><img height="100" align='left' src="logo-univ-toulouse.png"></a>
+<a href="https://www.univ-cotedazur.fr"><img height="100" align='left' src="Logo-univ-nice-cote-dazur.svg"></a>
