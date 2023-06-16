@@ -1,5 +1,7 @@
 ---
-title: "PAGE-TITLE"
+layout: page
+title: ct
+permalink: /
 ---
 
 <p> 
