@@ -16,7 +16,7 @@ The control-toolbox ecosystem gathers `Julia` packages for mathematical control 
 
 ## Installation
 
-See the [installation page](https://github.com/control-toolbox#installation).
+See the [installation page](https://github.com/control-toolbox#installation).1
 
 ## Partners
 
