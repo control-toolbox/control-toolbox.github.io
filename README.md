@@ -12,7 +12,7 @@ The control-toolbox ecosystem gathers `Julia` packages for mathematical control 
 
 ## Documentation
 
-[![doc OptimalControl.jl](https://img.shields.io/badge/doc-OptimalControl.jl-blue)](http://control-toolbox.org/CTDocs.jl/optimalcontrol)
+[![doc OptimalControl.jl](https://img.shields.io/badge/doc-OptimalControl.jl-blue)](http://control-toolbox.org/docs/optimalcontrol)
 
 ## Installation
 
