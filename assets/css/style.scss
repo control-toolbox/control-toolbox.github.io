@@ -6,3 +6,12 @@
 .container {
     padding-top: 40px;
 }
+
+@media screen and (max-width:450px){
+    .container{
+        max-width:400px!important;
+        padding-left:20px;
+        padding-right:20px;
+        text-align:justify;
+    }
+}
