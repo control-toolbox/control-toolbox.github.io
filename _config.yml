@@ -1,2 +1,5 @@
 name: control-toolbox
 title: control-toolbox
+
+plugins:
+  - jekyll-seo-tag
