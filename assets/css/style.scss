@@ -8,10 +8,12 @@
 }
 
 @media screen and (max-width:450px){
+
     .container{
-        max-width:400px!important;
-        padding-left:20px;
-        padding-right:20px;
+        max-width:100%!important;
+        padding-left:5%;
+        padding-right:5%;
         text-align:justify;
     }
+    
 }
