@@ -4,10 +4,6 @@ title: Home
 permalink: /
 ---
 
-<p> 
-  <a href="https://github.com/control-toolbox"><img width="100" align='left' src="assets/img/ct-logo.svg"></a>
-</p>
-
 The control-toolbox ecosystem gathers Julia packages for mathematical control and applications. It is an outcome of a research initiative supported by the [Centre Inria of Université Côte d'Azur](https://www.inria.fr/en/inria-centre-universite-cote-azur) and a sequel to previous developments, notably [Bocop](https://www.bocop.org) and [Hampath](https://www.hampath.org). See also: [ct gallery](https://ct.gitlabpages.inria.fr/gallery). The root package is [OptimalControl.jl](https://github.com/control-toolbox/OptimalControl.jl) which aims to provide tools to solve optimal control problems by direct and indirect methods.
 
 <img src="./assets/img/diagram.png" style="display: block; margin: 0 auto 20px auto;" width="320px">
