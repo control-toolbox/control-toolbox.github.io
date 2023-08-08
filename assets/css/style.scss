@@ -13,6 +13,16 @@
     display: none!important;
 }
 
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+}
+
 @media screen and (max-width:450px){
 
     .container{
@@ -23,3 +33,4 @@
     }
     
 }
+
