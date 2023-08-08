@@ -50,6 +50,6 @@ a:hover {
     
 }
 
-pre code, pre code.hljs {
-    padding: 0 0 !important;
+.markdown-body pre code,.markdown-body pre tt {
+    display: contents !important;
 }
