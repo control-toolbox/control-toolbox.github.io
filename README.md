@@ -16,7 +16,7 @@ See the [installation page](https://github.com/control-toolbox#installation).
 
 ## Partners
 
-<a href="https://www.univ-toulouse.fr"><img height="80" align='left' src="assets/img/logo-univ-toulouse.png"></a>
-<a href="https://www.univ-cotedazur.fr"><img height="80" align='left' src="assets/img/Logo-univ-nice-cote-dazur.svg"></a>
-<a href="https://www.inria.fr"><img height="80" align='left' src="assets/img/inria.svg"></a>
-<a href="https://www.cnrs.fr"><img height="80" align='left' src="assets/img/logo-cnrs.svg"></a>
+<a href="https://www.univ-toulouse.fr"><img id="partner" align='left' src="assets/img/logo-univ-toulouse.png"></a>
+<a href="https://www.univ-cotedazur.fr"><img id="partner" align='left' src="assets/img/Logo-univ-nice-cote-dazur.svg"></a>
+<a href="https://www.inria.fr"><img id="partner" align='left' src="assets/img/inria.svg"></a>
+<a href="https://www.cnrs.fr"><img id="partner" align='left' src="assets/img/logo-cnrs.svg"></a>
