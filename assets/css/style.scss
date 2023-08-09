@@ -3,11 +3,6 @@
 
 @import "{{ site.theme }}";
 
-/*! Add a small amount of padding above global container */
-.container {
-    padding-top: 40px;
-}
-
 /*! Logos of partners */
 .markdown-body img#partner {
     height: 80px;
@@ -43,17 +38,6 @@ a:hover {
     background-color: #fff;
 }
 
-/*! propriétés du body du markdown */
-.container {
-    width: 100%;
-    max-width: 1100px!important;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    text-align: justify;
-}
-
 /*! bonne indentation du code dans le markdown */
 .markdown-body pre code,.markdown-body pre tt {
     display: contents !important;
@@ -64,7 +48,17 @@ body {
     margin-bottom: 100px!important;
 }
 
-/*! responsive pc */
+/*! propriétés du body du markdown */
+.container {
+    padding-top: 40px;
+    width: 100%;
+    max-width: 1100px!important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+}
 
 /*! Titre de la page */
 h1#ct-title {
@@ -84,6 +78,10 @@ img#ct-logo-title {
 /*! responsive mobile phone */
 @media screen and (max-width: 450px) {
 
+    .container {
+        max-width:100% !important;
+    }
+
     h1#ct-title {
         font-size: 2.5em;
     }
@@ -91,13 +89,6 @@ img#ct-logo-title {
     img#ct-logo-title {
         margin-right: 15px;
         width: 45px
-    }
-
-    .container {
-        max-width:100% !important;
-        padding-left: 5%;
-        padding-right: 5%;
-        text-align: justify
     }
 
 }
