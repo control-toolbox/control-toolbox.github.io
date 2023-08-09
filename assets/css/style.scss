@@ -20,8 +20,7 @@
 }
 
 /*! navigation menu: mettre à droite l'icone github */
-div.align-right
-{
+div.align-right {
     text-align: right;
     width: 100%;
 }
@@ -65,37 +64,34 @@ body {
 }
 
 /*! responsive pc */
-@media screen and (min-width:450px){
 
-    /*! Titre de la page */
-    h1 {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 3em;
-        font-family: roboto;
-    }
+/*! Titre de la page */
+h1#ct-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3em;
+    font-family: roboto;
+}
 
-    /*! Titre de la page: logo */
-    .ct-logo-title {
-        vertical-align:sub;
-        margin-right: 20px;
-        width: 60px;
-    }
-
+/*! Titre de la page: logo */
+img#ct-logo-title {
+    vertical-align: sub;
+    margin-right: 20px;
+    width: 60px;
 }
 
 /*! responsive mobile phone */
-@media screen and (max-width:450px){
+@media screen and (max-width: 450px) {
 
-    .container{
-        max-width:100%!important;
-        padding-left:5%;
-        padding-right:5%;
-        text-align:justify;
+    .container {
+        max-width:100% !important;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify;
     }
 
     /*! Titre de la page */
-    h1 {
+    h1#ct-title {
         text-align: center;
         margin-top: 50px;
         font-size: 2.5em;
@@ -103,10 +99,9 @@ body {
     }
 
     /*! Titre de la page: logo */
-    .ct-logo-title {
-        vertical-align:sub;
+    img#ct-logo-title {
+        vertical-align: sub;
         margin-right: 15px;
         width: 45px;
     }
-    
 }
