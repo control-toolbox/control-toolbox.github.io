@@ -15,6 +15,15 @@
     width: auto!important;
 }
 
+#multi-page-nav {
+    background-color: #007fa2 !important;
+    border-bottom: none !important;
+}
+
+#multi-page-nav a.nav-link {
+    color: #eaeaea !important;
+}
+
 /*! navigation menu: mettre à droite l'icone github */
 div.align-right {
     text-align: right;
