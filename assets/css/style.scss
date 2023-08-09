@@ -84,26 +84,26 @@ img#ct-logo-title {
 /*! responsive mobile phone */
 @media screen and (max-width: 450px) {
 
-/*! Titre de la page */
-h1#ct-title {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 2.5em;
-    font-family: roboto;
-}
+    /*! Titre de la page */
+    h1#ct-title {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 2.5em;
+        font-family: roboto
+    }
 
-/*! Titre de la page: logo */
-img#ct-logo-title {
-    vertical-align: sub;
-    margin-right: 15px;
-    width: 45px;
-}
+    /*! Titre de la page: logo */
+    img#ct-logo-title {
+        vertical-align: sub;
+        margin-right: 15px;
+        width: 45px
+    }
 
-.container {
-    max-width:100% !important;
-    padding-left: 5%;
-    padding-right: 5%;
-    text-align: justify;
-}
+    .container {
+        max-width:100% !important;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: justify
+    }
 
 }
