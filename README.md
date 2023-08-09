@@ -30,7 +30,7 @@ using OptimalControl
 end
 
 sol = solve(ocp)
-plot(sol, size=(600, 450))
+plot(sol)
 ```
 
 You should obtain this:
