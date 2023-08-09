@@ -13,22 +13,37 @@
     height: 80px;
 }
 
-/*! navigation menu */
+/*! navigation menu: bonne indentation des tab dans le menu */
 #multi-page-nav .nav-item {
     padding: 0 0.75rem!important;
     line-height: var(--navbar-height)!important;
 }
 
+/*! navigation menu: mettre à droite l'icone github */
+div.align-right
+{
+    text-align: right;
+    width: 100%;
+}
+
+/*! navigation menu: taille minimale du logo ct */
+#multi-page-nav .brand {
+    min-width: 45px!important;
+}
+
+/*! navigation menu: hover des liens du menu */
 a:hover {
     text-decoration: none;
 }
 
+/*! les images dans le markdown */
 .markdown-body img {
     max-width: 100%;
     box-sizing: content-box;
     background-color: #fff;
 }
 
+/*! propriétés du body du markdown */
 .container {
     width: 100%;
     max-width: 1100px!important;
@@ -39,6 +54,37 @@ a:hover {
     text-align: justify;
 }
 
+/*! bonne indentation du code dans le markdown */
+.markdown-body pre code,.markdown-body pre tt {
+    display: contents !important;
+}
+
+/*! marge en bas du body */
+body {
+    margin-bottom: 100px!important;
+}
+
+/*! responsive pc */
+@media screen and (min-width:450px){
+
+    /*! Titre de la page */
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 3em;
+        font-family: roboto;
+    }
+
+    /*! Titre de la page: logo */
+    .ct-logo-title {
+        vertical-align:sub;
+        margin-right: 20px;
+        width: 60px;
+    }
+
+}
+
+/*! responsive mobile phone */
 @media screen and (max-width:450px){
 
     .container{
@@ -47,13 +93,20 @@ a:hover {
         padding-right:5%;
         text-align:justify;
     }
+
+    /*! Titre de la page */
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 2.5em;
+        font-family: roboto;
+    }
+
+    /*! Titre de la page: logo */
+    .ct-logo-title {
+        vertical-align:sub;
+        margin-right: 15px;
+        width: 45px;
+    }
     
-}
-
-.markdown-body pre code,.markdown-body pre tt {
-    display: contents !important;
-}
-
-body {
-    margin-bottom: 100px!important;
 }
