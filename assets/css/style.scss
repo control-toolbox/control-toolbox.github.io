@@ -3,15 +3,7 @@
 
 @import "{{ site.theme }}";
 
-footer {
-    display: flex !important;
-    justify-content: center;
-    padding-top: 50px;
-    background-color: #007fa2;
-    color: #fff;
-    padding-bottom: 50px;
-    margin-top: 50px;
-}
+@import "common.css";
 
 /*! Logos of partners */
 .markdown-body img#partner {
