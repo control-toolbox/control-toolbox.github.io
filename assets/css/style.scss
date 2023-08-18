@@ -3,6 +3,16 @@
 
 @import "{{ site.theme }}";
 
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-color: #007fa2;
+    color: #fff;
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+
 /*! Logos of partners */
 .markdown-body img#partner {
     height: 80px;
@@ -50,7 +60,7 @@ a:hover {
 
 /*! marge en bas du body */
 body {
-    margin-bottom: 100px!important;
+    /* margin-bottom: 100px!important; */
     font-family: 'Lato Medium'!important;
 }
 
