@@ -18,4 +18,6 @@ var footer = document.createElement('footer');
 fetch('https://control-toolbox.org/_includes/footer.html')
 .then(response=> response.text())
 .then(text=> footer.innerHTML = text);
-document.body.appendChild(footer);
+
+var foo = document.createElement('p');
+document.body.appendChild(foo);
