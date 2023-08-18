@@ -13,3 +13,9 @@ favicon.rel = 'icon';
 favicon.href = 'https://control-toolbox.org/assets/img/ct-logo.svg';
 document.head.appendChild(favicon);
 
+/* footer */
+var footer = document.createElement('footer');
+fetch('https://control-toolbox.org/_includes/footer.html')
+.then(response=> response.text())
+.then(text=> footer.innerHTML = text);
+document.body.appendChild(footer);
