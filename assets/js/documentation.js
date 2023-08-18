@@ -9,19 +9,17 @@ window.onload = function() {
     gtag('config', 'G-J27VDFHJW2');
 
     /* ct favicon */
-    /*var favicon = document.createElement('link');
+    var favicon = document.createElement('link');
     favicon.type = 'image/x-icon';
     favicon.rel = 'icon';
     favicon.href = 'https://control-toolbox.org/assets/img/ct-logo.svg';
     document.head.appendChild(favicon);
-    */
+
     /* footer */
     var footer = document.createElement('footer');
     fetch('https://control-toolbox.org/_includes/footer.html')
-    .then(response=> response.text())
-    .then(text=> footer.innerHTML = text);
-
-    var foo = document.createElement('p');
-    document.body.appendChild(foo);
+    .then(response => response.text())
+    .then(text => $(footer).innerHTML = text);
+    document.body.appendChild(footer);
 
 };
