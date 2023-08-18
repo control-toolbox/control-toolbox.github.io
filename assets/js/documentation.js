@@ -17,7 +17,7 @@ window.onload = function() {
 
     /* footer */
     var footer = document.createElement('footer');
-    fetch('https://control-toolbox.org/assets/html/footer-documentation.html')
+    fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/footer.html')
     .then(response => response.text())
     .then(text => footer.innerHTML = text);
     /*footer.innerHTML = "<p>© 2023 control-toolbox</p>"*/
