@@ -41,4 +41,4 @@ You should obtain this:
 <a href="https://www.univ-cotedazur.fr"><img id="partner" align='left' src="assets/img/Logo-univ-nice-cote-dazur.svg"></a>
 <a href="https://www.inria.fr"><img id="partner" align='left' src="assets/img/inria.svg"></a>
 <a href="https://www.cnrs.fr"><img id="partner" align='left' src="assets/img/logo-cnrs.svg"></a>
-<a href="https://www.cnrs.fr"><img id="partner" align='left' src="assets/img/cimi-transparent-logo.png"></a>
+<a href="https://www.cnrs.fr"><img id="partner" align='left' src="assets/img/logo-cimi.png"></a>
