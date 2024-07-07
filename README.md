@@ -12,10 +12,12 @@ See the [installation page](https://github.com/control-toolbox#installation).
 
 ## Getting started
 
-To solve your first optimal control problem using `OptimalControl.jl` package, please visit our [basic example tutorial](https://control-toolbox.org/docs/optimalcontrol/stable/tutorial-basic-example.html) or just copy-paste the following piece of code!
+To solve your first optimal control problem using `OptimalControl.jl` package (version `0.9.0`), please visit our [basic example tutorial](https://control-toolbox.org/docs/optimalcontrol/stable/tutorial-basic-example.html) or just copy-paste the following piece of code!
 
 ```julia
 using OptimalControl
+using NLPModelsIpopt
+using Plots
 
 @def ocp begin
     t ∈ [ 0, 1 ], time
