@@ -1,9 +1,12 @@
 function topbarInjector() {
-  document
-  .getElementById("multidoc-toggler")
-  .addEventListener("click", function () {
-    document.getElementById("nav-items").classList.toggle("hidden-on-mobile");
-  });
+
+  const el = document.getElementById('multidoc-toggler');
+  if (el) {
+    el.addEventListener("click", function () {
+      document.getElementById("nav-items").classList.toggle("hidden-on-mobile");
+    });
+  }
+
   document.body.addEventListener("click", function (ev) {
     const thisIsExpanded = ev.target.matches(".nav-expanded > .dropdown-label");
     if (!ev.target.matches(".nav-dropdown-container")) {
@@ -18,6 +21,7 @@ function topbarInjector() {
       ev.target.parentElement.classList.add("nav-expanded");
     }
   });
+  
 }
   
 if (
