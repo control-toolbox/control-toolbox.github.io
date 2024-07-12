@@ -1,26 +1,42 @@
 <nav id="multi-page-nav">
-    <a class="brand" href="https://control-toolbox.org/"><img alt="home" src="../../assets/img/ct-logo-white.svg"></a>
-    <div id="nav-items">
-      <a class="nav-link nav-item" href="../OptimalControl.jl/stable">OptimalControl</a>
-      <a class="nav-link nav-item" href="../CTProblems.jl/stable">CTProblems</a>
-      <div class="nav-dropdown">
-        <button class="nav-item dropdown-label ">Applications</button>
-        <ul class="nav-dropdown-container">
-          <a class="nav-link nav-item" href="../mri/stable/">MRI</a>
-          <a class="nav-link nav-item" href="../kepler/stable/">Kepler</a>
-        </ul>
+  <div class="hidden-on-mobile" id="nav-items">
+    <div class="nav-dropdown">
+      <button class="nav-item dropdown-label">Debugging</button>
+      <ul class="nav-dropdown-container">
+        <a class="nav-link active nav-item" href="../">Infiltrator</a>
+        <a class="nav-link nav-item" href="../../debug/">JuliaInterpreter</a>
+      </ul>
+    </div>
+    <div class="nav-dropdown">
+      <button class="nav-item dropdown-label">Mega Debugger</button>
+      <div class="nav-dropdown-container nav-mega-dropdown-container">
+        <div class="nav-mega-column">
+          <div class="column-header">Column 1</div>
+          <ul class="column-content">
+            <a class="nav-link active nav-item" href="../">Infiltrator</a>
+            <a class="nav-link nav-item" href="../../debug/">JuliaInterpreter</a>
+          </ul>
+        </div>
+        <div class="nav-mega-column">
+          <div class="column-header">Column 2</div>
+          <ul class="column-content">
+            <a class="nav-link active nav-item" href="../">Infiltrator</a>
+            <a class="nav-link nav-item" href="../../debug/">JuliaInterpreter</a>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="align-right" style="
-    margin-top: 10px;
-    ">
-      <a href="https://github.com/control-toolbox">
-        <svg width="35" height="35" viewBox="0 0 16 16">
-          <g color="#fff">
-          <path fill="currentcolor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" style="
-      "></path>
-          </g>
-        </svg>
-      </a>
+    <a class="nav-link nav-item" href="../../data/">DataSets</a>
+    <div class="search nav-item">
+      <input id="search-input" placeholder="Search...">
+      <ul class="suggestions hidden" id="search-result-container"></ul>
+      <div class="search-keybinding">/</div>
     </div>
+  </div>
+  <button id="multidoc-toggler">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z">
+      </path>
+    </svg>
+  </button>
 </nav>
