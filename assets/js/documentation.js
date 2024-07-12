@@ -15,12 +15,18 @@ window.onload = function() {
     favicon.href = 'https://control-toolbox.org/assets/img/ct-logo.svg';
     document.head.appendChild(favicon);
 
+    /* top bar menu */
+    var topbar = document.createElement('div');
+    fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/navigation.html')
+    .then(response => response.text())
+    .then(text => topbar.innerHTML = text);
+    document.body.insertBefore(topbar, document.body.firstChild);
+
     /* footer */
     var footer = document.createElement('footer');
     fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/footer.html')
     .then(response => response.text())
     .then(text => footer.innerHTML = text);
-    /*footer.innerHTML = "<p>© 2023 control-toolbox</p>"*/
     document.body.appendChild(footer);
 
 };
