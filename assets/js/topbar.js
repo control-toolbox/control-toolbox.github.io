@@ -1,4 +1,4 @@
-window.onload = function topbarInjector() {
+function topbarInjector() {
   document
   .getElementById("multidoc-toggler")
   .addEventListener("click", function () {
@@ -20,12 +20,12 @@ window.onload = function topbarInjector() {
   });
 }
   
-// if (
-//   document.readyState === "complete" ||
-//   document.readyState === "interactive"
-// ) {
-//   // call on next available tick
-//   setTimeout(topbarInjector, 1);
-// } else {
-//   document.addEventListener("DOMContentLoaded", topbarInjector);
-// }
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
+  // call on next available tick
+  setTimeout(topbarInjector, 1);
+} else {
+  document.addEventListener("DOMContentLoaded", topbarInjector);
+}
