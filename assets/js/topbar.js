@@ -1,11 +1,10 @@
 function topbarInjector() {
 
-  const el = document.getElementById('multidoc-toggler');
-  if (el) {
-    el.addEventListener("click", function () {
+  document
+    .getElementById("multidoc-toggler")
+    .addEventListener("click", function () {
       document.getElementById("nav-items").classList.toggle("hidden-on-mobile");
     });
-  }
 
   document.body.addEventListener("click", function (ev) {
     const thisIsExpanded = ev.target.matches(".nav-expanded > .dropdown-label");
@@ -24,19 +23,12 @@ function topbarInjector() {
 
 }
   
-// if (
-//   document.readyState === "complete" ||
-//   document.readyState === "interactive"
-// ) {
-//   // call on next available tick
-//   setTimeout(topbarInjector, 1);
-// } else {
-//   document.addEventListener("DOMContentLoaded", topbarInjector);
-// }
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", topbarInjector);
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
+  // call on next available tick
+  setTimeout(topbarInjector, 1);
 } else {
-  topbarInjector();
+  document.addEventListener("DOMContentLoaded", topbarInjector);
 }
-
