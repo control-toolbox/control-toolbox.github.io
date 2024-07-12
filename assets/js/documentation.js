@@ -1,12 +1,21 @@
 /* from control-toolbox.org/docs/pkg-name/stable/ */
 function topbarInjector() {
 
+    /* top bar menu */
+    var topbar = document.createElement('div');
+    fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/navigation.html')
+    .then(response => response.text())
+    .then(text => topbar.innerHTML = text);
+    document.body.insertBefore(topbar, document.body.firstChild);
+
+    // 
     document
         .getElementById("multidoc-toggler")
         .addEventListener("click", function () {
         document.getElementById("nav-items").classList.toggle("hidden-on-mobile");
         });
 
+    // 
     document.body.addEventListener("click", function (ev) {
         const thisIsExpanded = ev.target.matches(".nav-expanded > .dropdown-label");
         if (!ev.target.matches(".nav-dropdown-container")) {
@@ -48,18 +57,6 @@ window.onload = function() {
     favicon.rel = 'icon';
     favicon.href = 'https://control-toolbox.org/assets/img/ct-logo.svg';
     document.head.appendChild(favicon);
-
-    /* top bar menu */
-    var topbar = document.createElement('div');
-    fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/navigation.html')
-    .then(response => response.text())
-    .then(text => topbar.innerHTML = text);
-    document.body.insertBefore(topbar, document.body.firstChild);
-
-    /* top bar javascript */
-    // var script = document.createElement("script");
-    // script.src = 'https://control-toolbox.org/assets/js/topbar.js';
-    // document.head.appendChild(script);
 
     /* footer */
     var footer = document.createElement('footer');
