@@ -2,11 +2,29 @@
 function topbarInjector() {
 
     /* top bar menu */
-    var topbar = document.createElement('div');
-    fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/navigation.html')
-    .then(response => response.text())
-    .then(text => topbar.innerHTML = text);
-    document.body.insertBefore(topbar, document.body.firstChild);
+    var navElement = document.createElement('nav');
+    navElement.id = "multi-page-nav";
+    navElement.innerHTML = `
+        <a class="brand" href="https://control-toolbox.org/"><img alt="home" src="https://control-toolbox.org/assets/img/ct-logo-white.svg"></a>
+        <div class="hidden-on-mobile" id="nav-items" style="width: inherit;">
+        <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl/stable">OptimalControl</a>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/CTProblems.jl/stable">CTProblems</a>
+        <div class="nav-dropdown">
+            <button class="nav-item dropdown-label ">Applications</button>
+            <ul class="nav-dropdown-container">
+            <a class="nav-link nav-item" href="https://control-toolbox.org/mri/stable/">MRI</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/kepler/stable/">Kepler</a>
+            </ul>
+        </div>
+        </div>
+        <button id="multidoc-toggler">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path>
+        </svg>
+        </button>`;
+
+    var body = document.body;
+    body.insertBefore(navElement, body.firstChild);
 
     // 
     document
