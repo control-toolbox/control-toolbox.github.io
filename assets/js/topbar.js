@@ -21,15 +21,22 @@ function topbarInjector() {
       ev.target.parentElement.classList.add("nav-expanded");
     }
   });
-  
+
 }
   
-if (
-  document.readyState === "complete" ||
-  document.readyState === "interactive"
-) {
-  // call on next available tick
-  setTimeout(topbarInjector, 1);
-} else {
+// if (
+//   document.readyState === "complete" ||
+//   document.readyState === "interactive"
+// ) {
+//   // call on next available tick
+//   setTimeout(topbarInjector, 1);
+// } else {
+//   document.addEventListener("DOMContentLoaded", topbarInjector);
+// }
+
+if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", topbarInjector);
+} else {
+  topbarInjector();
 }
+
