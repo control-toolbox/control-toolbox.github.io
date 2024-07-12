@@ -2,6 +2,11 @@
 
 window.onload = function() {
 
+    /* topbar javascript */
+    var script = document.createElement("script");
+    script.src = 'https://control-toolbox.org/assets/js/topbar.js';
+    document.head.appendChild(script); 
+
     /* google analytics */
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
