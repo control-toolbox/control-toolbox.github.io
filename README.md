@@ -12,7 +12,7 @@ See the [installation page](https://github.com/control-toolbox#installation).
 
 ## Getting started
 
-To solve your first optimal control problem using `OptimalControl.jl` package (version `0.9.0`), please visit our [basic example tutorial](https://control-toolbox.org/OptimalControl.jl/stable/tutorial-basic-example.html).
+To solve your first optimal control problem using `OptimalControl.jl` package, please visit our [basic example tutorial](https://control-toolbox.org/OptimalControl.jl/stable/tutorial-basic-example.html).
 
 ## Partners
 
