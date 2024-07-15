@@ -5,6 +5,29 @@
 
 @import "common.css";
 
+/* Sticky footer */
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.markdown-body {
+    min-height: 100%;
+    margin-bottom: -55px; /* equal to footer height */
+}
+
+.markdown-body:after {
+    content: "";
+    display: block;
+}
+
+.ct-footer, .markdown-body:after {
+    height: 55px; 
+}
+
 /*! Logos of partners */
 .markdown-body img#partner {
     height: 75px;
