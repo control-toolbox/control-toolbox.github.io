@@ -78,6 +78,7 @@ window.onload = function() {
 
     /* footer */
     var footer = document.createElement('footer');
+    footer.class = 'ct-footer';
     fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/footer.html')
     .then(response => response.text())
     .then(text => footer.innerHTML = text);
