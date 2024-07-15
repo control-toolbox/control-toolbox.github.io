@@ -24,16 +24,16 @@ html, body {
     height: 100%;
 }
 
-.docs-main {
+.#documenter {
     min-height: 100%;
     margin-bottom: -55px; /* equal to footer height */
 }
 
-.docs-main:after {
+.#documenter:after {
     content: "";
     display: block;
 }
 
-.ct-footer, .docs-main:after {
+.ct-footer, .#documenter:after {
     height: 55px; 
 }
