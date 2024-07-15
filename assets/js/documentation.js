@@ -12,8 +12,8 @@ function topbarInjector() {
         <div class="nav-dropdown">
             <button class="nav-item dropdown-label ">Applications</button>
             <ul class="nav-dropdown-container">
-            <a class="nav-link nav-item" href="https://control-toolbox.org/mri/stable/">MRI</a>
-            <a class="nav-link nav-item" href="https://control-toolbox.org/kepler/stable/">Kepler</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/mri/stable/">Medical Resonance Imaging</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/kepler/stable/">Orbit transfer - Kepler</a>
             </ul>
         </div>
         </div>
