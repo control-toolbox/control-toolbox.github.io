@@ -23,8 +23,8 @@ function topbarInjector() {
         </svg>
         </button>`;
 
-    var body = document.body;
-    body.insertBefore(navElement, body.firstChild);
+    var elt = document.getElementById("documenter");
+    elt.insertBefore(navElement, elt.firstChild);
 
     // 
     document
