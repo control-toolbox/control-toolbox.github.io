@@ -14,3 +14,26 @@
 nav.docs-sidebar {
     z-index: 1;
 }
+
+/* Sticky footer */
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.docs-main {
+    min-height: 100%;
+    margin-bottom: -55px; /* equal to footer height */
+}
+
+.docs-main:after {
+    content: "";
+    display: block;
+}
+
+.ct-footer, .docs-main:after {
+    height: 55px; 
+}
