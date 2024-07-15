@@ -18,17 +18,17 @@ html, body {
     height: 100%;
 }
 
-.page-wrap {
+#documenter {
     min-height: 100%;
     margin-bottom: -55px; /* equal to footer height */
 }
 
-.page-wrap:after {
+#documenter:after {
     content: "";
     display: block;
 }
 
-.ct-footer, .page-wrap:after {
+.ct-footer, #documenter:after {
     height: 55px; 
 }
 
