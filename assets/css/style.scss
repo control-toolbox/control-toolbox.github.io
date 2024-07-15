@@ -14,17 +14,17 @@ html, body {
     height: 100%;
 }
 
-.container {
+.page-wrap {
     min-height: 100%;
     margin-bottom: -55px; /* equal to footer height */
 }
 
-.container:after {
+.page-wrap:after {
     content: "";
     display: block;
 }
 
-.ct-footer, .container:after {
+.ct-footer, .page-wrap:after {
     height: 55px; 
 }
 
