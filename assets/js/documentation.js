@@ -7,13 +7,14 @@ function topbarInjector() {
     navElement.innerHTML = `
         <a class="brand" href="https://control-toolbox.org/"><img alt="home" src="https://control-toolbox.org/assets/img/ct-logo-white.svg"></a>
         <div class="hidden-on-mobile" id="nav-items" style="width: inherit;">
-        <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl/stable">OptimalControl</a>
-        <a class="nav-link nav-item" href="https://control-toolbox.org/CTProblems.jl/stable">CTProblems</a>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl">OptimalControl</a>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/CTProblems.jl">CTProblems</a>
         <div class="nav-dropdown">
             <button class="nav-item dropdown-label ">Applications</button>
             <ul class="nav-dropdown-container">
-            <a class="nav-link nav-item" href="https://control-toolbox.org/medical_resonance_imaging/stable/">Medical Resonance Imaging</a>
-            <a class="nav-link nav-item" href="https://control-toolbox.org/kepler/stable/">Orbit transfer - Kepler</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/calculus_of_variations">Calculus of variations</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/medical_resonance_imaging">Medical Resonance Imaging</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/kepler">Orbit transfer - Kepler</a>
             </ul>
         </div>
         </div>
