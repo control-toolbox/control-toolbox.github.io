@@ -14,17 +14,17 @@ html, body {
     height: 100%;
 }
 
-.markdown-body {
+.container {
     min-height: 100%;
     margin-bottom: -55px; /* equal to footer height */
 }
 
-.markdown-body:after {
+.container:after {
     content: "";
     display: block;
 }
 
-.ct-footer, .markdown-body:after {
+.ct-footer, .container:after {
     height: 55px; 
 }
 
