@@ -8,7 +8,6 @@ function topbarInjector() {
         <a class="brand" href="https://control-toolbox.org/"><img alt="home" src="https://control-toolbox.org/assets/img/ct-logo-white.svg"></a>
         <div class="hidden-on-mobile" id="nav-items" style="width: inherit;">
         <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl">OptimalControl</a>
-        <a class="nav-link nav-item" href="https://control-toolbox.org/CTProblems.jl">CTProblems</a>
         <div class="nav-dropdown">
             <button class="nav-item dropdown-label ">Applications</button>
             <ul class="nav-dropdown-container">
