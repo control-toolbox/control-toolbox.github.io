@@ -8,7 +8,7 @@ The control-toolbox ecosystem gathers Julia packages for mathematical control an
 
 ## Getting started
 
-To solve your first optimal control problem using [OptimalControl.jl](https://github.com/control-toolbox/OptimalControl.jl) package, please visit our [basic example tutorial](https://control-toolbox.org/OptimalControl.jl/stable/tutorial-basic-example.html).
+To solve your first optimal control problem using [OptimalControl.jl](https://github.com/control-toolbox/OptimalControl.jl) package, please check the [documentation](https://control-toolbox.org/OptimalControl.jl/stable), or simply try our [basic example tutorial](https://control-toolbox.org/OptimalControl.jl/stable/tutorial-basic-example.html).
 
 ## Partners
 
