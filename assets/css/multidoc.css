@@ -67,7 +67,7 @@ html {
 #multi-page-nav .dropdown-label {
     cursor: pointer;
     color: #ccc;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     border: none;
     text-align: left;
     background: none;
