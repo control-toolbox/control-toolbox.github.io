@@ -140,7 +140,7 @@ html {
     font-size: 16px;
     padding: 5px;
     margin: 0;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 #multi-page-nav .nav-expanded .nav-mega-dropdown-container {
@@ -161,7 +161,7 @@ html {
 
 #multi-page-nav a.nav-link {
     color: #ccc;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 #multi-page-nav a.nav-link:hover {
