@@ -13,6 +13,7 @@ function topbarInjector() {
             <ul class="nav-dropdown-container">
             <a class="nav-link nav-item" href="https://control-toolbox.org/calculus_of_variations">Calculus of variations</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/control-loss">Control loss</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/preconditioning">Geometric preconditioner</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/medical_resonance_imaging">Medical Resonance Imaging</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/kepler">Orbit transfer - Kepler</a>
             </ul>
