@@ -15,7 +15,7 @@ function topbarInjector() {
             <a class="nav-link nav-item" href="https://control-toolbox.org/GeometricPreconditioner.jl">Geometric preconditioner</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/LossControl.jl">Loss control</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/MedicalResonanceImaging.jl">Medical Resonance Imaging</a>
-            <a class="nav-link nav-item" href="https://control-toolbox.org/kepler">Orbit transfer - Kepler</a>
+            <a class="nav-link nav-item" href="https://control-toolbox.org/Kepler.jl">Orbit transfer - Kepler</a>
             </ul>
         </div>
         </div>
