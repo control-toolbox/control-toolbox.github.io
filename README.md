@@ -13,7 +13,9 @@ To solve your first optimal control problem using [OptimalControl.jl](https://gi
 ## Partners
 
 <a href="https://www.univ-toulouse.fr"><img id="partner" align='left' src="assets/img/logo-univ-toulouse.png"></a>
+<a href="https://www.irit.fr"><img id="partner" align='left' src="assets/img/logo-irit.png"></a>
 <a href="https://www.univ-cotedazur.fr"><img id="partner" align='left' src="assets/img/Logo-univ-nice-cote-dazur.svg"></a>
+<a href="https://math.univ-cotedazur.fr"><img id="partner" align='left' src="assets/img/logo-ljad.jpeg"></a>
 <a href="https://www.inria.fr"><img id="partner" align='left' src="assets/img/inria.svg"></a>
 <a href="https://www.cnrs.fr"><img id="partner" align='left' src="assets/img/logo-cnrs.svg"></a>
 <a href="https://www.cnrs.fr"><img id="partner" align='left' src="assets/img/logo-cimi.png"></a>
