@@ -19,5 +19,5 @@ To solve your first optimal control problem using [OptimalControl.jl](https://gi
     <div class="logo"><a href="https://math.univ-cotedazur.fr"><img id="partner" align="left" src="assets/img/logo-ljad.jpeg" /></a></div>
     <div class="logo"><a href="https://www.inria.fr"><img id="partner" align="left" src="assets/img/inria.svg" /></a></div>
     <div class="logo"><a href="https://www.cnrs.fr"><img id="partner" align="left" src="assets/img/logo-cnrs.svg" /></a></div>
-    <div class="logo"><a href="https://www.cnrs.fr"><img id="partner" align="left" src="assets/img/logo-cimi.png" /></a></p></div>
+    <div class="logo"><a href="https://www.cnrs.fr"><img id="partner" align="left" src="assets/img/logo-cimi.png" /></a></div>
 </div>
