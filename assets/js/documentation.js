@@ -12,6 +12,7 @@ function topbarInjector() {
             <button class="nav-item dropdown-label ">Applications</button>
             <ul class="nav-dropdown-container">
             <a class="nav-link nav-item" href="https://control-toolbox.org/CalculusOfVariations.jl">Calculus of variations</a>
+            <a class="nav-link nav-item" href="https://agustinyabo.github.io/PWLdynamics.jl">Gene regulatory networks</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/GeometricPreconditioner.jl">Geometric preconditioner</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/LossControl.jl">Loss control</a>
             <a class="nav-link nav-item" href="https://control-toolbox.org/MedicalResonanceImaging.jl">Medical Resonance Imaging</a>
