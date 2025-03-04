@@ -23,6 +23,6 @@ To solve your first optimal control problem using [OptimalControl.jl](https://gi
 </div>
 
 <div class="funding">
-    <div class="logo"><a href="https://anr.fr"><img id="funding" align="left" src="assets/img/anr-logo.jpg" height="50px"/></a></div>
-    <div class="logo"><a href="https://pde-ai.math.cnrs.fr"><img id="funding" align="left" src="assets/img/fr2030ia.png" height="50px"/></a></div>    
+    <div class="logo"><a href="https://anr.fr"><img id="funding" align="left" src="assets/img/anr-logo.jpg" height="5px"/></a></div>
+    <div class="logo"><a href="https://pde-ai.math.cnrs.fr"><img id="funding" align="left" src="assets/img/fr2030ia.png" height="5px"/></a></div>    
 </div>
