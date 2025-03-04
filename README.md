@@ -14,10 +14,15 @@ To solve your first optimal control problem using [OptimalControl.jl](https://gi
 
 <div class="partners">
     <div class="logo"><a href="https://www.univ-toulouse.fr"><img id="partner" align="left" src="assets/img/logo-univ-toulouse.png" /></a></div>
+    <div class="logo"><a href="https://www.cimi.univ-toulouse.fr/en"><img id="partner" align="left" src="assets/img/logo-cimi.png" /></a></div>
     <div class="logo"><a href="https://www.irit.fr"><img id="partner" align="left" src="assets/img/logo-irit.png" /></a></div>
-    <div class="logo"><a href="https://www.univ-cotedazur.fr"><img id="partner" align="left" src="assets/img/Logo-univ-nice-cote-dazur.svg" /></a></div>
+    <div class="logo"><a href="https://www.cnrs.fr"><img id="partner" align="left" src="assets/img/logo-cnrs.svg" /></a></div>
     <div class="logo"><a href="https://math.univ-cotedazur.fr"><img id="partner" align="left" src="assets/img/logo-ljad.jpeg" /></a></div>
     <div class="logo"><a href="https://www.inria.fr"><img id="partner" align="left" src="assets/img/inria.svg" /></a></div>
-    <div class="logo"><a href="https://www.cnrs.fr"><img id="partner" align="left" src="assets/img/logo-cnrs.svg" /></a></div>
-    <div class="logo"><a href="https://www.cnrs.fr"><img id="partner" align="left" src="assets/img/logo-cimi.png" /></a></div>
+    <div class="logo"><a href="https://www.univ-cotedazur.fr"><img id="partner" align="left" src="assets/img/Logo-univ-nice-cote-dazur.svg" /></a></div>
+</div>
+
+<div class="funding">
+    <div class="logo"><a href="https://anr.fr"><img id="funding" align="left" src="assets/img/anr-logo.jpg" /></a></div>
+    <div class="logo"><a href="https://pde-ai.math.cnrs.fr"><img id="funding" align="left" src="assets/img/fr2030ia.png" /></a></div>    
 </div>
