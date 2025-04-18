@@ -1,12 +1,3 @@
-footer {
-    display: flex !important;
-    justify-content: center;
-    color: #007fa2;
-    margin-top: 0px;
-    position: relative;
-    z-index: 1;
-}
-
 .center {
     margin: 0;
     position: absolute;
@@ -18,4 +9,29 @@ footer {
 
 article#documenter-page.content{
     min-height: 66vh;    
+}
+
+/* Smooth hide and show top menu nav */
+#multi-page-nav.show-top-menu {
+    transform: translateY(0);
+}
+
+#multi-page-nav.hide-top-menu {
+    transform: translateY(-100%);
+}
+
+.smooth-show-hide {
+    transition: 0.3s all ease-in-out !important;
+}
+
+.docs-sidebar, .docs-sidebar.show-top-menu {
+    padding-top: calc(var(--navbar-height) + 1rem) !important;
+}
+
+.docs-sidebar.hide-top-menu {
+    padding-top: 0 !important;
+}
+
+.docs-main {
+    padding-top: calc(var(--navbar-height)) !important;
 }

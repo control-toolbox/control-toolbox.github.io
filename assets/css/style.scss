@@ -6,6 +6,16 @@
 
 /* Sticky footer */
 footer {
+    display: flex !important;
+    justify-content: center;
+    background-color: #007fa2;
+    color: #fff;
+    margin-top: 0px;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
     margin-top: 0px;
 }
 
@@ -33,7 +43,7 @@ html, body {
 
 /*! Logos of partners */
 .markdown-body img#partner {
-    height: 80px;
+    height: 60px;
 }
 
 .partners{
@@ -42,7 +52,7 @@ html, body {
 
 .partners .logo {
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
 }
 
 /*! navigation menu: bonne indentation des tab dans le menu */
@@ -53,6 +63,7 @@ html, body {
 }
 
 #multi-page-nav {
+    position: sticky !important;
     background-color: #007fa2 !important;
     border-bottom: none !important;
 }
