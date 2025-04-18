@@ -7,7 +7,7 @@ function topbarInjector() {
     navElement.innerHTML = `
         <a class="brand" href="https://control-toolbox.org/"><img alt="home" src="https://control-toolbox.org/assets/img/ct-logo-white.svg"></a>
         <div class="hidden-on-mobile" id="nav-items" style="width: inherit;">
-        <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl">OptimalControl.jl</a>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl">Documentation</a>
         <div class="nav-dropdown">
             <button class="nav-item dropdown-label ">Applications</button>
             <ul class="nav-dropdown-container">
@@ -19,6 +19,8 @@ function topbarInjector() {
             <a class="nav-link nav-item" href="https://control-toolbox.org/Kepler.jl">Orbit transfer - Kepler</a>
             </ul>
         </div>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControlProblems.jl">Problems</a>
+        <a class="nav-link nav-item" href="https://github.com/control-toolbox">Github</a>
         </div>
         <button id="multidoc-toggler">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
