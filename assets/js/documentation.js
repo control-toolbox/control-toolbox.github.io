@@ -20,6 +20,7 @@ function topbarInjector() {
             </ul>
         </div>
         <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControlProblems.jl">Problems</a>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl/dev/index.html#Citing-us">Citing</a>
         <a class="nav-link nav-item" href="https://github.com/control-toolbox">Github</a>
         </div>
         <button id="multidoc-toggler">
