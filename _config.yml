@@ -3,8 +3,7 @@ tagline: Julia tools for optimal control
 description: The control-toolbox ecosystem gathers Julia packages for mathematical control and applications.
 url: https://control-toolbox.org
 logo: /assets/img/ct-logo.svg
+theme: jekyll-theme-primer
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
-  
