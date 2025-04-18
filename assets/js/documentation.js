@@ -4,6 +4,7 @@ function topbarInjector() {
     /* top bar menu */
     var navElement = document.createElement('nav');
     navElement.id = "multi-page-nav";
+    navElement.className = "show-top-menu smooth-show-hide";
     navElement.innerHTML = `
         <a class="brand" href="https://control-toolbox.org/"><img alt="home" src="https://control-toolbox.org/assets/img/ct-logo-white.svg"></a>
         <div class="hidden-on-mobile" id="nav-items" style="width: inherit;">
@@ -32,6 +33,13 @@ function topbarInjector() {
     var elt = document.getElementById("documenter");
     elt.insertBefore(navElement, elt.firstChild);
 
+    // get class docs-sidebar if exists and add in the classes: show-top-menu and smooth-show-hide
+    var sidebar = document.getElementsByClassName("docs-sidebar");
+    if (sidebar.length > 0) {
+        sidebar[0].classList.add("show-top-menu");
+        sidebar[0].classList.add("smooth-show-hide");
+    }
+
     // 
     document
         .getElementById("multidoc-toggler")
@@ -57,16 +65,78 @@ function topbarInjector() {
 
 }
 
+// Function to show the top bar menu
+function showTopBar() {
+
+    // update top bar
+    var topbar = document.getElementById("multi-page-nav");
+    if (topbar) {
+        topbar.classList.remove("hide-top-menu");
+        topbar.classList.add("show-top-menu");
+    }
+
+    // update sidebar
+    var sidebar = document.getElementsByClassName("docs-sidebar");
+    if (sidebar.length > 0) {
+        sidebar[0].classList.remove("hide-top-menu");
+        sidebar[0].classList.add("show-top-menu");
+    }
+
+}
+
+// Function to hide the top bar menu
+function hideTopBar() {
+
+    // update top bar
+    var topbar = document.getElementById("multi-page-nav");
+    if (topbar) {
+        topbar.classList.remove("show-top-menu");
+        topbar.classList.add("hide-top-menu");
+    }
+
+    // update sidebar
+    var sidebar = document.getElementsByClassName("docs-sidebar");
+    if (sidebar.length > 0) {
+        sidebar[0].classList.remove("show-top-menu");
+        sidebar[0].classList.add("hide-top-menu");
+    }
+
+}
+
+// ajoute un event listener sur les touches du clavier
+function addEventListenerToShowHideTopbar() {
+
+    // Ajout d'un écouteur d'événements pour la touche 's'
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 's') {
+            showTopBar();
+            return false;
+        }
+    });
+
+    // Ajout d'un écouteur d'événements pour la touche 'h'
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'h') {
+            hideTopBar();
+            return false;
+        }
+    });
+}
+
+//
 if (
     document.readyState === "complete" ||
     document.readyState === "interactive"
 ) {
     // call on next available tick
     setTimeout(topbarInjector, 1);
+    setTimeout(addEventListenerToShowHideTopbar, 1);
 } else {
     document.addEventListener("DOMContentLoaded", topbarInjector);
+    document.addEventListener("DOMContentLoaded", addEventListenerToShowHideTopbar);
 }
 
+//
 window.onload = function() {
 
     /* google analytics */
@@ -88,7 +158,12 @@ window.onload = function() {
     fetch('https://raw.githubusercontent.com/control-toolbox/control-toolbox.github.io/main/_includes/footer.html')
     .then(response => response.text())
     .then(text => footer.innerHTML = text);
-    document.body.appendChild(footer);
+
+    var docs_main = document.getElementsByClassName("docs-main");
+    if (docs_main.length > 0) {
+        docs_main[0].appendChild(footer);
+    } else {
+        document.body.appendChild(footer);
+    }
 
 };
-

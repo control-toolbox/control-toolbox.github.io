@@ -1,8 +1,7 @@
 footer {
     display: flex !important;
     justify-content: center;
-    background-color: #007fa2;
-    color: #fff;
+    color: #007fa2;
     margin-top: 0px;
     position: relative;
     z-index: 1;

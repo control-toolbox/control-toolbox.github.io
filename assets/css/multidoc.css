@@ -8,7 +8,7 @@ html {
     height: var(--navbar-height);
     z-index: 10;
     padding: 0 1rem;
-    position: sticky;
+    position: fixed;
     display: flex;
     top: 0;
     background-color: #282f2f;
@@ -182,17 +182,13 @@ html {
 }
 
 /* Documenter css tweaks */
-.docs-sidebar  {
-    padding-top: calc(var(--navbar-height) + 1rem) !important;
-}
-
 .docs-sidebar {
     top: 0;
 }
 
 @media screen and (max-width: 1055px) {
     #multi-page-nav {
-        position: sticky;
+        position: fixed;
         top: 0;
         padding: 0 1rem;
         height: unset;

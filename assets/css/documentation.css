@@ -26,7 +26,7 @@ html, body {
 
 #documenter {
     min-height: 100%;
-    margin-bottom: -55px; /* equal to footer height */
+    margin-bottom: -25px; /* equal to footer height */
 }
 
 #documenter:after {
@@ -34,6 +34,35 @@ html, body {
     display: block;
 }
 
-.ct-footer, #documenter:after {
-    height: 55px; 
+.ct-footer {
+    height: 25px; 
+}
+
+#documenter:after {
+    height: 25px; 
+}
+
+/* Smooth hide and show top menu nav */
+#multi-page-nav.show-top-menu {
+    transform: translateY(0);
+}
+
+#multi-page-nav.hide-top-menu {
+    transform: translateY(-100%);
+}
+
+.smooth-show-hide {
+    transition: 0.3s all ease-in-out !important;
+}
+
+.docs-sidebar, .docs-sidebar.show-top-menu {
+    padding-top: calc(var(--navbar-height) + 1rem) !important;
+}
+
+.docs-sidebar.hide-top-menu {
+    padding-top: 0 !important;
+}
+
+.docs-main {
+    padding-top: calc(var(--navbar-height)) !important;
 }
