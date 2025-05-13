@@ -50,3 +50,30 @@ html, body {
 #documenter:after {
     height: 25px; 
 }
+
+/* SIDEBAR */
+@media screen and (max-width: 1055px) {
+
+    #documenter-article-toggle-button-sidebar {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 1056px) {
+
+    #documenter-article-toggle-button-sidebar {
+        display: block; /* or inline-block, depending on your layout */
+    }
+
+    #documenter .docs-sidebar.hidden {
+        left:-18rem!important;
+    }
+
+    #documenter .docs-main.sidebar-hidden {
+        width:100%!important;
+        max-width: 52rem!important;
+        margin-left: 2rem!important;
+        padding-right: 0rem!important;
+    }
+}

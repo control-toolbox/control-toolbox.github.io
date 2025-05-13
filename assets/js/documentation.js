@@ -124,6 +124,86 @@ function addEventListenerToShowHideTopbar() {
     });
 }
 
+// SIDEBAR TOGGLE
+function addSidebarToggleButton() {
+    // Select the element with the class "docs-right"
+    var docsRight = document.querySelector('.docs-right');
+
+    // Check if the element exists
+    if (docsRight) {
+        // Create the new button element
+        var button = document.createElement('a');
+        button.className = 'docs-article-toggle-button-sidebar fa-solid';
+        button.id = 'documenter-article-toggle-button-sidebar';
+        button.href = 'javascript:;';
+        button.title = 'Fold sidebar';
+
+        // Check localStorage for button status
+        var buttonStatus = localStorage.getItem('sidebarButtonStatus');
+
+        // Set the button class based on the stored status
+        if (buttonStatus === 'right') {
+            button.classList.add('fa-chevron-right');
+        } else {
+            button.classList.add('fa-chevron-left'); // Default to left
+        }
+
+        // Insert the button as the first child of the docs-right element
+        docsRight.insertBefore(button, docsRight.firstChild);
+
+        // Event listener
+        button.addEventListener('click', toggleSidebarButton);
+    }
+}
+
+function toggleSidebarButton() {
+
+    if (this.classList.contains('fa-chevron-left')) {
+        hideSidebar(this)
+    } else {
+        showSidebar(this)
+    }
+    
+}
+
+function hideSidebar(button) {
+
+    button.classList.remove('fa-chevron-left');
+    button.classList.add('fa-chevron-right');
+
+    localStorage.setItem('sidebarButtonStatus', 'right');
+
+    var sidebar = document.querySelector('.docs-sidebar');
+    if (sidebar) {
+        sidebar.classList.add('hidden')
+    }
+
+    var content = document.querySelector('.docs-main');
+    if (content){
+        content.classList.add('sidebar-hidden')
+    }
+
+}
+
+function showSidebar(button) {
+        
+    button.classList.remove('fa-chevron-right');
+    button.classList.add('fa-chevron-left');
+
+    localStorage.setItem('sidebarButtonStatus', 'left');
+
+    var sidebar = document.querySelector('.docs-sidebar');
+    if (sidebar) {
+        sidebar.classList.remove('hidden')
+    }
+
+    var content = document.querySelector('.docs-main');
+    if (content){
+        content.classList.remove('sidebar-hidden')
+    }
+
+}
+
 //
 if (
     document.readyState === "complete" ||
@@ -132,9 +212,11 @@ if (
     // call on next available tick
     setTimeout(topbarInjector, 1);
     setTimeout(addEventListenerToShowHideTopbar, 1);
+    setTimeout(addSidebarToggleButton, 1);
 } else {
     document.addEventListener("DOMContentLoaded", topbarInjector);
     document.addEventListener("DOMContentLoaded", addEventListenerToShowHideTopbar);
+    document.addEventListener("DOMContentLoaded", addSidebarToggleButton);
 }
 
 //
