@@ -131,28 +131,36 @@ function addSidebarToggleButton() {
 
     // Check if the element exists
     if (docsRight) {
-        // Create the new button element
-        var button = document.createElement('a');
-        button.className = 'docs-article-toggle-button-sidebar fa-solid';
-        button.id = 'documenter-article-toggle-button-sidebar';
-        button.href = 'javascript:;';
-        button.title = 'Fold sidebar';
 
-        // Check localStorage for button status
-        var buttonStatus = localStorage.getItem('sidebarButtonStatus');
+        // check if the button already exists
+        var button = document.getElementById('documenter-article-toggle-button-sidebar');
+        if (!(button)) {
 
-        // Set the button class based on the stored status
-        if (buttonStatus === 'right') {
-            button.classList.add('fa-chevron-right');
-        } else {
-            button.classList.add('fa-chevron-left'); // Default to left
+            // Create the new button element
+            var button = document.createElement('a');
+            button.className = 'docs-article-toggle-button-sidebar fa-solid';
+            button.id = 'documenter-article-toggle-button-sidebar';
+            button.href = 'javascript:;';
+            button.title = 'Fold sidebar';
+
+            // Check localStorage for button status
+            var buttonStatus = localStorage.getItem('sidebarButtonStatus');
+
+            // Set the button class based on the stored status
+            if (buttonStatus === 'right') {
+                button.classList.add('fa-chevron-right');
+            } else {
+                button.classList.add('fa-chevron-left'); // Default to left
+            }
+
+            // Insert the button as the first child of the docs-right element
+            docsRight.insertBefore(button, docsRight.firstChild);
+
+            // Event listener
+            button.addEventListener('click', toggleSidebarButton);
+
         }
 
-        // Insert the button as the first child of the docs-right element
-        docsRight.insertBefore(button, docsRight.firstChild);
-
-        // Event listener
-        button.addEventListener('click', toggleSidebarButton);
     }
 }
 
