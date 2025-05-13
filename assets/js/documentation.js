@@ -133,60 +133,35 @@ function addSidebarToggleButton() {
     // Check if the element exists
     if (docsRight) {
 
-        // check if the button already exists
-        var button = document.getElementById('documenter-article-toggle-button-sidebar');
-        if (!(button)) {
-
-            // Create the new button element
-            var button = document.createElement('a');
-            button.className = 'docs-article-toggle-button-sidebar fa-solid';
-            button.id = 'documenter-article-toggle-button-sidebar';
-            button.href = 'javascript:;';
-            button.title = 'Fold sidebar';
-
-            // Insert the button as the first child of the docs-right element
-            docsRight.insertBefore(button, docsRight.firstChild);
-
-            // Event listener
-            button.addEventListener('click', function () {
-                toggleSidebarButton(this);
-            });
-
+        var buttonSidebar = document.getElementById('documenter-sidebar-button');
+        if (buttonSidebar) {
+            buttonSidebar.addEventListener('click', toggleSidebarButton);
         }
-
-        // Check localStorage for button status
+        
         var buttonStatus = localStorage.getItem('sidebarButtonStatus');
-
-        // Set the button class based on the stored status
-        if (buttonStatus === 'right') {
-            button.classList.remove('fa-chevron-left');
-            button.classList.add('fa-chevron-right');
-            hideSidebar(button)
+        if (buttonStatus === 'show') {
+            showSidebar()
         } else {
-            button.classList.remove('fa-chevron-right');
-            button.classList.add('fa-chevron-left'); // Default to left
-            showSidebar(button)
+            hideSidebar()
         }
 
     }
 }
 
-function toggleSidebarButton(button) {
+function toggleSidebarButton() {
 
-    if (button.classList.contains('fa-chevron-left')) {
-        hideSidebar(button)
+    var buttonStatus = localStorage.getItem('sidebarButtonStatus');
+    if (buttonStatus === 'show') {
+        hideSidebar()
+        localStorage.setItem('sidebarButtonStatus', 'hide');
     } else {
-        showSidebar(button)
+        showSidebar()
+        localStorage.setItem('sidebarButtonStatus', 'show');
     }
     
 }
 
-function hideSidebar(button) {
-
-    button.classList.remove('fa-chevron-left');
-    button.classList.add('fa-chevron-right');
-
-    localStorage.setItem('sidebarButtonStatus', 'right');
+function hideSidebar() {
 
     var sidebar = document.querySelector('.docs-sidebar');
     if (sidebar) {
@@ -200,12 +175,7 @@ function hideSidebar(button) {
 
 }
 
-function showSidebar(button) {
-        
-    button.classList.remove('fa-chevron-right');
-    button.classList.add('fa-chevron-left');
-
-    localStorage.setItem('sidebarButtonStatus', 'left');
+function showSidebar() {
 
     var sidebar = document.querySelector('.docs-sidebar');
     if (sidebar) {
