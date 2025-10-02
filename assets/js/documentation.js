@@ -231,6 +231,71 @@ window.onload = function() {
 
 };
 
+// Ensure focus returns to main content after sidebar toggle to keep scroll behavior responsive
+function addFocusRestoreAfterSidebarToggle() {
+    function getMainContent() {
+        return (
+            document.getElementById('documenter-page') ||
+            document.querySelector('#documenter .docs-main article.content') ||
+            document.querySelector('#documenter article.content') ||
+            document.querySelector('article.content')
+        );
+    }
+
+    function ensureMainTabindex() {
+        var main = getMainContent();
+        if (main && !main.hasAttribute('tabindex')) {
+            main.setAttribute('tabindex', '-1');
+        }
+        return main;
+    }
+
+    function focusMainContent() {
+        var main = ensureMainTabindex();
+        if (main) {
+            try { main.focus({ preventScroll: true }); } catch (e) { try { main.focus(); } catch (e2) {} }
+        } else {
+            try { window.focus(); } catch (e) {}
+        }
+    }
+
+    function blurSidebarToggle() {
+        var btn = document.getElementById('documenter-sidebar-button');
+        if (btn && typeof btn.blur === 'function') {
+            try { btn.blur(); } catch (e) {}
+        }
+    }
+
+    function onToggleAttempt(e) {
+        var el = e.target;
+        if (!el) return;
+        var isToggle = (el.id === 'documenter-sidebar-button') || (el.closest && el.closest('#documenter-sidebar-button'));
+        if (!isToggle) return;
+        // Immediately blur the toggle to release focus
+        blurSidebarToggle();
+        // Restore focus to main content (twice to survive async class toggles)
+        setTimeout(focusMainContent, 0);
+        setTimeout(focusMainContent, 60);
+    }
+
+    // Listeners on multiple interaction types for robustness
+    document.addEventListener('mousedown', onToggleAttempt, true);
+    document.addEventListener('touchstart', onToggleAttempt, { passive: true, capture: true });
+    document.addEventListener('click', onToggleAttempt, true);
+
+    // Ensure tabindex exists early
+    ensureMainTabindex();
+}
+
+// Initialize focus restore as soon as possible
+try {
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        addFocusRestoreAfterSidebarToggle();
+    } else {
+        document.addEventListener('DOMContentLoaded', addFocusRestoreAfterSidebarToggle);
+    }
+} catch (e) { /* no-op */ }
+
 // Add scroll behavior to hide topbar when scrolled down beyond a threshold
 function addScrollTopBehavior() {
     var ticking = false;
