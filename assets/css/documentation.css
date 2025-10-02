@@ -6,6 +6,20 @@
     display: none!important;
 }
 
+/* Desktop behavior for Documenter header controlled by ct-header-classes */
+@media screen and (min-width: 1056px) {
+    #documenter .docs-main header.docs-navbar {
+        transition: transform 0.35s ease-in-out !important;
+        will-change: transform;
+    }
+    #documenter .docs-main header.docs-navbar.ct-header-visible {
+        transform: translateY(0);
+    }
+    #documenter .docs-main header.docs-navbar.ct-header-hidden {
+        transform: translateY(-100%);
+    }
+}
+
 #multi-page-nav {
     background-color: #007fa2 !important;
     border-bottom: none !important;

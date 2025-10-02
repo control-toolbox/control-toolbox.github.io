@@ -240,7 +240,11 @@ function addScrollTopBehavior() {
     var lastTopbarVisible = null;
     var lastHeaderVisible = null;
     var lastScrollY = window.scrollY || window.pageYOffset || 0;
-    var minDelta = 6; // px minimal upward movement to trigger show mid-page
+    // Accumulated scroll thresholds (px)
+    var UP_THRESHOLD = 14;
+    var DOWN_THRESHOLD = 20;
+    var accum = 0;       // accumulated dy in the current direction
+    var dirSign = 0;     // 1 for up, -1 for down, 0 for none
     var lastVisible = null; // persistent desired visibility state
 
     function isTopbarMenuOpen() {
@@ -251,8 +255,15 @@ function addScrollTopBehavior() {
     }
 
     function isDocSidebarVisible() {
+        // Prefer layout state from .docs-main
+        var main = document.querySelector('.docs-main');
+        if (main && main.classList.contains('sidebar-hidden')) {
+            return false;
+        }
         var sidebar = document.querySelector('.docs-sidebar');
         if (!sidebar) return false;
+        // If both 'hidden' and 'visible' are present, treat as hidden
+        if (sidebar.classList.contains('hidden')) return false;
         return sidebar.classList.contains('visible');
     }
 
@@ -288,29 +299,45 @@ function addScrollTopBehavior() {
 
     function computeDesiredVisibility() {
         var pos = atTopOrBottom(threshold);
-        var dy = lastScrollY - pos.y;
-        var directionUp = dy > minDelta;
-        var directionDown = dy < -minDelta;
+        var dy = lastScrollY - pos.y; // positive when scrolling up
 
         // If menus are open, always visible
         if (isTopbarMenuOpen() || isDocSidebarVisible()) {
+            // reset accumulation so we don't surprise after closing
+            accum = 0; dirSign = 0;
             return { visible: true, atBottom: false, atTop: pos.atTop, y: pos.y };
         }
 
         // At top or bottom within threshold => visible
         if (pos.atTop || pos.atBottom) {
+            accum = 0; dirSign = 0;
             return { visible: true, atBottom: pos.atBottom, atTop: pos.atTop, y: pos.y };
         }
 
-        // Mid-page behavior: show on upward scroll, hide on downward scroll
-        if (directionUp) {
+        // Mid-page: accumulate movement until threshold reached
+        var sign = dy > 0 ? 1 : (dy < 0 ? -1 : 0);
+        if (sign === 0) {
+            // no movement: keep state, do not change accum
+            return { visible: (lastVisible !== null ? lastVisible : false), atBottom: false, atTop: false, y: pos.y };
+        }
+        if (sign !== dirSign) {
+            // direction changed: reset accumulator to current delta
+            accum = dy;
+            dirSign = sign;
+        } else {
+            accum += dy;
+        }
+
+        if (dirSign === 1 && accum >= UP_THRESHOLD) {
+            // show after sufficient upward scroll
             return { visible: true, atBottom: false, atTop: false, y: pos.y };
         }
-        if (directionDown) {
+        if (dirSign === -1 && (-accum) >= DOWN_THRESHOLD) {
+            // hide after sufficient downward scroll
             return { visible: false, atBottom: false, atTop: false, y: pos.y };
         }
 
-        // No significant movement: keep previous state
+        // Not enough movement yet: keep previous
         return { visible: (lastVisible !== null ? lastVisible : false), atBottom: false, atTop: false, y: pos.y };
     }
 
