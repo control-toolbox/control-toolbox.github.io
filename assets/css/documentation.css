@@ -81,3 +81,44 @@ html, body {
 #documenter .docs-main header.docs-navbar .docs-sidebar-button {
     display: block!important;
 }
+
+/* Align Documenter header (burger) behavior with custom topbar on small screens */
+@media screen and (max-width: 1055px) {
+    /* When JS adds these classes, they override Headroom positioning */
+    #documenter .docs-main header.docs-navbar.ct-header-visible {
+        top: var(--navbar-height) !important;
+    }
+    #documenter .docs-main header.docs-navbar.ct-header-hidden {
+        top: -100vh !important;
+    }
+
+    /* Staggered transitions: topbar first, then header (burger) */
+    #multi-page-nav.smooth-show-hide {
+        transition-property: transform !important;
+        transition-duration: 0.25s !important; /* faster */
+        transition-timing-function: ease-in-out !important;
+        transition-delay: 0s !important; /* no delay for topbar */
+        will-change: transform;
+    }
+
+    #documenter .docs-main header.docs-navbar {
+        transition-property: top, box-shadow !important;
+        transition-duration: 0.35s !important; /* slightly slower */
+        transition-timing-function: ease-in-out !important;
+        transition-delay: 0.08s !important; /* delay so it follows topbar */
+        will-change: top;
+    }
+}
+
+/* Fine-tune when the appearance originates from bottom of page */
+@media screen and (max-width: 1055px) {
+    html.ct-appear-bottom #multi-page-nav.smooth-show-hide {
+        transition-duration: 0.30s !important; /* slightly longer */
+        transition-delay: 0s !important;       /* keep topbar immediate */
+    }
+
+    html.ct-appear-bottom #documenter .docs-main header.docs-navbar {
+        transition-duration: 0.50s !important; /* slightly longer */
+        transition-delay: 0.0s !important;    /* less pronounced delay */
+    }
+}

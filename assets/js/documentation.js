@@ -76,13 +76,6 @@ function showTopBar() {
         topbar.classList.add("show-top-menu");
     }
 
-    // update sidebar
-    var sidebar = document.getElementsByClassName("docs-sidebar");
-    if (sidebar.length > 0) {
-        sidebar[0].classList.remove("hide-top-menu");
-        sidebar[0].classList.add("show-top-menu");
-    }
-
 }
 
 // Function to hide the top bar menu
@@ -93,13 +86,6 @@ function hideTopBar() {
     if (topbar) {
         topbar.classList.remove("show-top-menu");
         topbar.classList.add("hide-top-menu");
-    }
-
-    // update sidebar
-    var sidebar = document.getElementsByClassName("docs-sidebar");
-    if (sidebar.length > 0) {
-        sidebar[0].classList.remove("show-top-menu");
-        sidebar[0].classList.add("hide-top-menu");
     }
 
 }
@@ -198,10 +184,12 @@ if (
     setTimeout(topbarInjector, 1);
     setTimeout(addEventListenerToShowHideTopbar, 1);
     setTimeout(addSidebarToggleButton, 1);
+    setTimeout(addScrollTopBehavior, 1);
 } else {
     document.addEventListener("DOMContentLoaded", topbarInjector);
     document.addEventListener("DOMContentLoaded", addEventListenerToShowHideTopbar);
     document.addEventListener("DOMContentLoaded", addSidebarToggleButton);
+    document.addEventListener("DOMContentLoaded", addScrollTopBehavior);
 }
 
 //
@@ -235,3 +223,145 @@ window.onload = function() {
     }
 
 };
+
+// Add scroll behavior to hide topbar when scrolled down beyond a threshold
+function addScrollTopBehavior() {
+    var ticking = false;
+    var threshold = 20; // px tolerance; adjustable (top and bottom)
+
+    // Cache last states to avoid redundant DOM writes
+    var lastTopbarVisible = null;
+    var lastHeaderVisible = null;
+    var lastScrollY = window.scrollY || window.pageYOffset || 0;
+    var minDelta = 6; // px minimal upward movement to trigger show mid-page
+    var lastVisible = null; // persistent desired visibility state
+
+    function isTopbarMenuOpen() {
+        var navItems = document.getElementById("nav-items");
+        if (!navItems) return false;
+        // On mobile, nav is open when it does NOT have 'hidden-on-mobile'
+        return !navItems.classList.contains("hidden-on-mobile");
+    }
+
+    function isDocSidebarVisible() {
+        var sidebar = document.querySelector('.docs-sidebar');
+        if (!sidebar) return false;
+        return sidebar.classList.contains('visible');
+    }
+
+    function getHeaderEl() {
+        return document.querySelector('#documenter .docs-main header.docs-navbar');
+    }
+
+    function atTopOrBottom(tol) {
+        var y = window.scrollY || window.pageYOffset || 0;
+        var atTop = y <= tol;
+        var atBottom = (window.innerHeight + y) >= ((document.documentElement && document.documentElement.scrollHeight) || document.body.offsetHeight) - tol;
+        return { atTop: atTop, atBottom: atBottom, y: y };
+    }
+
+    function setHeaderVisible(visible) {
+        var header = getHeaderEl();
+        if (!header) return;
+        if (visible === lastHeaderVisible) return;
+        header.classList.toggle('ct-header-visible', !!visible);
+        header.classList.toggle('ct-header-hidden', !visible);
+        lastHeaderVisible = visible;
+    }
+
+    function setTopbarVisible(visible) {
+        if (visible === lastTopbarVisible) return;
+        if (visible) {
+            showTopBar();
+        } else {
+            hideTopBar();
+        }
+        lastTopbarVisible = visible;
+    }
+
+    function computeDesiredVisibility() {
+        var pos = atTopOrBottom(threshold);
+        var dy = lastScrollY - pos.y;
+        var directionUp = dy > minDelta;
+        var directionDown = dy < -minDelta;
+
+        // If menus are open, always visible
+        if (isTopbarMenuOpen() || isDocSidebarVisible()) {
+            return { visible: true, atBottom: false, atTop: pos.atTop, y: pos.y };
+        }
+
+        // At top or bottom within threshold => visible
+        if (pos.atTop || pos.atBottom) {
+            return { visible: true, atBottom: pos.atBottom, atTop: pos.atTop, y: pos.y };
+        }
+
+        // Mid-page behavior: show on upward scroll, hide on downward scroll
+        if (directionUp) {
+            return { visible: true, atBottom: false, atTop: false, y: pos.y };
+        }
+        if (directionDown) {
+            return { visible: false, atBottom: false, atTop: false, y: pos.y };
+        }
+
+        // No significant movement: keep previous state
+        return { visible: (lastVisible !== null ? lastVisible : false), atBottom: false, atTop: false, y: pos.y };
+    }
+
+    function update() {
+        ticking = false;
+        var res = computeDesiredVisibility();
+        var visible = res.visible;
+        // Toggle a root class to signal that appearance originates from bottom
+        // Only set when not forced by menus
+        var fromBottom = res.atBottom && !(isTopbarMenuOpen() || isDocSidebarVisible());
+        try {
+            document.documentElement.classList.toggle('ct-appear-bottom', !!fromBottom);
+        } catch (e) { /* no-op */ }
+        setTopbarVisible(visible);
+        setHeaderVisible(visible);
+        // update last scroll position after applying visibility
+        lastScrollY = res.y;
+        lastVisible = visible;
+    }
+
+    // Initial state: compute once based on current position
+    update();
+
+    // Scroll listener
+    window.addEventListener("scroll", function () {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Resize listener (in case layout switches around 1055px)
+    window.addEventListener('resize', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
+    });
+
+    // Click on Documenter burger button: force reevaluation
+    var docBurger = document.getElementById('documenter-sidebar-button');
+    if (docBurger) {
+        docBurger.addEventListener('click', function () {
+            // Wait a tick so classes update
+            setTimeout(update, 0);
+        });
+    }
+
+    // Observe sidebar visibility class changes
+    var sidebar = document.querySelector('.docs-sidebar');
+    if (sidebar && 'MutationObserver' in window) {
+        try {
+            var observer = new MutationObserver(function () {
+                update();
+            });
+            observer.observe(sidebar, { attributes: true, attributeFilter: ['class'] });
+        } catch (e) {
+            // no-op
+        }
+    }
+}
