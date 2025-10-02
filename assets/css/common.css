@@ -1,3 +1,45 @@
+/* H1 */
+h1 .docs-heading-anchor,
+h1 .docs-heading-anchor:hover,
+h1 .docs-heading-anchor:visited {
+    color: #003d4d; /* bleu très foncé */
+}
+
+/* H2 */
+h2 .docs-heading-anchor,
+h2 .docs-heading-anchor:hover,
+h2 .docs-heading-anchor:visited {
+    color: #005f73; /* bleu profond */
+}
+
+/* H3 */
+h3 .docs-heading-anchor,
+h3 .docs-heading-anchor:hover,
+h3 .docs-heading-anchor:visited {
+    color: #0096a0; /* bleu vif mais contrasté */
+}
+
+/* H4 */
+h4 .docs-heading-anchor,
+h4 .docs-heading-anchor:hover,
+h4 .docs-heading-anchor:visited {
+    color: #f18f01; /* orange/ocre */
+}
+
+/* H5 */
+h5 .docs-heading-anchor,
+h5 .docs-heading-anchor:hover,
+h5 .docs-heading-anchor:visited {
+    color: #d72638; /* rouge doux */
+}
+
+/* H6 */
+h6 .docs-heading-anchor,
+h6 .docs-heading-anchor:hover,
+h6 .docs-heading-anchor:visited {
+    color: #6a0572; /* violet profond */
+}
+
 .center {
     margin: 0;
     position: absolute;
