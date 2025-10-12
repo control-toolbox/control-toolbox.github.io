@@ -83,6 +83,13 @@ function showTopBar() {
         topbar.classList.add("show-top-menu");
     }
 
+    // update sidebar padding state
+    var sidebar = document.querySelector('.docs-sidebar');
+    if (sidebar) {
+        sidebar.classList.remove('hide-top-menu');
+        sidebar.classList.add('show-top-menu');
+    }
+
 }
 
 // Function to hide the top bar menu
@@ -93,6 +100,13 @@ function hideTopBar() {
     if (topbar) {
         topbar.classList.remove("show-top-menu");
         topbar.classList.add("hide-top-menu");
+    }
+
+    // update sidebar padding state
+    var sidebar = document.querySelector('.docs-sidebar');
+    if (sidebar) {
+        sidebar.classList.remove('show-top-menu');
+        sidebar.classList.add('hide-top-menu');
     }
 
 }
