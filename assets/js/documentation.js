@@ -146,10 +146,10 @@ function addSidebarToggleButton() {
         }
         
         var buttonStatus = localStorage.getItem('sidebarButtonStatus');
-        if (buttonStatus === 'show') {
-            showSidebar()
-        } else {
+        if (buttonStatus === 'hide') {
             hideSidebar()
+        } else {
+            showSidebar()
         }
 
     }
@@ -158,12 +158,12 @@ function addSidebarToggleButton() {
 function toggleSidebarButton() {
 
     var buttonStatus = localStorage.getItem('sidebarButtonStatus');
-    if (buttonStatus === 'show') {
-        hideSidebar()
-        localStorage.setItem('sidebarButtonStatus', 'hide');
-    } else {
+    if (buttonStatus === 'hide') {
         showSidebar()
         localStorage.setItem('sidebarButtonStatus', 'show');
+    } else {
+        hideSidebar()
+        localStorage.setItem('sidebarButtonStatus', 'hide');
     }
     
 }
