@@ -397,7 +397,7 @@ function addScrollTopBehavior() {
         var sign = dy > 0 ? 1 : (dy < 0 ? -1 : 0);
         if (sign === 0) {
             // no movement: keep state, do not change accum
-            return { visible: (lastVisible !== null ? lastVisible : false), atBottom: false, atTop: false, y: pos.y };
+            return { visible: (lastVisible !== null ? lastVisible : true), atBottom: false, atTop: false, y: pos.y };
         }
         if (sign !== dirSign) {
             // direction changed: reset accumulator to current delta
