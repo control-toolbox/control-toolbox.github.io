@@ -477,4 +477,37 @@ function addScrollTopBehavior() {
             // no-op
         }
     }
+
+    function forceTopbarVisibleAtCurrentPosition() {
+        accum = 0;
+        dirSign = 0;
+        lastVisible = true;
+        setTopbarVisible(true);
+        setHeaderVisible(true);
+        lastScrollY = window.scrollY || window.pageYOffset || 0;
+    }
+
+    document.addEventListener('click', function (e) {
+        var el = e.target;
+        if (!el) return;
+        if (el.closest) {
+            el = el.closest('a');
+        } else if (!el.tagName || el.tagName.toLowerCase() !== 'a') {
+            return;
+        }
+        if (!el) return;
+        var href = el.getAttribute('href') || '';
+        if (!href) return;
+        if (href.charAt(0) === '#') {
+            setTimeout(forceTopbarVisibleAtCurrentPosition, 80);
+            return;
+        }
+        try {
+            var url = new URL(href, window.location.href);
+            if (url.hash && url.pathname === window.location.pathname && url.origin === window.location.origin) {
+                setTimeout(forceTopbarVisibleAtCurrentPosition, 80);
+            }
+        } catch (err) {
+        }
+    }, true);
 }
