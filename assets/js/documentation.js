@@ -94,21 +94,21 @@ function showTopBar() {
 
 // Function to hide the top bar menu
 function hideTopBar() {
+    
+    // // update top bar
+    // var topbar = document.getElementById("multi-page-nav");
+    // if (topbar) {
+    //     topbar.classList.remove("show-top-menu");
+    //     topbar.classList.add("hide-top-menu");
+    // }
 
-    // update top bar
-    var topbar = document.getElementById("multi-page-nav");
-    if (topbar) {
-        topbar.classList.remove("show-top-menu");
-        topbar.classList.add("hide-top-menu");
-    }
-
-    // update sidebar padding state
-    var sidebar = document.querySelector('.docs-sidebar');
-    if (sidebar) {
-        sidebar.classList.remove('show-top-menu');
-        sidebar.classList.add('hide-top-menu');
-    }
-
+    // // update sidebar padding state
+    // var sidebar = document.querySelector('.docs-sidebar');
+    // if (sidebar) {
+    //     sidebar.classList.remove('show-top-menu');
+    //     sidebar.classList.add('hide-top-menu');
+    // }
+    
 }
 
 // ajoute un event listener sur les touches du clavier
