@@ -30,7 +30,7 @@ function topbarInjector() {
             <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControlProblems.jl/stable/#Citing-us">OptimalControlProblems</a>      
             </ul>
         </div>
-        <a class="nav-link nav-item" href="https://github.com/control-toolbox">Github</a>
+        <a class="nav-link nav-item" href="https://github.com/control-toolbox">GitHub</a>
         </div>
         <button id="multidoc-toggler">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
