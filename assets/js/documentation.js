@@ -32,6 +32,7 @@ function topbarInjector() {
             </ul>
         </div>
         <a class="nav-link nav-item" href="https://github.com/control-toolbox">GitHub</a>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/contributors/">Contributors</a>
         </div>
         <button id="multidoc-toggler">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
