@@ -1,0 +1,128 @@
+name: Update Contributors Page
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday at 6:00 UTC (8:00 AM in France)
+  workflow_dispatch:      # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-contributors:
+    name: 🌟 Update Contributors Page
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Install Python dependencies
+        run: |
+          echo "📦 Installing Python dependencies..."
+          pip install -r scripts/requirements.txt
+          echo "✅ Dependencies installed"
+      
+      - name: 🔍 Verify dependencies
+        run: |
+          echo "🔍 Verifying installed packages..."
+          python3 -c "import requests; print(f'✓ requests {requests.__version__}')"
+          python3 -c "import dotenv; print(f'✓ python-dotenv installed')"
+          echo "✅ All dependencies verified"
+      
+      - name: 🌟 Generate contributors page
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🌟 Generating contributors page..."
+          echo "📊 Analyzing repositories..."
+          cd scripts
+          python3 github_contributors.py --web
+          echo "✅ Contributors page generated"
+      
+      - name: 📊 Check if file was generated
+        run: |
+          if [ -f "about/contributors.md" ]; then
+            echo "✅ Contributors page exists"
+            echo "📄 File size: $(stat -f%z about/contributors.md 2>/dev/null || stat -c%s about/contributors.md 2>/dev/null) bytes"
+            echo ""
+            echo "📋 First 10 lines:"
+            head -n 10 about/contributors.md
+          else
+            echo "❌ Contributors page not found!"
+            exit 1
+          fi
+      
+      - name: 🔧 Configure git
+        run: |
+          echo "🔧 Configuring git user..."
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          echo "✅ Git user configured"
+      
+      - name: 📝 Commit and push changes
+        run: |
+          echo "🌳 Checking git status..."
+          git status
+          
+          echo ""
+          echo "📊 Adding contributors page..."
+          git add about/contributors.md
+          
+          # Check if there are changes to commit
+          if git diff --cached --quiet; then
+            echo "ℹ️  No changes detected in contributors page"
+            echo "📊 Page is already up to date"
+            exit 0
+          fi
+          
+          echo "✅ Changes detected, preparing commit..."
+          echo ""
+          echo "📋 Files to be committed:"
+          git diff --cached --name-status
+          
+          echo ""
+          echo "📝 Committing changes..."
+          TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git commit -m "🌟 Update contributors page" \
+                     -m "Automated update of the contributors page" \
+                     -m "Generated on: $TIMESTAMP" \
+                     -m "" \
+                     -m "This commit was automatically created by the Update Contributors workflow."
+          
+          echo "✅ Changes committed"
+          
+          echo ""
+          echo "🚀 Pushing to repository..."
+          git push origin main || git push origin master
+          echo "✅ Changes pushed successfully"
+      
+      - name: ✅ Workflow summary
+        if: always()
+        run: |
+          echo ""
+          echo "=========================================="
+          echo "📊 Contributors Page Update Summary"
+          echo "=========================================="
+          echo ""
+          
+          if [ -f "about/contributors.md" ]; then
+            echo "✅ Contributors page: Generated"
+            echo "📁 Location: about/contributors.md"
+            echo "🌐 URL: https://control-toolbox.org/contributors/"
+          else
+            echo "❌ Contributors page: Failed to generate"
+          fi
+          
+          echo ""
+          echo "🕒 Workflow completed at: $(date -u +"%Y-%m-%d %H:%M UTC")"
+          echo "=========================================="

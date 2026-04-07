@@ -1,0 +1,557 @@
+---
+layout: default
+title: Contributors
+permalink: /contributors/
+---
+
+<link rel="stylesheet" href="/assets/css/contributors.css">
+
+<div class="contributors-page">
+
+<div class="contributors-header">
+<h1>🌟 Contributors</h1>
+<p class="subtitle">Thank you to all the amazing people who have contributed to the control-toolbox ecosystem!</p>
+<p class="last-update">Last updated: April 07, 2026 at 15:23 UTC</p>
+</div>
+
+<div class="summary-cards">
+<div class="summary-card card-repos">
+<div class="card-label">Repositories</div>
+<div class="card-value">24</div>
+</div>
+<div class="summary-card card-contributors">
+<div class="card-label">Contributors</div>
+<div class="card-value">32</div>
+</div>
+<div class="summary-card card-commits">
+<div class="card-label">Total Commits</div>
+<div class="card-value">8,569</div>
+</div>
+</div>
+
+<div class="info-box">
+<p><strong>Note:</strong> Contributions represent commits made to the repositories. Bots are excluded from the statistics. </p>
+</div>
+
+<div class="contributors-section">
+<h2>👥 All Contributors</h2>
+<div class="contributors-inline">
+<span class="contributor-item"><a href="https://github.com/ocots" class="contributor-name">ocots</a> <span class="contributor-count">(6063)</span></span>, <span class="contributor-item"><a href="https://github.com/jbcaillau" class="contributor-name">jbcaillau</a> <span class="contributor-count">(1170)</span></span>, <span class="contributor-item"><a href="https://github.com/PierreMartinon" class="contributor-name">PierreMartinon</a> <span class="contributor-count">(477)</span></span>, <span class="contributor-item"><a href="https://github.com/0Yassine0" class="contributor-name">0Yassine0</a> <span class="contributor-count">(200)</span></span>, <span class="contributor-item"><a href="https://github.com/BaptisteCbl" class="contributor-name">BaptisteCbl</a> <span class="contributor-count">(151)</span></span>, <span class="contributor-item"><a href="https://github.com/j-l-s" class="contributor-name">j-l-s</a> <span class="contributor-count">(140)</span></span>, <span class="contributor-item"><a href="https://github.com/AnasXbouali" class="contributor-name">AnasXbouali</a> <span class="contributor-count">(71)</span></span>, <span class="contributor-item"><a href="https://github.com/AmielMetier" class="contributor-name">AmielMetier</a> <span class="contributor-count">(65)</span></span>, <span class="contributor-item"><a href="https://github.com/gergaud" class="contributor-name">gergaud</a> <span class="contributor-count">(55)</span></span>, <span class="contributor-item"><a href="https://github.com/agustinyabo" class="contributor-name">agustinyabo</a> <span class="contributor-count">(24)</span></span>, <span class="contributor-item"><a href="https://github.com/antoinepichon03" class="contributor-name">antoinepichon03</a> <span class="contributor-count">(23)</span></span>, <span class="contributor-item"><a href="https://github.com/HediChennoufi" class="contributor-name">HediChennoufi</a> <span class="contributor-count">(19)</span></span>, <span class="contributor-item"><a href="https://github.com/baillietn" class="contributor-name">baillietn</a> <span class="contributor-count">(15)</span></span>, <span class="contributor-item"><a href="https://github.com/Yassin-Moukan" class="contributor-name">Yassin-Moukan</a> <span class="contributor-count">(13)</span></span>, <span class="contributor-item"><a href="https://github.com/alegoupil" class="contributor-name">alegoupil</a> <span class="contributor-count">(11)</span></span>, <span class="contributor-item"><a href="https://github.com/amontoison" class="contributor-name">amontoison</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/Ousmane-prog" class="contributor-name">Ousmane-prog</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/joseph-gergaud" class="contributor-name">joseph-gergaud</a> <span class="contributor-count">(9)</span></span>, <span class="contributor-item"><a href="https://github.com/YouriRenoud" class="contributor-name">YouriRenoud</a> <span class="contributor-count">(9)</span></span>, <span class="contributor-item"><a href="https://github.com/ade4569" class="contributor-name">ade4569</a> <span class="contributor-count">(6)</span></span>, <span class="contributor-item"><a href="https://github.com/srcansiz" class="contributor-name">srcansiz</a> <span class="contributor-count">(5)</span></span>, <span class="contributor-item"><a href="https://github.com/michel2323" class="contributor-name">michel2323</a> <span class="contributor-count">(4)</span></span>, <span class="contributor-item"><a href="https://github.com/oameye" class="contributor-name">oameye</a> <span class="contributor-count">(3)</span></span>, <span class="contributor-item"><a href="https://github.com/gdalle" class="contributor-name">gdalle</a> <span class="contributor-count">(3)</span></span>, <span class="contributor-item"><a href="https://github.com/remydutto" class="contributor-name">remydutto</a> <span class="contributor-count">(3)</span></span>, <span class="contributor-item"><a href="https://github.com/abavoil" class="contributor-name">abavoil</a> <span class="contributor-count">(2)</span></span>, <span class="contributor-item"><a href="https://github.com/tmigot" class="contributor-name">tmigot</a> <span class="contributor-count">(2)</span></span>, <span class="contributor-item"><a href="https://github.com/loxim3" class="contributor-name">loxim3</a> <span class="contributor-count">(2)</span></span>, <span class="contributor-item"><a href="https://github.com/mjacobse" class="contributor-name">mjacobse</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/Lupylune" class="contributor-name">Lupylune</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/frapac" class="contributor-name">frapac</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/BWembe" class="contributor-name">BWembe</a> <span class="contributor-count">(1)</span></span>
+</div>
+</div>
+
+<div class="contributors-section">
+<h2>🏆 Top 10 Contributors</h2>
+<ol class="top-contributors-list">
+<li><a href="https://github.com/ocots" class="contributor-name">ocots</a> — <span class="contributor-stats">6,063 contributions (70.8%)</span></li>
+<li><a href="https://github.com/jbcaillau" class="contributor-name">jbcaillau</a> — <span class="contributor-stats">1,170 contributions (13.7%)</span></li>
+<li><a href="https://github.com/PierreMartinon" class="contributor-name">PierreMartinon</a> — <span class="contributor-stats">477 contributions (5.6%)</span></li>
+<li><a href="https://github.com/0Yassine0" class="contributor-name">0Yassine0</a> — <span class="contributor-stats">200 contributions (2.3%)</span></li>
+<li><a href="https://github.com/BaptisteCbl" class="contributor-name">BaptisteCbl</a> — <span class="contributor-stats">151 contributions (1.8%)</span></li>
+<li><a href="https://github.com/j-l-s" class="contributor-name">j-l-s</a> — <span class="contributor-stats">140 contributions (1.6%)</span></li>
+<li><a href="https://github.com/AnasXbouali" class="contributor-name">AnasXbouali</a> — <span class="contributor-stats">71 contributions (0.8%)</span></li>
+<li><a href="https://github.com/AmielMetier" class="contributor-name">AmielMetier</a> — <span class="contributor-stats">65 contributions (0.8%)</span></li>
+<li><a href="https://github.com/gergaud" class="contributor-name">gergaud</a> — <span class="contributor-stats">55 contributions (0.6%)</span></li>
+<li><a href="https://github.com/agustinyabo" class="contributor-name">agustinyabo</a> — <span class="contributor-stats">24 contributions (0.3%)</span></li>
+</ol>
+</div>
+
+<div class="contributors-section">
+<h2>📊 Detailed Ranking</h2>
+<table class="contributors-table">
+<thead>
+<tr>
+<th>Rank</th>
+<th>Contributor</th>
+<th>Contributions</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="rank-badge top-1">1</span></td>
+<td><a href="https://github.com/ocots" class="contributor-link">ocots</a></td>
+<td>6,063</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 70.75504726339129%"></div>
+</div>
+<span class="percentage-text">70.8%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-2">2</span></td>
+<td><a href="https://github.com/jbcaillau" class="contributor-link">jbcaillau</a></td>
+<td>1,170</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 13.653868596102228%"></div>
+</div>
+<span class="percentage-text">13.7%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-3">3</span></td>
+<td><a href="https://github.com/PierreMartinon" class="contributor-link">PierreMartinon</a></td>
+<td>477</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 5.566577196872447%"></div>
+</div>
+<span class="percentage-text">5.6%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-10">4</span></td>
+<td><a href="https://github.com/0Yassine0" class="contributor-link">0Yassine0</a></td>
+<td>200</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 2.333994631812347%"></div>
+</div>
+<span class="percentage-text">2.3%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-10">5</span></td>
+<td><a href="https://github.com/BaptisteCbl" class="contributor-link">BaptisteCbl</a></td>
+<td>151</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 1.762165947018322%"></div>
+</div>
+<span class="percentage-text">1.8%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-10">6</span></td>
+<td><a href="https://github.com/j-l-s" class="contributor-link">j-l-s</a></td>
+<td>140</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 1.633796242268643%"></div>
+</div>
+<span class="percentage-text">1.6%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-10">7</span></td>
+<td><a href="https://github.com/AnasXbouali" class="contributor-link">AnasXbouali</a></td>
+<td>71</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.8285680942933832%"></div>
+</div>
+<span class="percentage-text">0.8%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-10">8</span></td>
+<td><a href="https://github.com/AmielMetier" class="contributor-link">AmielMetier</a></td>
+<td>65</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.7585482553390127%"></div>
+</div>
+<span class="percentage-text">0.8%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-10">9</span></td>
+<td><a href="https://github.com/gergaud" class="contributor-link">gergaud</a></td>
+<td>55</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.6418485237483954%"></div>
+</div>
+<span class="percentage-text">0.6%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge top-10">10</span></td>
+<td><a href="https://github.com/agustinyabo" class="contributor-link">agustinyabo</a></td>
+<td>24</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.2800793558174816%"></div>
+</div>
+<span class="percentage-text">0.3%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">11</span></td>
+<td><a href="https://github.com/antoinepichon03" class="contributor-link">antoinepichon03</a></td>
+<td>23</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.2684093826584199%"></div>
+</div>
+<span class="percentage-text">0.3%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">12</span></td>
+<td><a href="https://github.com/HediChennoufi" class="contributor-link">HediChennoufi</a></td>
+<td>19</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.22172949002217296%"></div>
+</div>
+<span class="percentage-text">0.2%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">13</span></td>
+<td><a href="https://github.com/baillietn" class="contributor-link">baillietn</a></td>
+<td>15</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.17504959738592601%"></div>
+</div>
+<span class="percentage-text">0.2%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">14</span></td>
+<td><a href="https://github.com/Yassin-Moukan" class="contributor-link">Yassin-Moukan</a></td>
+<td>13</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.15170965106780254%"></div>
+</div>
+<span class="percentage-text">0.2%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">15</span></td>
+<td><a href="https://github.com/alegoupil" class="contributor-link">alegoupil</a></td>
+<td>11</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.12836970474967907%"></div>
+</div>
+<span class="percentage-text">0.1%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">16</span></td>
+<td><a href="https://github.com/amontoison" class="contributor-link">amontoison</a></td>
+<td>10</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.11669973159061733%"></div>
+</div>
+<span class="percentage-text">0.1%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">17</span></td>
+<td><a href="https://github.com/Ousmane-prog" class="contributor-link">Ousmane-prog</a></td>
+<td>10</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.11669973159061733%"></div>
+</div>
+<span class="percentage-text">0.1%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">18</span></td>
+<td><a href="https://github.com/joseph-gergaud" class="contributor-link">joseph-gergaud</a></td>
+<td>9</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.10502975843155561%"></div>
+</div>
+<span class="percentage-text">0.1%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">19</span></td>
+<td><a href="https://github.com/YouriRenoud" class="contributor-link">YouriRenoud</a></td>
+<td>9</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.10502975843155561%"></div>
+</div>
+<span class="percentage-text">0.1%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">20</span></td>
+<td><a href="https://github.com/ade4569" class="contributor-link">ade4569</a></td>
+<td>6</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.0700198389543704%"></div>
+</div>
+<span class="percentage-text">0.1%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">21</span></td>
+<td><a href="https://github.com/srcansiz" class="contributor-link">srcansiz</a></td>
+<td>5</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.05834986579530867%"></div>
+</div>
+<span class="percentage-text">0.1%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">22</span></td>
+<td><a href="https://github.com/michel2323" class="contributor-link">michel2323</a></td>
+<td>4</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.04667989263624694%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">23</span></td>
+<td><a href="https://github.com/oameye" class="contributor-link">oameye</a></td>
+<td>3</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.0350099194771852%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">24</span></td>
+<td><a href="https://github.com/gdalle" class="contributor-link">gdalle</a></td>
+<td>3</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.0350099194771852%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">25</span></td>
+<td><a href="https://github.com/remydutto" class="contributor-link">remydutto</a></td>
+<td>3</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.0350099194771852%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">26</span></td>
+<td><a href="https://github.com/abavoil" class="contributor-link">abavoil</a></td>
+<td>2</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.02333994631812347%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">27</span></td>
+<td><a href="https://github.com/tmigot" class="contributor-link">tmigot</a></td>
+<td>2</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.02333994631812347%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">28</span></td>
+<td><a href="https://github.com/loxim3" class="contributor-link">loxim3</a></td>
+<td>2</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.02333994631812347%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">29</span></td>
+<td><a href="https://github.com/mjacobse" class="contributor-link">mjacobse</a></td>
+<td>1</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.011669973159061734%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">30</span></td>
+<td><a href="https://github.com/Lupylune" class="contributor-link">Lupylune</a></td>
+<td>1</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.011669973159061734%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">31</span></td>
+<td><a href="https://github.com/frapac" class="contributor-link">frapac</a></td>
+<td>1</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.011669973159061734%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+<tr>
+<td><span class="rank-badge other">32</span></td>
+<td><a href="https://github.com/BWembe" class="contributor-link">BWembe</a></td>
+<td>1</td>
+<td>
+<div class="contribution-bar">
+<div class="bar-container">
+<div class="bar-fill" style="width: 0.011669973159061734%"></div>
+</div>
+<span class="percentage-text">0.0%</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="contributors-section">
+<h2>📈 Additional Statistics</h2>
+<div class="stats-grid">
+<div class="stat-item">
+<strong>Average contributions</strong>
+<span>267.8 commits per contributor</span>
+</div>
+<div class="stat-item">
+<strong>Median contributions</strong>
+<span>10 commits</span>
+</div>
+<div class="stat-item">
+<strong>Top 10 contributions</strong>
+<span>8,416 commits (98.2%)</span>
+</div>
+<div class="stat-item">
+<strong>Other contributors</strong>
+<span>153 commits (1.8%)</span>
+</div>
+</div>
+</div>
+
+<div class="contributors-section">
+<h2>📦 Analyzed Repositories</h2>
+<div class="repo-list">
+<h3>AnasXbouali</h3>
+<ul>
+<li><a href="https://github.com/AnasXbouali/SIRcontrol.jl">SIRcontrol.jl</a></li>
+</ul>
+<h3>agustinyabo</h3>
+<ul>
+<li><a href="https://github.com/agustinyabo/DiauxicGrowth.jl">DiauxicGrowth.jl</a></li>
+<li><a href="https://github.com/agustinyabo/PWLdynamics.jl">PWLdynamics.jl</a></li>
+</ul>
+<h3>control-toolbox</h3>
+<ul>
+<li><a href="https://github.com/control-toolbox/CTActions">CTActions</a></li>
+<li><a href="https://github.com/control-toolbox/CTAppTemplate.jl">CTAppTemplate.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTBase.jl">CTBase.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTBenchmarks.jl">CTBenchmarks.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTDiffFlow.jl">CTDiffFlow.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTDirect.jl">CTDirect.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTFlows.jl">CTFlows.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTModels.jl">CTModels.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTParser.jl">CTParser.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTProblems.jl">CTProblems.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTSolvers.jl">CTSolvers.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CalculusOfVariations.jl">CalculusOfVariations.jl</a></li>
+<li><a href="https://github.com/control-toolbox/GeometricPreconditioner.jl">GeometricPreconditioner.jl</a></li>
+<li><a href="https://github.com/control-toolbox/Kepler.jl">Kepler.jl</a></li>
+<li><a href="https://github.com/control-toolbox/LossControl.jl">LossControl.jl</a></li>
+<li><a href="https://github.com/control-toolbox/MagneticResonanceImaging.jl">MagneticResonanceImaging.jl</a></li>
+<li><a href="https://github.com/control-toolbox/OptimalControl.jl">OptimalControl.jl</a></li>
+<li><a href="https://github.com/control-toolbox/OptimalControlProblems.jl">OptimalControlProblems.jl</a></li>
+<li><a href="https://github.com/control-toolbox/ProjetLong26">ProjetLong26</a></li>
+<li><a href="https://github.com/control-toolbox/Tutorials.jl">Tutorials.jl</a></li>
+<li><a href="https://github.com/control-toolbox/ct-registry">ct-registry</a></li>
+</ul>
+</div>
+</div>
+
+<hr>
+<p style="text-align: center; color: #6a737d; font-size: 0.9rem;">
+<em>🤖 This page is automatically generated via the GitHub API and updated weekly.</em>
+</p>
+
+</div>
