@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+
+gem "jekyll", "~> 3.9.0"
+gem "jekyll-theme-primer"
+gem "jekyll-seo-tag"
+gem "webrick", "~> 1.7"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"
+gem "kramdown-parser-gfm"
