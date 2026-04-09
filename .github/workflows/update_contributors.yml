@@ -1,8 +1,8 @@
 name: Update Contributors Page
 
 on:
-  schedule:
-    - cron: '0 6 * * 1'  # Every Monday at 6:00 UTC (8:00 AM in France)
+  schedule: # execute every 24 hours
+    - cron: "* */24 * * *"
   workflow_dispatch:      # Allow manual trigger
 
 permissions:
