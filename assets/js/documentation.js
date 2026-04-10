@@ -10,19 +10,7 @@ function topbarInjector() {
         <div class="hidden-on-mobile" id="nav-items" style="width: inherit;">
         <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControl.jl">Documentation</a>
         <a class="nav-link nav-item" href="https://control-toolbox.org/Tutorials.jl">Tutorials</a>
-        <div class="nav-dropdown">
-            <button class="nav-item dropdown-label ">Applications</button>
-            <ul class="nav-dropdown-container">
-            <a class="nav-link nav-item" href="https://control-toolbox.org/CalculusOfVariations.jl">Calculus of variations</a>
-            <a class="nav-link nav-item" href="https://agustinyabo.github.io/DiauxicGrowth.jl">Diauxic bacterial growth</a>
-            <a class="nav-link nav-item" href="https://agustinyabo.github.io/PWLdynamics.jl">Gene regulatory networks</a>
-            <a class="nav-link nav-item" href="https://control-toolbox.org/GeometricPreconditioner.jl">Geometric preconditioner</a>
-            <a class="nav-link nav-item" href="https://control-toolbox.org/LossControl.jl">Loss control</a>
-            <a class="nav-link nav-item" href="https://control-toolbox.org/MagneticResonanceImaging.jl">Magnetic Resonance Imaging</a>
-            <a class="nav-link nav-item" href="https://control-toolbox.org/Kepler.jl">Orbit transfer - Kepler</a>
-            <a class="nav-link nav-item" href="https://anasxbouali.github.io/SIRcontrol.jl">SIR control</a>            
-            </ul>
-        </div>
+        <a class="nav-link nav-item" href="https://control-toolbox.org/applications/">Applications</a>
         <a class="nav-link nav-item" href="https://control-toolbox.org/OptimalControlProblems.jl">Problems</a>
         <div class="nav-dropdown">
             <button class="nav-item dropdown-label ">Citing</button>

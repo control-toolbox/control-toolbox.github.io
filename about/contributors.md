@@ -2,9 +2,8 @@
 layout: default
 title: Contributors
 permalink: /contributors/
+custom_css: /assets/css/contributors.css
 ---
-
-<link rel="stylesheet" href="/assets/css/contributors.css">
 
 <div class="contributors-page">
 
