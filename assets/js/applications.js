@@ -24,6 +24,30 @@
   btnDetailed.addEventListener('click', function() { setView('detailed'); });
   btnCompact.addEventListener('click', function() { setView('compact'); });
 
+  // ÉTAPE 1: Mobile portrait filter toggle
+  var mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+  var filterTagsWrapper = document.getElementById('filter-tags-wrapper');
+  var MOBILE_FILTERS_KEY = 'mobile-filters-expanded';
+
+  if (mobileFilterToggle && filterTagsWrapper) {
+    // Load saved state
+    var savedState = localStorage.getItem(MOBILE_FILTERS_KEY);
+    if (savedState === 'true') {
+      filterTagsWrapper.classList.add('expanded');
+      mobileFilterToggle.classList.add('expanded');
+      mobileFilterToggle.querySelector('span').textContent = 'Hide filter tags';
+    }
+
+    // Toggle on click
+    mobileFilterToggle.addEventListener('click', function() {
+      filterTagsWrapper.classList.toggle('expanded');
+      mobileFilterToggle.classList.toggle('expanded');
+      var isExpanded = filterTagsWrapper.classList.contains('expanded');
+      mobileFilterToggle.querySelector('span').textContent = isExpanded ? 'Hide filter tags' : 'Show filter tags';
+      localStorage.setItem(MOBILE_FILTERS_KEY, isExpanded);
+    });
+  }
+
   // Tag filtering and search
   var cards = Array.from(grid.querySelectorAll('.app-card'));
   var filterCounter = document.getElementById('filter-counter');

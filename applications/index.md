@@ -6,7 +6,7 @@ custom_css:
   - /assets/css/contributors.css
   - /assets/css/applications.css
 custom_js:
-  - /assets/js/applications.js?v=2
+  - /assets/js/applications.js?v=5
 ---
 
 <div class="contributors-page">
@@ -35,6 +35,15 @@ custom_js:
 <input type="text" id="search-input" placeholder="Search applications..." />
 </div>
 
+<!-- Toggle button for mobile portrait (hidden by default) -->
+<button class="mobile-filter-toggle" id="mobile-filter-toggle" style="display: none;">
+<span>Show filter tags</span>
+<i class="fa-solid fa-chevron-down"></i>
+</button>
+
+<!-- Collapsible tags container -->
+<div class="filter-tags-wrapper" id="filter-tags-wrapper">
+
 <div class="filter-tags-section">
 <h4>Application Domains</h4>
 <div class="filter-bar" id="filter-bar-domains"></div>
@@ -58,6 +67,8 @@ custom_js:
 <div class="filter-tags-section">
 <h4>Specific Techniques</h4>
 <div class="filter-bar" id="filter-bar-techniques"></div>
+</div>
+
 </div>
 </div>
 </aside>
