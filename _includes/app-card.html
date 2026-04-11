@@ -4,13 +4,14 @@
 <span class="app-title">{{ include.title }}</span>
 </div>
 <div class="app-body">
+<p class="app-summary">{{ include.summary }}</p>
 {% if include.tags_list %}
 <div class="app-tags">
+<span class="tags-label">Tags:</span>
 {% for tag in include.tags_list %}
 <span class="tag">{{ tag }}</span>
 {% endfor %}
 </div>
 {% endif %}
-<p class="app-summary">{{ include.summary }}</p>
 </div>
 </a>

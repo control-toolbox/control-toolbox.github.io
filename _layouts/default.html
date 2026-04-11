@@ -41,6 +41,7 @@
 
     </div>
     
+    {% if page.custom_js %}{% assign js_list = page.custom_js %}{% if js_list.first %}{% for js in js_list %}<script src="{{ js }}"></script>{% endfor %}{% else %}<script src="{{ js_list }}"></script>{% endif %}{% endif %}
   </body>
 
 </html>
