@@ -6,7 +6,7 @@ custom_css:
   - /assets/css/contributors.css
   - /assets/css/applications.css
 custom_js:
-  - /assets/js/applications.js?v=8
+  - /assets/js/applications.js?v=9
 ---
 
 <div class="contributors-page">

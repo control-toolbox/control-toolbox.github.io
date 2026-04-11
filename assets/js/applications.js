@@ -18,8 +18,19 @@
     localStorage.setItem(VIEW_STORAGE_KEY, mode);
   }
 
+  // Check if mobile
+  function isMobile() {
+    return window.innerWidth <= 480 || 
+           (window.innerHeight <= 500 && window.matchMedia('(orientation: landscape)').matches);
+  }
+
+  // Set initial view: compact by default on mobile if no preference
   var savedView = localStorage.getItem(VIEW_STORAGE_KEY);
-  if (savedView) { setView(savedView); }
+  if (savedView) {
+    setView(savedView);
+  } else if (isMobile()) {
+    setView('compact');
+  }
 
   btnDetailed.addEventListener('click', function() { setView('detailed'); });
   btnCompact.addEventListener('click', function() { setView('compact'); });
