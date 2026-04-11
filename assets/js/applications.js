@@ -48,6 +48,35 @@
     });
   }
 
+  // ÉTAPE 2: Landscape drawer toggle
+  var landscapeHamburger = document.getElementById('landscape-hamburger');
+  var landscapeOverlay = document.getElementById('landscape-overlay');
+  var filterSidebar = document.getElementById('filter-sidebar');
+  var LANDSCAPE_DRAWER_KEY = 'landscape-drawer-open';
+
+  if (landscapeHamburger && landscapeOverlay && filterSidebar) {
+    // Load saved state (default: open)
+    var drawerState = localStorage.getItem(LANDSCAPE_DRAWER_KEY);
+    if (drawerState === 'false') {
+      filterSidebar.classList.add('closed');
+      landscapeOverlay.classList.remove('visible');
+    } else {
+      // Default: drawer open, show overlay
+      landscapeOverlay.classList.add('visible');
+    }
+
+    // Toggle drawer
+    function toggleDrawer() {
+      filterSidebar.classList.toggle('closed');
+      landscapeOverlay.classList.toggle('visible');
+      var isOpen = !filterSidebar.classList.contains('closed');
+      localStorage.setItem(LANDSCAPE_DRAWER_KEY, isOpen);
+    }
+
+    landscapeHamburger.addEventListener('click', toggleDrawer);
+    landscapeOverlay.addEventListener('click', toggleDrawer);
+  }
+
   // Tag filtering and search
   var cards = Array.from(grid.querySelectorAll('.app-card'));
   var filterCounter = document.getElementById('filter-counter');

@@ -6,7 +6,7 @@ custom_css:
   - /assets/css/contributors.css
   - /assets/css/applications.css
 custom_js:
-  - /assets/js/applications.js?v=5
+  - /assets/js/applications.js?v=8
 ---
 
 <div class="contributors-page">
@@ -16,8 +16,17 @@ custom_js:
 {% assign app_count = 8 %}
 
 <div class="apps-layout">
+
+<!-- Landscape drawer overlay (hidden by default) -->
+<div class="landscape-overlay" id="landscape-overlay"></div>
+
+<!-- Landscape hamburger button (hidden by default) -->
+<button class="landscape-hamburger" id="landscape-hamburger" style="display: none;">
+<i class="fa-solid fa-bars"></i>
+</button>
+
 <!-- Sidebar -->
-<aside class="filter-sidebar">
+<aside class="filter-sidebar" id="filter-sidebar">
 <div class="filter-sidebar-inner">
 <div class="sidebar-header">
 <h3><i class="fa-solid fa-filter"></i> Filters</h3>
