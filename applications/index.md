@@ -6,7 +6,7 @@ custom_css:
   - /assets/css/contributors.css
   - /assets/css/applications.css
 custom_js:
-  - /assets/js/applications.js?v=9
+  - /assets/js/applications.js?v=14
 ---
 
 <div class="contributors-page">
@@ -30,10 +30,19 @@ custom_js:
 <div class="filter-sidebar-inner">
 <div class="sidebar-header">
 <h3><i class="fa-solid fa-filter"></i> Filters</h3>
+<div class="sidebar-header-actions">
+<!-- Portrait collapse button (hidden by default) -->
+<button class="portrait-collapse-btn" id="portrait-collapse-btn" style="display: none;">
+<i class="fa-solid fa-chevron-down"></i>
+</button>
 <button class="filter-reset hidden" id="filter-reset">
 <i class="fa-solid fa-rotate-left"></i> Clear all
 </button>
 </div>
+</div>
+
+<!-- Collapsible content wrapper (level 1) -->
+<div class="portrait-content-wrapper" id="portrait-content-wrapper">
 
 <div class="filter-counter-box">
 <span class="filter-counter" id="filter-counter">{{ app_count }} application{% if app_count != 1 %}s{% endif %}</span>
@@ -44,13 +53,13 @@ custom_js:
 <input type="text" id="search-input" placeholder="Search applications..." />
 </div>
 
-<!-- Toggle button for mobile portrait (hidden by default) -->
+<!-- Toggle button for mobile portrait tags (level 2) -->
 <button class="mobile-filter-toggle" id="mobile-filter-toggle" style="display: none;">
 <span>Show filter tags</span>
 <i class="fa-solid fa-chevron-down"></i>
 </button>
 
-<!-- Collapsible tags container -->
+<!-- Collapsible tags container (level 2) -->
 <div class="filter-tags-wrapper" id="filter-tags-wrapper">
 
 <div class="filter-tags-section">
@@ -76,6 +85,8 @@ custom_js:
 <div class="filter-tags-section">
 <h4>Specific Techniques</h4>
 <div class="filter-bar" id="filter-bar-techniques"></div>
+</div>
+
 </div>
 
 </div>

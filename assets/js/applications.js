@@ -35,7 +35,29 @@
   btnDetailed.addEventListener('click', function() { setView('detailed'); });
   btnCompact.addEventListener('click', function() { setView('compact'); });
 
-  // ÉTAPE 1: Mobile portrait filter toggle
+  // ÉTAPE 4: Portrait double accordion - Level 1 (main content)
+  var portraitCollapseBtn = document.getElementById('portrait-collapse-btn');
+  var portraitContentWrapper = document.getElementById('portrait-content-wrapper');
+  var PORTRAIT_CONTENT_KEY = 'portrait-content-expanded';
+
+  if (portraitCollapseBtn && portraitContentWrapper) {
+    // Load saved state (default: collapsed)
+    var contentState = localStorage.getItem(PORTRAIT_CONTENT_KEY);
+    if (contentState === 'true') {
+      portraitContentWrapper.classList.add('expanded');
+      portraitCollapseBtn.classList.add('expanded');
+    }
+
+    // Toggle on click
+    portraitCollapseBtn.addEventListener('click', function() {
+      portraitContentWrapper.classList.toggle('expanded');
+      portraitCollapseBtn.classList.toggle('expanded');
+      var isExpanded = portraitContentWrapper.classList.contains('expanded');
+      localStorage.setItem(PORTRAIT_CONTENT_KEY, isExpanded);
+    });
+  }
+
+  // ÉTAPE 1: Mobile portrait filter toggle - Level 2 (tags)
   var mobileFilterToggle = document.getElementById('mobile-filter-toggle');
   var filterTagsWrapper = document.getElementById('filter-tags-wrapper');
   var MOBILE_FILTERS_KEY = 'mobile-filters-expanded';
@@ -71,15 +93,18 @@
     if (drawerState === 'false') {
       filterSidebar.classList.add('closed');
       landscapeOverlay.classList.remove('visible');
+      landscapeHamburger.classList.remove('hidden');
     } else {
-      // Default: drawer open, show overlay
+      // Default: drawer open, show overlay, hide hamburger
       landscapeOverlay.classList.add('visible');
+      landscapeHamburger.classList.add('hidden');
     }
 
     // Toggle drawer
     function toggleDrawer() {
       filterSidebar.classList.toggle('closed');
       landscapeOverlay.classList.toggle('visible');
+      landscapeHamburger.classList.toggle('hidden');
       var isOpen = !filterSidebar.classList.contains('closed');
       localStorage.setItem(LANDSCAPE_DRAWER_KEY, isOpen);
     }

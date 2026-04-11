@@ -125,17 +125,81 @@
         min-height: 44px;
     }
 
-    /* Card optimizations for portrait mobile */
-    .apps-main {
-        padding: 1rem;
+    /* Portrait double accordion */
+    .sidebar-header-actions {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0.5rem;
+        align-items: center;
+        flex: 1;
     }
 
-    .apps-main .contributors-header h1 {
-        font-size: 1.75rem;
+    .portrait-collapse-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: var(--color-canvas-default, #ffffff);
+        border: 1px solid var(--color-border-default, #e1e4e8);
+        border-radius: 6px;
+        cursor: pointer;
+        color: var(--color-text-secondary, #586069);
+        transition: all 0.15s ease;
+        margin-left: auto;
+        order: -1;
+    }
+
+    .portrait-collapse-btn:hover {
+        background: var(--color-canvas-subtle, #f6f8fa);
+    }
+
+    .portrait-collapse-btn i {
+        transition: transform 0.3s ease;
+    }
+
+    .portrait-collapse-btn.expanded i {
+        transform: rotate(180deg);
+    }
+
+    /* Level 1 wrapper - collapsed by default */
+    .portrait-content-wrapper {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .portrait-content-wrapper.expanded {
+        max-height: 3000px;
+    }
+
+    /* Card optimizations for portrait mobile */
+    .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .contributors-page {
+        padding: 0 !important;
+    }
+
+    .contributors-section {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .apps-main {
+        padding: 1rem;
+        max-width: 100% !important;
     }
 
     .apps-main .contributors-header {
         margin-bottom: 1rem;
+        padding: 0;
+    }
+
+    .apps-main .contributors-header h1 {
+        font-size: 1.75rem;
     }
 
     .view-toggle-bar {
@@ -152,13 +216,13 @@
     }
 
     .app-avatar-text {
-        font-size: 1.25rem;
-        padding: 0.4rem 0.6rem;
-        width: 100px;
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+        width: 75px;
     }
 
     .app-title {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .app-body {
@@ -173,10 +237,34 @@
         font-size: 0.65rem;
         padding: 0.2rem 0.5rem;
     }
+
+    /* Detailed view overrides for portrait mobile */
+    .app-grid:not(.compact) .app-avatar-text {
+        width: 75px !important;
+        font-size: 1rem;
+    }
+
+    /* Compact view overrides for portrait mobile */
+    .app-grid.compact .app-avatar-text {
+        width: 75px !important;
+        font-size: 0.9rem;
+    }
+
+    .app-grid.compact .app-title {
+        font-size: 0.85rem;
+    }
 }
 
-/* Landscape mode ONLY - drawer sidebar (small screens only) */
-@media (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+/* Landscape mode - drawer sidebar (≤768px in landscape OR small height) */
+@media (max-width: 900px) and (orientation: landscape) {
+    /* Change layout to 1 column since sidebar is fixed */
+    .apps-layout {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
     /* Show and configure overlay - behind sidebar but above content */
     .landscape-overlay {
         display: block;
@@ -228,7 +316,7 @@
         display: flex !important;
         position: fixed;
         left: 10px;
-        top: 10px;
+        top: 70px;
         z-index: 1001;
         width: 48px;
         height: 48px;
@@ -242,6 +330,15 @@
         color: var(--color-text-secondary, #586069);
         transition: all 0.15s ease;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .landscape-hamburger.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     .landscape-hamburger:hover {
@@ -305,24 +402,6 @@
     .tag {
         font-size: 0.6rem;
         padding: 0.15rem 0.4rem;
-    }
-}
-
-@media (max-width: 968px) and (min-width: 481px) {
-    .apps-layout {
-        grid-template-columns: 1fr;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-    }
-    .filter-sidebar {
-        border-right: none;
-        border-bottom: 1px solid var(--color-border-default, #e1e4e8);
-    }
-    .filter-sidebar-inner {
-        position: relative !important;
-        top: 0 !important;
-        max-height: none !important;
     }
 }
 
