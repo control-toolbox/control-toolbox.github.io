@@ -194,12 +194,7 @@
     }
 
     .apps-main .contributors-header {
-        margin-bottom: 1rem;
-        padding: 0;
-    }
-
-    .apps-main .contributors-header h1 {
-        font-size: 1.75rem;
+        display: none;
     }
 
     .view-toggle-bar {
@@ -367,7 +362,7 @@
     }
 
     .apps-main .contributors-header {
-        margin-bottom: 1rem;
+        display: none;
     }
 
     .app-grid {
