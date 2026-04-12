@@ -310,7 +310,7 @@
     .landscape-hamburger {
         display: flex !important;
         position: fixed;
-        left: 10px;
+        left: 5px;
         top: 70px;
         z-index: 1001;
         width: 48px;
