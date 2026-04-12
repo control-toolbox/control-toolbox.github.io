@@ -1,0 +1,65 @@
+[
+  {
+    "title": "One net to rule them all: Domain randomization in quadcopter racing across different platforms",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11128790/",
+    "authors_pub": "R Ferede, T Blaha, E Lucassen… - … on Robotics and …, 2025 - ieeexplore.ieee.org",
+    "snippet": "In high-speed quadcopter racing, finding a single controller that works well across differentplatforms remains challenging. This work presents the first neural network controller for …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "Fast protocols for charging a three-spin-chain quantum battery: V. Evangelakos et al.",
+    "url": "https://www.nature.com/articles/s41598-025-30354-1",
+    "authors_pub": "V Evangelakos,E Paspalakis,D Stefanatos- Scientific Reports, 2025 - nature.com",
+    "snippet": "We derive fast protocols for charging a three-qubit Ising spin-chain quantum battery, usingamplitude and phase control of the global transverse field. For weak coupling between the …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "Vaccination and Collective Action Under Social Norms: B. Morsky",
+    "url": "https://link.springer.com/article/10.1007/s11538-025-01436-y",
+    "authors_pub": "B Morsky- Bulletin of mathematical biology, 2025 - Springer",
+    "snippet": "Social dynamics are an integral part of the spread of disease affecting contact rates as wellas the adoption of pharmaceutical and non-pharmaceutical interventions. When vaccines …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "Modeling and optimization of control problems on GPUs",
+    "url": "https://arxiv.org/abs/2510.03932",
+    "authors_pub": "A Montoison,JB Caillau- arXiv preprint arXiv:2510.03932, 2025 - arxiv.org",
+    "snippet": "We present a fully Julia-based, GPU-accelerated workflow for solving large-scale sparsenonlinear optimal control problems. Continuous-time dynamics are modeled and then …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "Minimum time problem for the double integrator with a loss-of-control region",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1751570X26000075",
+    "authors_pub": "T Bayen,A Bouali, L Bourdin - Nonlinear Analysis: Hybrid Systems, 2026 - Elsevier",
+    "snippet": "In this paper we address the minimum time problem for the double integrator, but here, incontrast with the classical version of this problem, the control is constrained to remain …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "The Zermelo navigation problem on the 2-sphere of revolution: an optimal control perspective with applications to micromagnetism",
+    "url": "https://iopscience.iop.org/article/10.1088/1361-6544/ae2cd9/meta",
+    "authors_pub": "B Bonnard,O Cots,Y Privat- Nonlinearity, 2026 - iopscience.iop.org",
+    "snippet": "This article presents geometric optimal control techniques for analyzing geodesics in time-optimal Zermelo navigation problems on 2-spheres of revolution. We classify the problem by …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "Pulse control of affine systems with applications to quantum control",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11312971/",
+    "authors_pub": "I Beschastnyi,L Dell'Elce,JB Pomet… - 2025 IEEE 64th …, 2025 - ieeexplore.ieee.org",
+    "snippet": "Motivated by problems in quantum control, we introduce a novel method for studying time-optimal control problems of affine systems with unbounded controls. Intuitively, we construct …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "Optimal allocation control in microbial growth under a heat-shock",
+    "url": "https://inria.hal.science/hal-05369609/",
+    "authors_pub": "JI Imizcoz,AG Yabo,W Djema,F Mairet,JL Gouzé- 2025 - inria.hal.science",
+    "snippet": "Resource allocation models are a highly useful tool to study microbial growth in a variety ofcontexts. We use here a model of this kind describing the metabolism of a micro-organism …",
+    "cite_link": "javascript:void(0)"
+  },
+  {
+    "title": "Modeling and Optimization of Control Problems on GPUs",
+    "url": "https://hal.science/hal-05295809/",
+    "authors_pub": "JB Caillau,A Montoison- 2025 - hal.science",
+    "snippet": "We present a fully Julia-based, GPUaccelerated workflow for solving large-scale sparsenonlinear optimal control problems. Continuous-time dynamics are modeled and then …",
+    "cite_link": "javascript:void(0)"
+  }
+]

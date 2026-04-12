@@ -1,16 +1,16 @@
-name: Update Contributors Page
+name: Update Citations Page
 
 on:
-  schedule: # execute every day at midnight
-    - cron: "0 0 * * *"
+  schedule: # execute every week on Monday at midnight
+    - cron: "0 0 * * 1"
   workflow_dispatch:      # Allow manual trigger
 
 permissions:
   contents: write
 
 jobs:
-  update-contributors:
-    name: 🌟 Update Contributors Page
+  update-citations:
+    name: 📚 Update Citations Page
     runs-on: ubuntu-latest
     
     steps:
@@ -29,36 +29,35 @@ jobs:
       - name: 📦 Install Python dependencies
         run: |
           echo "📦 Installing Python dependencies..."
-          pip install -r scripts/contributors/requirements.txt
+          pip install -r scripts/citations/requirements.txt
           echo "✅ Dependencies installed"
       
       - name: 🔍 Verify dependencies
         run: |
           echo "🔍 Verifying installed packages..."
           python3 -c "import requests; print(f'✓ requests {requests.__version__}')"
-          python3 -c "import dotenv; print(f'✓ python-dotenv installed')"
+          python3 -c "import bs4; print(f'✓ beautifulsoup4 installed')"
+          python3 -c "import lxml; print(f'✓ lxml installed')"
           echo "✅ All dependencies verified"
       
-      - name: 🌟 Generate contributors page
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 📚 Generate citations page
         run: |
-          echo "🌟 Generating contributors page..."
-          echo "📊 Analyzing repositories..."
-          cd scripts/contributors
-          python3 github_contributors.py --web
-          echo "✅ Contributors page generated"
+          echo "📚 Generating citations page..."
+          echo "📊 Retrieving citations from Google Scholar..."
+          cd scripts/citations
+          python3 generate_citations_page.py
+          echo "✅ Citations page generated"
       
       - name: 📊 Check if file was generated
         run: |
-          if [ -f "about/contributors.md" ]; then
-            echo "✅ Contributors page exists"
-            echo "📄 File size: $(stat -f%z about/contributors.md 2>/dev/null || stat -c%s about/contributors.md 2>/dev/null) bytes"
+          if [ -f "about/citations.md" ]; then
+            echo "✅ Citations page exists"
+            echo "📄 File size: $(stat -f%z about/citations.md 2>/dev/null || stat -c%s about/citations.md 2>/dev/null) bytes"
             echo ""
             echo "📋 First 10 lines:"
-            head -n 10 about/contributors.md
+            head -n 10 about/citations.md
           else
-            echo "❌ Contributors page not found!"
+            echo "❌ Citations page not found!"
             exit 1
           fi
       
@@ -75,13 +74,13 @@ jobs:
           git status
           
           echo ""
-          echo "📊 Adding contributors page..."
-          git add about/contributors.md
+          echo "📚 Adding citations page..."
+          git add about/citations.md
           
           # Check if there are changes to commit
           if git diff --cached --quiet; then
-            echo "ℹ️  No changes detected in contributors page"
-            echo "📊 Page is already up to date"
+            echo "ℹ️  No changes detected in citations page"
+            echo "📚 Page is already up to date"
             exit 0
           fi
           
@@ -93,11 +92,11 @@ jobs:
           echo ""
           echo "📝 Committing changes..."
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-          git commit -m "🌟 Update contributors page" \
-                     -m "Automated update of the contributors page" \
+          git commit -m "📚 Update citations page" \
+                     -m "Automated update of the citations page from Google Scholar" \
                      -m "Generated on: $TIMESTAMP" \
                      -m "" \
-                     -m "This commit was automatically created by the Update Contributors workflow."
+                     -m "This commit was automatically created by the Update Citations workflow."
           
           echo "✅ Changes committed"
           
@@ -111,16 +110,16 @@ jobs:
         run: |
           echo ""
           echo "=========================================="
-          echo "📊 Contributors Page Update Summary"
+          echo "📚 Citations Page Update Summary"
           echo "=========================================="
           echo ""
           
-          if [ -f "about/contributors.md" ]; then
-            echo "✅ Contributors page: Generated"
-            echo "📁 Location: about/contributors.md"
-            echo "🌐 URL: https://control-toolbox.org/contributors/"
+          if [ -f "about/citations.md" ]; then
+            echo "✅ Citations page: Generated"
+            echo "📁 Location: about/citations.md"
+            echo "🌐 URL: https://control-toolbox.org/citations/"
           else
-            echo "❌ Contributors page: Failed to generate"
+            echo "❌ Citations page: Failed to generate"
           fi
           
           echo ""
