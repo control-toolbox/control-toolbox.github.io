@@ -579,9 +579,9 @@ Exemples d'utilisation:
     
     # Génération de la page web
     if args.web:
-        # Obtenir le répertoire racine du projet (1 niveau au-dessus du script)
+        # Obtenir le répertoire racine du projet (2 niveaux au-dessus du script)
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        project_root = os.path.dirname(script_dir)
+        project_root = os.path.dirname(os.path.dirname(script_dir))
         web_output = os.path.join(project_root, 'about', 'contributors.md')
         generate_web_page(contributors, packages, exclude_bots, exclude_names, web_output)
     
