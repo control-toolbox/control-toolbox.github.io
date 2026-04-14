@@ -101,6 +101,10 @@ custom_js:
 <p class="subtitle">A collection of optimal control applications built with the control-toolbox ecosystem.</p>
 </div>
 
+<div class="apps-cta">
+<p>Want to add your application? <a href="https://github.com/orgs/control-toolbox/discussions/65" target="_blank">Follow the guide</a>.</p>
+</div>
+
 <div class="view-toggle-bar">
 <button id="btn-detailed" class="view-btn active" title="Vue détaillée"><i class="fa-solid fa-list"></i></button>
 <button id="btn-compact" class="view-btn" title="Vue compacte"><i class="fa-solid fa-table-cells"></i></button>
