@@ -12,10 +12,12 @@ import csv
 import re
 from typing import List, Dict
 
-
 class ScholarCitationScraper:
+    """Scraper for Google Scholar citations."""
     def __init__(self, scholar_url: str):
+        """Initialize the scraper with a Google Scholar URL."""
         self.scholar_url = scholar_url
+        # Use a realistic User-Agent to avoid being blocked
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         }
@@ -23,7 +25,14 @@ class ScholarCitationScraper:
         self.session.headers.update(self.headers)
     
     def get_citations(self, max_pages: int = 10) -> List[Dict]:
-        """Retrieve citations from Google Scholar."""
+        """Retrieve citations from Google Scholar with pagination support.
+        
+        Args:
+            max_pages: Maximum number of pages to fetch
+        
+        Returns:
+            List of citation dictionaries
+        """
         citations = []
         current_url = self.scholar_url
         page = 0
@@ -58,10 +67,17 @@ class ScholarCitationScraper:
         return citations
     
     def parse_citations(self, soup: BeautifulSoup) -> List[Dict]:
-        """Parse citation data from Google Scholar HTML."""
+        """Extract citation information from the parsed HTML.
+        
+        Args:
+            soup: BeautifulSoup object containing parsed HTML
+        
+        Returns:
+            List of citation dictionaries with title, authors, snippet, URL
+        """
         citations = []
         
-        # Find all citation entries
+        # Find all citation entries (Google Scholar uses these CSS classes)
         citation_divs = soup.find_all('div', class_='gs_r gs_or gs_scl')
         
         for div in citation_divs:
@@ -83,7 +99,8 @@ class ScholarCitationScraper:
                 author_div = div.find('div', class_='gs_a')
                 if author_div:
                     authors_text = author_div.get_text(strip=True)
-                    # Fix missing spaces after commas
+                    # Fix common spacing issues in Google Scholar's text
+                    # e.g., "Smith,J." -> "Smith, J."
                     authors_text = re.sub(r',(?=[^\s])', ', ', authors_text)
                     # Fix missing spaces around dashes
                     authors_text = re.sub(r'-(?=[^\s])', '- ', authors_text)
@@ -96,6 +113,7 @@ class ScholarCitationScraper:
                     citation['snippet'] = snippet_div.get_text(strip=True)
                 
                 # Citation count (if available)
+                # Note: 'Citer' is the French label for "Cite" on Google Scholar
                 cite_links = div.find_all('a')
                 for link in cite_links:
                     if 'Citer' in link.get_text():
@@ -112,24 +130,35 @@ class ScholarCitationScraper:
         return citations
     
     def save_to_json(self, citations: List[Dict], filename: str = 'citations.json'):
-        """Save citations to JSON file."""
+        """Export citations to a JSON file for programmatic access.
+        
+        Args:
+            citations: List of citation dictionaries
+            filename: Output file name
+        """
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(citations, f, ensure_ascii=False, indent=2)
         print(f"Saved {len(citations)} citations to {filename}")
     
     def save_to_csv(self, citations: List[Dict], filename: str = 'citations.csv'):
-        """Save citations to CSV file."""
+        """Export citations to a CSV file for spreadsheet analysis.
+        
+        Args:
+            citations: List of citation dictionaries
+            filename: Output file name
+        """
         if not citations:
             print("No citations to save")
             return
         
+        # Define the CSV columns
         fieldnames = ['title', 'authors_pub', 'snippet', 'url', 'cite_link']
         
         with open(filename, 'w', encoding='utf-8', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             for citation in citations:
-                # Only include fields that exist
+                # Only include fields that exist in the citation
                 row = {k: citation.get(k, '') for k in fieldnames}
                 writer.writerow(row)
         
@@ -137,7 +166,9 @@ class ScholarCitationScraper:
 
 
 def main():
+    """Main entry point for standalone execution."""
     # URL for OptimalControl.jl paper citations
+    # This is the paper ID for the OptimalControl.jl publication
     scholar_url = "https://scholar.google.com/scholar?cites=1899455738170204200"
     
     print("Starting Google Scholar citation scraper...")

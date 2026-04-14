@@ -1,25 +1,25 @@
-# Scripts de maintenance
+# Maintenance Scripts
 
-Ce dossier contient les scripts pour la maintenance du site control-toolbox.org.
+This folder contains scripts for maintaining the control-toolbox.org site.
 
-## 📄 Scripts disponibles
+## 📄 Available Scripts
 
 ### `generate_contributors_page.sh`
 
-Génère la page des contributeurs à partir des données GitHub.
+Generates the contributors page from GitHub data.
 
-**Usage :**
+**Usage:**
 
 ```bash
 ./generate_contributors_page.sh
 ```
 
-**Prérequis :**
+**Prerequisites:**
 
 - Python 3.7+
-- Dépendances : `requests`, `python-dotenv` (voir `requirements.txt`)
+- Dependencies: `requests`, `python-dotenv` (see `requirements.txt`)
 
-**Token GitHub (optionnel) :**
+**GitHub Token (optional):**
 
 ```bash
 export GITHUB_TOKEN='your_token_here'
@@ -27,35 +27,35 @@ export GITHUB_TOKEN='your_token_here'
 
 ### `github_contributors.py`
 
-Script Python pour analyser les contributeurs des repositories GitHub.
+Python script to analyze contributors from GitHub repositories.
 
-**Usage :**
+**Usage:**
 
 ```bash
-# Générer la page web
+# Generate the web page
 python3 github_contributors.py --web
 
-# Générer un rapport Markdown
+# Generate a Markdown report
 python3 github_contributors.py
 
-# Aide
+# Help
 python3 github_contributors.py --help
 ```
 
-## 📦 Installation des dépendances
+## 📦 Installing Dependencies
 
 ```bash
 pip3 install -r requirements.txt
 ```
 
-Ou avec `--break-system-packages` sur macOS :
+Or with `--break-system-packages` on macOS:
 
 ```bash
 pip3 install --break-system-packages requests python-dotenv
 ```
 
-## 🤖 Automatisation
+## 🤖 Automation
 
-La page est automatiquement mise à jour chaque lundi via GitHub Actions.
+The page is automatically updated every Monday via GitHub Actions.
 
-Voir `.github/workflows/update_contributors.yml`.
+See `.github/workflows/update_contributors.yml`.

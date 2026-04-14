@@ -1,19 +1,19 @@
 #!/bin/bash
 #
-# Script pour générer la page des citations du site control-toolbox
+# Script to generate the citations page for the control-toolbox site
 # Usage: ./generate_citations_page.sh
 #
 
 set -euo pipefail
 
-# Couleurs pour l'affichage
+# Colors for display
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# Obtenir le répertoire du script
+# Get script directory
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
@@ -22,19 +22,19 @@ echo -e "${BLUE}  Citations Page Generator${NC}"
 echo -e "${BLUE}========================================${NC}"
 echo ""
 
-# Vérifier que Python 3 est installé
+# Check that Python 3 is installed
 if ! command -v python3 &> /dev/null; then
-    echo -e "${RED}❌ Python 3 n'est pas installé${NC}"
-    echo -e "${YELLOW}   Installez Python 3 pour continuer${NC}"
+    echo -e "${RED}❌ Python 3 is not installed${NC}"
+    echo -e "${YELLOW}   Install Python 3 to continue${NC}"
     exit 1
 fi
 
-echo -e "${GREEN}✓${NC} Python 3 trouvé: $(python3 --version)"
+echo -e "${GREEN}✓${NC} Python 3 found: $(python3 --version)"
 
-# Vérifier les dépendances Python
-echo -e "${BLUE}Vérification des dépendances Python...${NC}"
+# Check Python dependencies
+echo -e "${BLUE}Checking Python dependencies...${NC}"
 
-# Fonction pour vérifier un module Python
+# Function to check a Python module
 check_python_module() {
     python3 -c "import $1" 2>/dev/null
     return $?
@@ -55,33 +55,33 @@ if ! check_python_module "lxml"; then
 fi
 
 if [ ${#MISSING_DEPS[@]} -gt 0 ]; then
-    echo -e "${RED}❌ Dépendances manquantes: ${MISSING_DEPS[*]}${NC}"
+    echo -e "${RED}❌ Missing dependencies: ${MISSING_DEPS[*]}${NC}"
     echo ""
-    echo -e "${YELLOW}Installation des dépendances...${NC}"
-    echo -e "${YELLOW}Commande suggérée:${NC}"
+    echo -e "${YELLOW}Installing dependencies...${NC}"
+    echo -e "${YELLOW}Suggested command:${NC}"
     echo -e "${YELLOW}  pip3 install --break-system-packages ${MISSING_DEPS[*]}${NC}"
-    echo -e "${YELLOW}ou${NC}"
+    echo -e "${YELLOW}or${NC}"
     echo -e "${YELLOW}  python3 -m venv venv${NC}"
     echo -e "${YELLOW}  source venv/bin/activate${NC}"
     echo -e "${YELLOW}  pip install -r $SCRIPT_DIR/requirements.txt${NC}"
     echo ""
     
-    # Demander si on doit installer avec --break-system-packages
-    read -p "Voulez-vous installer les dépendances avec --break-system-packages? (y/N) " -n 1 -r
+    # Ask whether to install with --break-system-packages
+    read -p "Do you want to install dependencies with --break-system-packages? (y/N) " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         pip3 install --break-system-packages "${MISSING_DEPS[@]}"
     else
-        echo -e "${RED}Installation annulée. Veuillez installer les dépendances manuellement.${NC}"
+        echo -e "${RED}Installation cancelled. Please install dependencies manually.${NC}"
         exit 1
     fi
 fi
 
-echo -e "${GREEN}✓${NC} Toutes les dépendances sont installées"
+echo -e "${GREEN}✓${NC} All dependencies are installed"
 echo ""
 
-# Exécuter le script Python
-echo -e "${BLUE}Génération de la page des citations...${NC}"
+# Run the Python script
+echo -e "${BLUE}Generating the citations page...${NC}"
 echo ""
 
 cd "$PROJECT_ROOT"
@@ -89,26 +89,26 @@ cd "$PROJECT_ROOT"
 if python3 "$SCRIPT_DIR/generate_citations_page.py"; then
     echo ""
     echo -e "${GREEN}========================================${NC}"
-    echo -e "${GREEN}✅ Page générée avec succès !${NC}"
+    echo -e "${GREEN}✅ Page generated successfully!${NC}"
     echo -e "${GREEN}========================================${NC}"
     echo ""
-    echo -e "${BLUE}Fichier créé:${NC} $PROJECT_ROOT/about/citations.md"
+    echo -e "${BLUE}File created:${NC} $PROJECT_ROOT/about/citations.md"
     echo ""
-    echo -e "${YELLOW}Prochaines étapes:${NC}"
-    echo -e "  1. Vérifiez le contenu de la page"
-    echo -e "  2. Testez localement avec Jekyll: ${BLUE}bundle exec jekyll serve${NC}"
-    echo -e "  3. Commitez et pushez les changements"
+    echo -e "${YELLOW}Next steps:${NC}"
+    echo -e "  1. Check the page content"
+    echo -e "  2. Test locally with Jekyll: ${BLUE}bundle exec jekyll serve${NC}"
+    echo -e "  3. Commit and push changes"
     echo ""
 else
     echo ""
     echo -e "${RED}========================================${NC}"
-    echo -e "${RED}❌ Erreur lors de la génération${NC}"
+    echo -e "${RED}❌ Error during generation${NC}"
     echo -e "${RED}========================================${NC}"
     echo ""
-    echo -e "${YELLOW}Vérifiez:${NC}"
-    echo -e "  - Que l'URL Google Scholar est valide"
-    echo -e "  - Que vous avez accès à Internet"
-    echo -e "  - Les logs ci-dessus pour plus de détails"
+    echo -e "${YELLOW}Check:${NC}"
+    echo -e "  - That the Google Scholar URL is valid"
+    echo -e "  - That you have Internet access"
+    echo -e "  - The logs above for more details"
     echo ""
     exit 1
 fi
