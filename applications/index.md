@@ -87,6 +87,11 @@ custom_js:
 <div class="filter-bar" id="filter-bar-techniques"></div>
 </div>
 
+<div class="filter-tags-section hidden" id="filter-section-others">
+<h4>Others</h4>
+<div class="filter-bar" id="filter-bar-others"></div>
+</div>
+
 </div>
 
 </div>
@@ -117,24 +122,22 @@ custom_js:
 
 <div class="app-grid" id="app-grid">
 
-{% assign tags-cov = "classical-mechanics,calculus-of-variations,lagrangian,direct-methods,indirect-methods" | split: "," %}
+{% assign tags-cov = "classical-mechanics,calculus-of-variations,lagrangian,shooting,continuation,conjugate-points" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/CalculusOfVariations.jl"
   abbrev="CoV"
   title="Calculus of variations"
   summary="Classical variational problems reformulated as optimal control problems and solved via direct and indirect numerical methods."
-  tags="classical-mechanics,calculus-of-variations,lagrangian,direct-methods,indirect-methods"
-  tags_list=tags-cov
+  tags=tags-cov
 %}
 
-{% assign tags-dbg = "biology,resource-allocation,switching-time,bang-bang,indirect-methods" | split: "," %}
+{% assign tags-dbg = "biology,resource-allocation,switching-time,bang-bang,direct" | split: "," %}
 {% include app-card.html
   url="https://agustinyabo.github.io/DiauxicGrowth.jl"
   abbrev="DBG"
   title="Diauxic bacterial growth"
   summary="Optimal resource allocation for bacterial growth on multiple substrates, maximizing final cell population via optimal control of metabolic fluxes."
-  tags="biology,resource-allocation,switching-time,bang-bang,indirect-methods"
-  tags_list=tags-dbg
+  tags=tags-dbg
 %}
 
 {% assign tags-grn = "biology,piecewise-linear,nonsmooth,regularization,gene-networks" | split: "," %}
@@ -143,30 +146,27 @@ custom_js:
   abbrev="GRN"
   title="PWL models of gene regulatory networks"
   summary="State transitions in piecewise linear models of gene regulatory networks, with a nonsmooth L¹ cost and regularization strategies (Hill and exponential)."
-  tags="biology,piecewise-linear,nonsmooth,regularization,gene-networks"
-  tags_list=tags-grn
+  tags=tags-grn
 %}
 
-{% assign tags-gprec = "preconditioning,shooting,convergence,hamiltonian,geometric-control" | split: "," %}
+{% assign tags-gprec = "preconditioning,shooting,convergence,geometric-control" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/GeometricPreconditioner.jl"
   abbrev="GPrec"
   font_size="19"
   title="Geometric preconditioner"
   summary="Geometric preconditioning of shooting methods to accelerate convergence in indirect optimal control, exploiting the structure of the Hamiltonian flow."
-  tags="preconditioning,shooting,convergence,hamiltonian,geometric-control"
-  tags_list=tags-gprec
+  tags=tags-gprec
 %}
 
-{% assign tags-lctrl = "constrained,regularization,shooting,indirect-methods,zermelo" | split: "," %}
+{% assign tags-lctrl = "constrained,regularization,pontryagin-maximum-principle,shooting,direct,shooting,zermelo" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/LossControl.jl"
   abbrev="LCtrl"
   font_size="19"
   title="Loss control regions in optimal control problems"
   summary="Optimal control problems with loss control regions where the control is frozen, solved by combining direct regularization and indirect shooting methods."
-  tags="constrained,regularization,shooting,indirect-methods,zermelo"
-  tags_list=tags-lctrl
+  tags=tags-lctrl
 %}
 
 {% assign tags-mf = "energy-optimization,production-regeneration,bang-bang,singular-control,turnpike" | split: "," %}
@@ -175,39 +175,35 @@ custom_js:
   abbrev="MF"
   title="Membrane filtration"
   summary="Energy-optimal control of membrane filtration processes with production-regeneration cycles, minimizing power consumption while achieving targeted permeate volume via bang-bang and singular control strategies."
-  tags="energy-optimization,production-regeneration,bang-bang,singular-control,turnpike"
-  tags_list=tags-mf
+  tags=tags-mf
 %}
 
-{% assign tags-mri = "medical-imaging,time-optimal,physics,geometric-control,bloch-equation" | split: "," %}
+{% assign tags-mri = "medical-imaging,time-optimal,geometric-control,direct,shooting,bloch-equation" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/MagneticResonanceImaging.jl"
   abbrev="MRI"
   title="Optimal control in Magnetic Resonance Imaging"
   summary="Time-minimal control of nuclear spin ensembles via RF pulses, with applications to contrast optimization in MRI using geometric optimal control."
-  tags="medical-imaging,time-optimal,physics,geometric-control,bloch-equation"
-  tags_list=tags-mri
+  tags=tags-mri
 %}
 
-{% assign tags-kepler = "aerospace,time-optimal,shooting,direct-methods,orbital-mechanics" | split: "," %}
+{% assign tags-kepler = "aerospace,time-optimal,shooting,direct,orbital-mechanics" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/Kepler.jl"
   abbrev="Kepler"
   font_size="19"
   title="Minimum time orbit transfer"
   summary="Minimum-time orbit transfer of a spacecraft under Kepler dynamics with thrust constraints, solved by direct and indirect methods."
-  tags="aerospace,time-optimal,shooting,direct-methods,orbital-mechanics"
-  tags_list=tags-kepler
+  tags=tags-kepler
 %}
 
-{% assign tags-sir = "epidemiology,constrained,social-distancing,public-health,ode" | split: "," %}
+{% assign tags-sir = "epidemiology,constrained,social-distancing,public-health,ode,direct" | split: "," %}
 {% include app-card.html
   url="https://anasxbouali.github.io/SIRcontrol.jl"
   abbrev="SIR"
   title="On the problem of minimizing the epidemic final size for SIR model via social distancing"
   summary="Minimizing epidemic final size in the SIR model via L¹-constrained social distancing interventions, with optimal control over a single or two time intervals."
-  tags="epidemiology,constrained,social-distancing,public-health,ode"
-  tags_list=tags-sir
+  tags=tags-sir
 %}
 
 </div>

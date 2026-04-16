@@ -3,6 +3,11 @@
     margin-bottom: 0 !important;
 }
 
+/* Global hidden class */
+.hidden {
+    display: none !important;
+}
+
 /* Layout with sidebar */
 .apps-layout {
     display: grid;

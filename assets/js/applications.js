@@ -126,23 +126,64 @@
   var tagCategories = {
     'domains': {
       container: document.getElementById('filter-bar-domains'),
-      tags: ['classical-mechanics', 'biology', 'epidemiology', 'aerospace', 'medical-imaging', 'physics']
+      tags: [
+        'classical-mechanics', 
+        'biology', 
+        'epidemiology', 
+        'aerospace', 
+        'medical-imaging', 
+        'physics']
     },
     'methods': {
       container: document.getElementById('filter-bar-methods'),
-      tags: ['direct-methods', 'indirect-methods', 'shooting', 'discretization', 'regularization']
+      tags: [
+        'direct-methods',
+        'indirect-methods',
+        'shooting',
+        'discretization',
+        'regularization',
+        'continuation',
+        'direct']
     },
     'problems': {
       container: document.getElementById('filter-bar-problems'),
-      tags: ['time-optimal', 'energy-optimal', 'lagrangian', 'constrained', 'nonsmooth', 'bang-bang']
+      tags: [
+        'time-optimal',
+        'energy-optimal',
+        'energy-optimization',
+        'lagrangian',
+        'constrained',
+        'nonsmooth',
+        'bang-bang']
     },
     'concepts': {
       container: document.getElementById('filter-bar-concepts'),
-      tags: ['calculus-of-variations', 'hamiltonian', 'pontryagin', 'geometric-control', 'piecewise-linear', 'ode']
+      tags: [
+        'calculus-of-variations',
+        'hamiltonian',
+        'pontryagin-maximum-principle',
+        'geometric-control',
+        'piecewise-linear',
+        'ode',
+        'conjugate-points',
+        'singular-control',
+        'turnpike']
     },
     'techniques': {
       container: document.getElementById('filter-bar-techniques'),
-      tags: ['preconditioning', 'convergence', 'switching-time', 'state-constraints', 'resource-allocation', 'social-distancing', 'public-health', 'gene-networks', 'zermelo', 'bloch-equation', 'orbital-mechanics']
+      tags: [
+        'preconditioning',
+        'convergence',
+        'switching-time',
+        'state-constraints',
+        'resource-allocation',
+        'social-distancing',
+        'public-health',
+        'gene-networks',
+        'zermelo',
+        'bloch-equation',
+        'orbital-mechanics',
+        'production-regeneration']
     }
   };
 
@@ -168,20 +209,29 @@
   var activeFilters = new Set();
   var tagButtons = {};
 
+  // Collect all categorized tags
+  var categorizedTags = new Set();
+  Object.keys(tagCategories).forEach(function(categoryKey) {
+    tagCategories[categoryKey].tags.forEach(function(tag) {
+      categorizedTags.add(tag);
+    });
+  });
+
+  // Create buttons for categorized tags
   Object.keys(tagCategories).forEach(function(categoryKey) {
     var category = tagCategories[categoryKey];
     category.tags.forEach(function(tag) {
       if (allTags.has(tag)) {
         var btn = document.createElement('button');
         btn.className = 'filter-btn';
-        
+
         var tagName = document.createElement('span');
         tagName.textContent = tag;
-        
+
         var tagCount = document.createElement('span');
         tagCount.className = 'tag-count';
         tagCount.textContent = tagCounts[tag];
-        
+
         btn.appendChild(tagName);
         btn.appendChild(tagCount);
         btn.addEventListener('click', function() { toggleFilter(tag); });
@@ -190,6 +240,38 @@
       }
     });
   });
+
+  // Handle OTHERS category - uncategorized tags
+  var othersContainer = document.getElementById('filter-bar-others');
+  var othersSection = document.getElementById('filter-section-others');
+  if (othersContainer && othersSection) {
+    var othersTags = Array.from(allTags).filter(function(tag) {
+      return !categorizedTags.has(tag);
+    }).sort();
+
+    if (othersTags.length > 0) {
+      othersTags.forEach(function(tag) {
+        var btn = document.createElement('button');
+        btn.className = 'filter-btn';
+
+        var tagName = document.createElement('span');
+        tagName.textContent = tag;
+
+        var tagCount = document.createElement('span');
+        tagCount.className = 'tag-count';
+        tagCount.textContent = tagCounts[tag];
+
+        btn.appendChild(tagName);
+        btn.appendChild(tagCount);
+        btn.addEventListener('click', function() { toggleFilter(tag); });
+        othersContainer.appendChild(btn);
+        tagButtons[tag] = btn;
+      });
+      othersSection.classList.remove('hidden');
+    } else {
+      othersSection.classList.add('hidden');
+    }
+  }
 
   function toggleFilter(tag) {
     if (activeFilters.has(tag)) {

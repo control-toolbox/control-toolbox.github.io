@@ -1,14 +1,14 @@
-<a class="app-card" href="{{ include.url }}" style="--app-color: {{ include.color | default: '#CB3C33' }};" data-tags="{{ include.tags }}">
+<a class="app-card" href="{{ include.url }}" style="--app-color: {{ include.color | default: '#CB3C33' }};" data-tags="{{ include.tags | join: ',' }}">
 <div class="app-header">
 <div class="app-avatar-text">{{ include.abbrev }}</div>
 <span class="app-title">{{ include.title }}</span>
 </div>
 <div class="app-body">
 <p class="app-summary">{{ include.summary }}</p>
-{% if include.tags_list %}
+{% if include.tags %}
 <div class="app-tags">
 <span class="tags-label">Tags:</span>
-{% for tag in include.tags_list %}
+{% for tag in include.tags %}
 <span class="tag">{{ tag }}</span>
 {% endfor %}
 </div>
