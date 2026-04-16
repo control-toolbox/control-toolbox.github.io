@@ -276,4 +276,10 @@
 
   // Load saved filters on page load
   loadFilters();
+
+  // Automatic color alternation
+  var colors = ['#CB3C33', '#389826', '#9558B2'];
+  cards.forEach(function(card, index) {
+    card.style.setProperty('--app-color', colors[index % colors.length]);
+  });
 })();

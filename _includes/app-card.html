@@ -1,4 +1,4 @@
-<a class="app-card" href="{{ include.url }}" style="--app-color: {{ include.color }};" data-tags="{{ include.tags }}">
+<a class="app-card" href="{{ include.url }}" style="--app-color: {{ include.color | default: '#CB3C33' }};" data-tags="{{ include.tags }}">
 <div class="app-header">
 <div class="app-avatar-text">{{ include.abbrev }}</div>
 <span class="app-title">{{ include.title }}</span>

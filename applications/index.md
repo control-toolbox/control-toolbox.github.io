@@ -13,7 +13,7 @@ custom_js:
 
 <div class="contributors-section">
 
-{% assign app_count = 8 %}
+{% assign app_count = 9 %}
 
 <div class="apps-layout">
 
@@ -117,95 +117,97 @@ custom_js:
 
 <div class="app-grid" id="app-grid">
 
-{% assign tags1 = "classical-mechanics,calculus-of-variations,lagrangian,direct-methods,indirect-methods" | split: "," %}
+{% assign tags-cov = "classical-mechanics,calculus-of-variations,lagrangian,direct-methods,indirect-methods" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/CalculusOfVariations.jl"
-  color="#CB3C33"
   abbrev="CoV"
   title="Calculus of variations"
   summary="Classical variational problems reformulated as optimal control problems and solved via direct and indirect numerical methods."
   tags="classical-mechanics,calculus-of-variations,lagrangian,direct-methods,indirect-methods"
-  tags_list=tags1
+  tags_list=tags-cov
 %}
 
-{% assign tags2 = "biology,resource-allocation,switching-time,bang-bang,indirect-methods" | split: "," %}
+{% assign tags-dbg = "biology,resource-allocation,switching-time,bang-bang,indirect-methods" | split: "," %}
 {% include app-card.html
   url="https://agustinyabo.github.io/DiauxicGrowth.jl"
-  color="#389826"
   abbrev="DBG"
   title="Diauxic bacterial growth"
   summary="Optimal resource allocation for bacterial growth on multiple substrates, maximizing final cell population via optimal control of metabolic fluxes."
   tags="biology,resource-allocation,switching-time,bang-bang,indirect-methods"
-  tags_list=tags2
+  tags_list=tags-dbg
 %}
 
-{% assign tags3 = "biology,piecewise-linear,nonsmooth,regularization,gene-networks" | split: "," %}
+{% assign tags-grn = "biology,piecewise-linear,nonsmooth,regularization,gene-networks" | split: "," %}
 {% include app-card.html
   url="https://agustinyabo.github.io/PWLdynamics.jl"
-  color="#9558B2"
   abbrev="GRN"
   title="PWL models of gene regulatory networks"
   summary="State transitions in piecewise linear models of gene regulatory networks, with a nonsmooth L¹ cost and regularization strategies (Hill and exponential)."
   tags="biology,piecewise-linear,nonsmooth,regularization,gene-networks"
-  tags_list=tags3
+  tags_list=tags-grn
 %}
 
-{% assign tags4 = "preconditioning,shooting,convergence,hamiltonian,geometric-control" | split: "," %}
+{% assign tags-gprec = "preconditioning,shooting,convergence,hamiltonian,geometric-control" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/GeometricPreconditioner.jl"
-  color="#CB3C33"
   abbrev="GPrec"
   font_size="19"
   title="Geometric preconditioner"
   summary="Geometric preconditioning of shooting methods to accelerate convergence in indirect optimal control, exploiting the structure of the Hamiltonian flow."
   tags="preconditioning,shooting,convergence,hamiltonian,geometric-control"
-  tags_list=tags4
+  tags_list=tags-gprec
 %}
 
-{% assign tags5 = "constrained,regularization,shooting,indirect-methods,zermelo" | split: "," %}
+{% assign tags-lctrl = "constrained,regularization,shooting,indirect-methods,zermelo" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/LossControl.jl"
-  color="#389826"
   abbrev="LCtrl"
   font_size="19"
   title="Loss control regions in optimal control problems"
   summary="Optimal control problems with loss control regions where the control is frozen, solved by combining direct regularization and indirect shooting methods."
   tags="constrained,regularization,shooting,indirect-methods,zermelo"
-  tags_list=tags5
+  tags_list=tags-lctrl
 %}
 
-{% assign tags6 = "medical-imaging,time-optimal,physics,geometric-control,bloch-equation" | split: "," %}
+{% assign tags-mf = "energy-optimization,production-regeneration,bang-bang,singular-control,turnpike" | split: "," %}
+{% include app-card.html
+  url="https://remydutto.github.io/CTMembraneFiltration.jl"
+  abbrev="MF"
+  title="Membrane filtration"
+  summary="Energy-optimal control of membrane filtration processes with production-regeneration cycles, minimizing power consumption while achieving targeted permeate volume via bang-bang and singular control strategies."
+  tags="energy-optimization,production-regeneration,bang-bang,singular-control,turnpike"
+  tags_list=tags-mf
+%}
+
+{% assign tags-mri = "medical-imaging,time-optimal,physics,geometric-control,bloch-equation" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/MagneticResonanceImaging.jl"
-  color="#9558B2"
   abbrev="MRI"
   title="Optimal control in Magnetic Resonance Imaging"
   summary="Time-minimal control of nuclear spin ensembles via RF pulses, with applications to contrast optimization in MRI using geometric optimal control."
   tags="medical-imaging,time-optimal,physics,geometric-control,bloch-equation"
-  tags_list=tags6
+  tags_list=tags-mri
 %}
 
-{% assign tags7 = "aerospace,time-optimal,shooting,direct-methods,orbital-mechanics" | split: "," %}
+{% assign tags-kepler = "aerospace,time-optimal,shooting,direct-methods,orbital-mechanics" | split: "," %}
 {% include app-card.html
   url="https://control-toolbox.org/Kepler.jl"
-  color="#CB3C33"
   abbrev="Kepler"
   font_size="19"
   title="Minimum time orbit transfer"
   summary="Minimum-time orbit transfer of a spacecraft under Kepler dynamics with thrust constraints, solved by direct and indirect methods."
   tags="aerospace,time-optimal,shooting,direct-methods,orbital-mechanics"
-  tags_list=tags7
+  tags_list=tags-kepler
 %}
 
-{% assign tags8 = "epidemiology,constrained,social-distancing,public-health,ode" | split: "," %}
+{% assign tags-sir = "epidemiology,constrained,social-distancing,public-health,ode" | split: "," %}
 {% include app-card.html
   url="https://anasxbouali.github.io/SIRcontrol.jl"
-  color="#389826"
   abbrev="SIR"
   title="On the problem of minimizing the epidemic final size for SIR model via social distancing"
   summary="Minimizing epidemic final size in the SIR model via L¹-constrained social distancing interventions, with optimal control over a single or two time intervals."
   tags="epidemiology,constrained,social-distancing,public-health,ode"
-  tags_list=tags8
+  tags_list=tags-sir
 %}
 
 </div>
