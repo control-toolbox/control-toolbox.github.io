@@ -543,6 +543,7 @@ Usage examples:
             ("control-toolbox", "MagneticResonanceImaging.jl"),
             ("control-toolbox", "CalculusOfVariations.jl"),
             ("control-toolbox", "CTProblems.jl"),
+            ("remydutto", "CTMembraneFiltration.jl"),
         ]
     
     if not packages:
