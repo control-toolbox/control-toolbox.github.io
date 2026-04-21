@@ -7,9 +7,15 @@ import requests
 import argparse
 import os
 import re
+from datetime import datetime, timezone
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
 from dotenv import load_dotenv
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:
+    # Fallback for Python < 3.9
+    from backports.zoneinfo import ZoneInfo
 
 # Regex to match Co-authored-by trailers in commit messages
 # Format: "Co-authored-by: Name <email@example.com>"
@@ -476,7 +482,8 @@ def generate_web_page(contributors: Dict[str, int], packages: List[Tuple[str, st
         f.write('<div class="contributors-header">\n')
         f.write('<h1>🌟 Contributors</h1>\n')
         f.write('<p class="subtitle">Thank you to all the amazing people who have contributed to the control-toolbox ecosystem!</p>\n')
-        f.write(f'<p class="last-update">Last updated: {datetime.now().strftime("%B %d, %Y at %H:%M UTC")}</p>\n')
+        france_time = datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Paris"))
+        f.write(f'<p class="last-update">Last updated: {france_time.strftime("%B %d, %Y at %H:%M")} (France)</p>\n')
         f.write('</div>\n\n')
         
         # Summary cards
