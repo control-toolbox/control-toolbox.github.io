@@ -25,6 +25,28 @@ NOREPLY_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Manual mapping from email address to GitHub login.
+# Used for contributors whose email is not public on GitHub and who never
+# committed directly on a default branch (so we cannot discover their login
+# automatically). Keys must be lowercase.
+KNOWN_EMAIL_TO_LOGIN: Dict[str, str] = {
+    'valentin.0111@hotmail.fr': 'vmerc',
+}
+
+# Co-author emails to ignore entirely (e.g., bots that don't use a '[bot]'
+# suffix in their login and therefore escape automatic filtering).
+# Keys must be lowercase.
+IGNORED_COAUTHOR_EMAILS = {
+    'compathelper_noreply@julialang.org',
+}
+
+# Merge known duplicate GitHub accounts belonging to the same real-world
+# contributor. Keys are aliases (lowercase), values are the canonical login
+# that contributions should be attributed to (exact case).
+LOGIN_ALIASES: Dict[str, str] = {
+    'joseph-gergaud': 'gergaud',
+}
+
 
 def parse_coauthors(message: str) -> List[Tuple[str, str]]:
     """Parse Co-authored-by trailers from a commit message.
@@ -147,11 +169,23 @@ def get_all_contributors_from_commits(repo_owner: str, repo_name: str, exclude_b
     params = {'per_page': 100}
     
     contributor_counts = Counter()
-    # Cache email -> login (None means unresolvable). Seeded while iterating
-    # commits whose primary author is linked to a GitHub account.
-    email_to_login: Dict[str, Optional[str]] = {}
+    # Cache email -> login (None means unresolvable). Seeded with manual
+    # mapping and then updated while iterating commits whose primary author
+    # is linked to a GitHub account.
+    email_to_login: Dict[str, Optional[str]] = dict(KNOWN_EMAIL_TO_LOGIN)
+    # Canonical case for GitHub logins (lowercase -> canonical form).
+    # GitHub logins are case-insensitive, but noreply emails store them in
+    # lowercase while the /commits API returns the canonical form.
+    canonical_logins: Dict[str, str] = {}
     unresolved_coauthors: Dict[str, str] = {}  # email -> name, for the warning
     page = 1
+    
+    def canonical(login: str) -> str:
+        """Return the canonical case for a login if known, else the input."""
+        return canonical_logins.get(login.lower(), login)
+    
+    def is_bot(login: str) -> bool:
+        return login.lower().endswith('[bot]')
     
     print(f"   🔍 Enumerating commits on default branch...")
     
@@ -179,6 +213,8 @@ def get_all_contributors_from_commits(repo_owner: str, repo_name: str, exclude_b
                     if exclude_bots and author.get('type') != 'User':
                         name = None
                     if name:
+                        # Record canonical case (API returns it correctly cased)
+                        canonical_logins[name.lower()] = name
                         contributor_counts[name] += 1
                         # Seed the cache: we now know this email maps to this login
                         if commit_email:
@@ -187,11 +223,18 @@ def get_all_contributors_from_commits(repo_owner: str, repo_name: str, exclude_b
                 # Co-authors from "Co-authored-by:" trailers (handles squash merges)
                 message = commit_data.get('message', '')
                 for coauthor_name, coauthor_email in parse_coauthors(message):
+                    # Skip explicitly ignored emails (e.g., non-standard bots)
+                    if coauthor_email in IGNORED_COAUTHOR_EMAILS:
+                        continue
                     login = resolve_email_to_login(coauthor_email, email_to_login, headers)
-                    if login:
-                        contributor_counts[login] += 1
-                    else:
+                    if not login:
                         unresolved_coauthors[coauthor_email] = coauthor_name
+                        continue
+                    # Filter bots (their logins end with '[bot]')
+                    if exclude_bots and is_bot(login):
+                        continue
+                    # Canonicalize case (noreply emails are lowercase)
+                    contributor_counts[canonical(login)] += 1
             
             print(f"   📄 Fetched {len(commits)} commits (page {page})")
             
@@ -246,6 +289,8 @@ def aggregate_contributors(packages: List[Tuple[str, str]], exclude_bots: bool =
         contributors = get_contributors(owner, repo, exclude_bots, github_token, use_commits)
         
         for name, contributions in contributors:
+            # Merge known duplicate accounts (e.g., joseph-gergaud -> gergaud)
+            name = LOGIN_ALIASES.get(name.lower(), name)
             # Exclude specified names
             if name.lower() not in exclude_names_lower:
                 aggregated[name] += contributions
