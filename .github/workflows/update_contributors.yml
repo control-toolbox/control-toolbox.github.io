@@ -46,7 +46,7 @@ jobs:
           echo "🌟 Generating contributors page..."
           echo "📊 Analyzing repositories..."
           cd scripts/contributors
-          python3 github_contributors.py --web
+          python3 github_contributors.py --web --use-commits
           echo "✅ Contributors page generated"
       
       - name: 📊 Check if file was generated

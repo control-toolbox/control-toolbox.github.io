@@ -6,12 +6,76 @@ Script to extract and aggregate contributors from multiple GitHub packages
 import requests
 import argparse
 import os
+import re
 from collections import defaultdict
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 from dotenv import load_dotenv
 
+# Regex to match Co-authored-by trailers in commit messages
+# Format: "Co-authored-by: Name <email@example.com>"
+COAUTHOR_RE = re.compile(
+    r'^\s*Co-authored-by:\s*(?P<name>.+?)\s*<(?P<email>[^>]+)>\s*$',
+    re.IGNORECASE | re.MULTILINE,
+)
+
+# Regex to extract login from GitHub noreply emails
+# Formats: "login@users.noreply.github.com" or "ID+login@users.noreply.github.com"
+NOREPLY_RE = re.compile(
+    r'^(?:\d+\+)?(?P<login>[^@]+)@users\.noreply\.github\.com$',
+    re.IGNORECASE,
+)
+
+
+def parse_coauthors(message: str) -> List[Tuple[str, str]]:
+    """Parse Co-authored-by trailers from a commit message.
+
+    Returns:
+        List of (name, email) tuples.
+    """
+    return [(m.group('name'), m.group('email').lower())
+            for m in COAUTHOR_RE.finditer(message or '')]
+
+
+def resolve_email_to_login(email: str, cache: Dict[str, Optional[str]],
+                           headers: dict) -> Optional[str]:
+    """Resolve an email address to a GitHub login.
+
+    Strategy:
+      1. Look up the cache first.
+      2. Parse GitHub noreply emails (no API call needed).
+      3. Fall back to the GitHub users search API.
+
+    Results (including negatives) are stored in the cache.
+    """
+    if email in cache:
+        return cache[email]
+
+    # Parse noreply email format
+    m = NOREPLY_RE.match(email)
+    if m:
+        login = m.group('login')
+        cache[email] = login
+        return login
+
+    # Fall back to search API
+    try:
+        response = requests.get(
+            'https://api.github.com/search/users',
+            headers=headers,
+            params={'q': f'{email} in:email'},
+            timeout=10,
+        )
+        response.raise_for_status()
+        items = response.json().get('items', [])
+        login = items[0]['login'] if items else None
+    except requests.exceptions.RequestException:
+        login = None
+
+    cache[email] = login
+    return login
+
 def get_contributors(repo_owner: str, repo_name: str, exclude_bots: bool = True, 
-                    github_token: str = None) -> List[Tuple[str, int]]:
+                    github_token: str = None, use_commits: bool = False) -> List[Tuple[str, int]]:
     """
     Retrieve the list of contributors from a GitHub repository
     
@@ -20,10 +84,15 @@ def get_contributors(repo_owner: str, repo_name: str, exclude_bots: bool = True,
         repo_name: Repository name
         exclude_bots: If True, exclude bots from the list
         github_token: GitHub token to increase the rate limit
+        use_commits: If True, enumerate commits on the default branch (slower but
+                     more up-to-date than the cached /contributors endpoint)
         
     Returns:
         List of tuples (contributor_name, contribution_count)
     """
+    if use_commits:
+        return get_all_contributors_from_commits(repo_owner, repo_name, exclude_bots, github_token)
+    
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contributors"
     
     headers = {}
@@ -50,8 +119,110 @@ def get_contributors(repo_owner: str, repo_name: str, exclude_bots: bool = True,
         print(f"⚠️  Error while fetching {repo_owner}/{repo_name}: {e}")
         return []
 
+def get_all_contributors_from_commits(repo_owner: str, repo_name: str, exclude_bots: bool = True,
+                                      github_token: str = None) -> List[Tuple[str, int]]:
+    """
+    Retrieve contributors by enumerating all commits on the default branch.
+    
+    This is slower than the /contributors endpoint but avoids its cache
+    (which can miss recently merged PRs) and counts all commits including
+    those from PR authors whose contributions were squashed/merged to main.
+    
+    Args:
+        repo_owner: Repository owner
+        repo_name: Repository name
+        exclude_bots: If True, exclude bots from the list
+        github_token: GitHub token to increase the rate limit
+        
+    Returns:
+        List of tuples (contributor_name, contribution_count)
+    """
+    from collections import Counter
+    
+    headers = {}
+    if github_token:
+        headers['Authorization'] = f'token {github_token}'
+    
+    url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/commits"
+    params = {'per_page': 100}
+    
+    contributor_counts = Counter()
+    # Cache email -> login (None means unresolvable). Seeded while iterating
+    # commits whose primary author is linked to a GitHub account.
+    email_to_login: Dict[str, Optional[str]] = {}
+    unresolved_coauthors: Dict[str, str] = {}  # email -> name, for the warning
+    page = 1
+    
+    print(f"   🔍 Enumerating commits on default branch...")
+    
+    try:
+        while True:
+            params['page'] = page
+            response = requests.get(url, headers=headers, params=params, timeout=10)
+            response.raise_for_status()
+            
+            commits = response.json()
+            
+            if not commits:
+                break
+            
+            for commit in commits:
+                author = commit.get('author')
+                commit_data = commit.get('commit', {})
+                commit_author = commit_data.get('author') or {}
+                commit_email = (commit_author.get('email') or '').lower()
+                
+                # Primary author
+                if author:
+                    name = author.get('login')
+                    # Bots have type == 'Bot' in the GitHub API
+                    if exclude_bots and author.get('type') != 'User':
+                        name = None
+                    if name:
+                        contributor_counts[name] += 1
+                        # Seed the cache: we now know this email maps to this login
+                        if commit_email:
+                            email_to_login.setdefault(commit_email, name)
+                
+                # Co-authors from "Co-authored-by:" trailers (handles squash merges)
+                message = commit_data.get('message', '')
+                for coauthor_name, coauthor_email in parse_coauthors(message):
+                    login = resolve_email_to_login(coauthor_email, email_to_login, headers)
+                    if login:
+                        contributor_counts[login] += 1
+                    else:
+                        unresolved_coauthors[coauthor_email] = coauthor_name
+            
+            print(f"   📄 Fetched {len(commits)} commits (page {page})")
+            
+            # Check if there are more pages
+            link_header = response.headers.get('Link', '')
+            if 'rel="next"' not in link_header:
+                break
+            
+            page += 1
+            
+            # Rate limit protection
+            if page % 10 == 0:
+                import time
+                time.sleep(1)
+        
+        # Warn about co-authors that could not be resolved to a GitHub login
+        if unresolved_coauthors:
+            print(f"   ⚠️  {len(unresolved_coauthors)} co-author(s) could not be "
+                  f"resolved to a GitHub login (ignored):")
+            for email, name in unresolved_coauthors.items():
+                print(f"      • {name} <{email}>")
+        
+        return list(contributor_counts.items())
+        
+    except requests.exceptions.RequestException as e:
+        print(f"⚠️  Error while fetching commits for {repo_owner}/{repo_name}: {e}")
+        return []
+
 def aggregate_contributors(packages: List[Tuple[str, str]], exclude_bots: bool = True, 
-                          exclude_names: List[str] = None, github_token: str = None) -> Dict[str, int]:
+                          exclude_names: List[str] = None, github_token: str = None,
+                          use_commits: bool = False) -> Dict[str, int]:
     """
     Aggregate contributors from multiple packages
     
@@ -60,6 +231,8 @@ def aggregate_contributors(packages: List[Tuple[str, str]], exclude_bots: bool =
         exclude_bots: If True, exclude bots
         exclude_names: List of contributor names to exclude
         github_token: GitHub token to increase the rate limit
+        use_commits: If True, enumerate commits on the default branch instead of
+                     using the /contributors endpoint (slower but avoids stale cache)
         
     Returns:
         Dictionary {contributor_name: total_contributions}
@@ -70,7 +243,7 @@ def aggregate_contributors(packages: List[Tuple[str, str]], exclude_bots: bool =
     
     for owner, repo in packages:
         print(f"📦 Fetching contributors for {owner}/{repo}...")
-        contributors = get_contributors(owner, repo, exclude_bots, github_token)
+        contributors = get_contributors(owner, repo, exclude_bots, github_token, use_commits)
         
         for name, contributions in contributors:
             # Exclude specified names
@@ -479,6 +652,13 @@ Usage examples:
     )
     
     parser.add_argument(
+        '--use-commits',
+        action='store_true',
+        help='Enumerate commits on the default branch instead of using the cached '
+             '/contributors endpoint (slower but catches recently merged PRs)'
+    )
+    
+    parser.add_argument(
         '--exclude',
         type=str,
         help='List of contributor names to exclude, separated by commas'
@@ -566,6 +746,10 @@ Usage examples:
     print(f"Excluding bots: {'Yes' if exclude_bots else 'No'}")
     if exclude_names:
         print(f"Excluded contributors: {', '.join(exclude_names)}")
+    if args.use_commits:
+        print(f"Method: enumerate commits on default branch (avoids stale cache)")
+    else:
+        print(f"Method: /contributors endpoint (cached, fast)")
     if github_token:
         print(f"Authentication: GitHub token provided (5000 req/h limit)")
     else:
@@ -573,7 +757,7 @@ Usage examples:
     print("="*70 + "\n")
     
     # Aggregate contributors
-    contributors = aggregate_contributors(packages, exclude_bots, exclude_names, github_token)
+    contributors = aggregate_contributors(packages, exclude_bots, exclude_names, github_token, args.use_commits)
     
     # Display ranking
     display_ranking(contributors)
