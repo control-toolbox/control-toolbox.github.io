@@ -11,13 +11,13 @@ permalink: /citations/
 <div class="citations-header">
 <h1>📚 Citations</h1>
 <p class="subtitle">Academic papers citing OptimalControl.jl and related control-toolbox projects</p>
-<p class="last-update">Last updated: April 14, 2026 at 12:30 UTC</p>
+<p class="last-update">Last updated: April 27, 2026 at 00:31 UTC</p>
 </div>
 
 <div class="summary-cards">
 <div class="summary-card card-citations">
 <div class="card-label">Total Citations</div>
-<div class="card-value">8</div>
+<div class="card-value">7</div>
 </div>
 </div>
 
@@ -60,12 +60,7 @@ permalink: /citations/
 <p class="citation-alt"><a href="https://hal.science/hal-05295809/" target="_blank">Version 2</a> — JB Caillau, A Montoison - 2025 - hal.science</p>
 </div>
 <div class="citation-item">
-<h3 class="citation-title"><a href="https://ieeexplore.ieee.org/abstract/document/11312971/" target="_blank">7. Pulse control of affine systems with applications to quantum control</a></h3>
-<p class="citation-authors">I Beschastnyi, L Dell'Elce, JB Pomet… - 2025 IEEE 64th …, 2025 - ieeexplore.ieee.org</p>
-<p class="citation-snippet">Motivated by problems in quantum control, we introduce a novel method for studying time-optimal control problems of affine systems with unbounded controls. Intuitively, we construct …</p>
-</div>
-<div class="citation-item">
-<h3 class="citation-title"><a href="https://inria.hal.science/hal-05369609/" target="_blank">8. Optimal allocation control in microbial growth under a heat-shock</a></h3>
+<h3 class="citation-title"><a href="https://inria.hal.science/hal-05369609/" target="_blank">7. Optimal allocation control in microbial growth under a heat-shock</a></h3>
 <p class="citation-authors">JI Imizcoz, AG Yabo, W Djema, F Mairet, JL Gouzé - 2025 - inria.hal.science</p>
 <p class="citation-snippet">Resource allocation models are a highly useful tool to study microbial growth in a variety ofcontexts. We use here a model of this kind describing the metabolism of a micro-organism …</p>
 </div>
