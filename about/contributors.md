@@ -11,7 +11,7 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>🌟 Contributors</h1>
 <p class="subtitle">Thank you to all the amazing people who have contributed to the control-toolbox ecosystem!</p>
-<p class="last-update">Last updated: June 10, 2026 at 03:50 (France)</p>
+<p class="last-update">Last updated: June 11, 2026 at 03:58 (France)</p>
 </div>
 
 <div class="summary-cards">
