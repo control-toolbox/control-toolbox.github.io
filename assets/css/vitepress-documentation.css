@@ -1,5 +1,9 @@
 /* control-toolbox.org — VitePress global navigation styles */
 
+a img {
+  display: inline !important;
+}
+
 :root {
     --ct-banner-height: 40px;
 }
