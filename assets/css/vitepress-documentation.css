@@ -4,9 +4,9 @@ a img {
   display: inline !important;
 }
 
-/* Sticky footer */
-footer {
-    display: flex !important;
+/* Show VitePress footer */
+.VPFooter.has-sidebar {
+    display: block !important;
 }
 
 :root {
