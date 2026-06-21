@@ -4,6 +4,11 @@ a img {
   display: inline !important;
 }
 
+/* Sticky footer */
+footer {
+    display: flex !important;
+}
+
 :root {
     --ct-banner-height: 40px;
 }

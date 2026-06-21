@@ -38,3 +38,26 @@
         inject();
     }
 }());
+
+window.onload = function() {
+
+    /* google analytics */
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J27VDFHJW2');
+
+    /* ct favicon */
+    var favicon = document.createElement('link');
+    favicon.type = 'image/x-icon';
+    favicon.rel = 'icon';
+    favicon.href = 'https://control-toolbox.org/assets/img/ct-logo.svg';
+    document.head.appendChild(favicon);
+
+    /* modify copyright text */
+    var copyrightElement = document.querySelector('.VPFooter .copyright');
+    if (copyrightElement) {
+        copyrightElement.innerHTML = "© Copyright 2026 control-toolbox.";
+    }
+
+};
