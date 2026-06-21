@@ -206,6 +206,15 @@ custom_js:
   tags=tags-sir
 %}
 
+{% assign tags-keep-bk = "kite electrical energy production, optimal control, bifurcation" | split: "," %}
+{% include app-card.html
+  url="https://keep-cnrs.github.io/CT-BK-App.jl"
+  abbrev="KEEP-BK"
+  title="Kite Electrical Energy Production and bifurcation detection"
+  summary="Using OptimalControl.jl to optimise the control free problem from the KEEP project, then BifurcationKit.jl to follow a path of solutions when varying parameters."
+  tags=tags-keep-bk
+%}
+
 </div>
 </div>
 </div>
