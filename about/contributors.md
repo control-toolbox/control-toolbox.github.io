@@ -11,7 +11,7 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>🌟 Contributors</h1>
 <p class="subtitle">Thank you to all the amazing people who have contributed to the control-toolbox ecosystem!</p>
-<p class="last-update">Last updated: June 27, 2026 at 03:46 (France)</p>
+<p class="last-update">Last updated: June 28, 2026 at 03:50 (France)</p>
 </div>
 
 <div class="summary-cards">
@@ -25,7 +25,7 @@ permalink: /contributors/
 </div>
 <div class="summary-card card-commits">
 <div class="card-label">Total Commits</div>
-<div class="card-value">9,667</div>
+<div class="card-value">9,691</div>
 </div>
 </div>
 
@@ -36,14 +36,14 @@ permalink: /contributors/
 <div class="contributors-section">
 <h2>👥 All Contributors</h2>
 <div class="contributors-inline">
-<span class="contributor-item"><a href="https://github.com/ocots" class="contributor-name">ocots</a> <span class="contributor-count">(7111)</span></span>, <span class="contributor-item"><a href="https://github.com/jbcaillau" class="contributor-name">jbcaillau</a> <span class="contributor-count">(1170)</span></span>, <span class="contributor-item"><a href="https://github.com/PierreMartinon" class="contributor-name">PierreMartinon</a> <span class="contributor-count">(509)</span></span>, <span class="contributor-item"><a href="https://github.com/0Yassine0" class="contributor-name">0Yassine0</a> <span class="contributor-count">(200)</span></span>, <span class="contributor-item"><a href="https://github.com/BaptisteCbl" class="contributor-name">BaptisteCbl</a> <span class="contributor-count">(151)</span></span>, <span class="contributor-item"><a href="https://github.com/j-l-s" class="contributor-name">j-l-s</a> <span class="contributor-count">(140)</span></span>, <span class="contributor-item"><a href="https://github.com/AnasXbouali" class="contributor-name">AnasXbouali</a> <span class="contributor-count">(71)</span></span>, <span class="contributor-item"><a href="https://github.com/gergaud" class="contributor-name">gergaud</a> <span class="contributor-count">(65)</span></span>, <span class="contributor-item"><a href="https://github.com/AmielMetier" class="contributor-name">AmielMetier</a> <span class="contributor-count">(65)</span></span>, <span class="contributor-item"><a href="https://github.com/agustinyabo" class="contributor-name">agustinyabo</a> <span class="contributor-count">(24)</span></span>, <span class="contributor-item"><a href="https://github.com/antoinepichon03" class="contributor-name">antoinepichon03</a> <span class="contributor-count">(23)</span></span>, <span class="contributor-item"><a href="https://github.com/HediChennoufi" class="contributor-name">HediChennoufi</a> <span class="contributor-count">(19)</span></span>, <span class="contributor-item"><a href="https://github.com/baillietn" class="contributor-name">baillietn</a> <span class="contributor-count">(15)</span></span>, <span class="contributor-item"><a href="https://github.com/Yassin-Moukan" class="contributor-name">Yassin-Moukan</a> <span class="contributor-count">(13)</span></span>, <span class="contributor-item"><a href="https://github.com/alegoupil" class="contributor-name">alegoupil</a> <span class="contributor-count">(11)</span></span>, <span class="contributor-item"><a href="https://github.com/remydutto" class="contributor-name">remydutto</a> <span class="contributor-count">(11)</span></span>, <span class="contributor-item"><a href="https://github.com/abavoil" class="contributor-name">abavoil</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/amontoison" class="contributor-name">amontoison</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/Ousmane-prog" class="contributor-name">Ousmane-prog</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/YouriRenoud" class="contributor-name">YouriRenoud</a> <span class="contributor-count">(9)</span></span>, <span class="contributor-item"><a href="https://github.com/ade4569" class="contributor-name">ade4569</a> <span class="contributor-count">(6)</span></span>, <span class="contributor-item"><a href="https://github.com/srcansiz" class="contributor-name">srcansiz</a> <span class="contributor-count">(5)</span></span>, <span class="contributor-item"><a href="https://github.com/michel2323" class="contributor-name">michel2323</a> <span class="contributor-count">(4)</span></span>, <span class="contributor-item"><a href="https://github.com/oameye" class="contributor-name">oameye</a> <span class="contributor-count">(3)</span></span>, <span class="contributor-item"><a href="https://github.com/gdalle" class="contributor-name">gdalle</a> <span class="contributor-count">(3)</span></span>, <span class="contributor-item"><a href="https://github.com/tmigot" class="contributor-name">tmigot</a> <span class="contributor-count">(2)</span></span>, <span class="contributor-item"><a href="https://github.com/loxim3" class="contributor-name">loxim3</a> <span class="contributor-count">(2)</span></span>, <span class="contributor-item"><a href="https://github.com/mjacobse" class="contributor-name">mjacobse</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/vmerc" class="contributor-name">vmerc</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/Lupylune" class="contributor-name">Lupylune</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/frapac" class="contributor-name">frapac</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/BWembe" class="contributor-name">BWembe</a> <span class="contributor-count">(1)</span></span>
+<span class="contributor-item"><a href="https://github.com/ocots" class="contributor-name">ocots</a> <span class="contributor-count">(7135)</span></span>, <span class="contributor-item"><a href="https://github.com/jbcaillau" class="contributor-name">jbcaillau</a> <span class="contributor-count">(1170)</span></span>, <span class="contributor-item"><a href="https://github.com/PierreMartinon" class="contributor-name">PierreMartinon</a> <span class="contributor-count">(509)</span></span>, <span class="contributor-item"><a href="https://github.com/0Yassine0" class="contributor-name">0Yassine0</a> <span class="contributor-count">(200)</span></span>, <span class="contributor-item"><a href="https://github.com/BaptisteCbl" class="contributor-name">BaptisteCbl</a> <span class="contributor-count">(151)</span></span>, <span class="contributor-item"><a href="https://github.com/j-l-s" class="contributor-name">j-l-s</a> <span class="contributor-count">(140)</span></span>, <span class="contributor-item"><a href="https://github.com/AnasXbouali" class="contributor-name">AnasXbouali</a> <span class="contributor-count">(71)</span></span>, <span class="contributor-item"><a href="https://github.com/gergaud" class="contributor-name">gergaud</a> <span class="contributor-count">(65)</span></span>, <span class="contributor-item"><a href="https://github.com/AmielMetier" class="contributor-name">AmielMetier</a> <span class="contributor-count">(65)</span></span>, <span class="contributor-item"><a href="https://github.com/agustinyabo" class="contributor-name">agustinyabo</a> <span class="contributor-count">(24)</span></span>, <span class="contributor-item"><a href="https://github.com/antoinepichon03" class="contributor-name">antoinepichon03</a> <span class="contributor-count">(23)</span></span>, <span class="contributor-item"><a href="https://github.com/HediChennoufi" class="contributor-name">HediChennoufi</a> <span class="contributor-count">(19)</span></span>, <span class="contributor-item"><a href="https://github.com/baillietn" class="contributor-name">baillietn</a> <span class="contributor-count">(15)</span></span>, <span class="contributor-item"><a href="https://github.com/Yassin-Moukan" class="contributor-name">Yassin-Moukan</a> <span class="contributor-count">(13)</span></span>, <span class="contributor-item"><a href="https://github.com/alegoupil" class="contributor-name">alegoupil</a> <span class="contributor-count">(11)</span></span>, <span class="contributor-item"><a href="https://github.com/remydutto" class="contributor-name">remydutto</a> <span class="contributor-count">(11)</span></span>, <span class="contributor-item"><a href="https://github.com/abavoil" class="contributor-name">abavoil</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/amontoison" class="contributor-name">amontoison</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/Ousmane-prog" class="contributor-name">Ousmane-prog</a> <span class="contributor-count">(10)</span></span>, <span class="contributor-item"><a href="https://github.com/YouriRenoud" class="contributor-name">YouriRenoud</a> <span class="contributor-count">(9)</span></span>, <span class="contributor-item"><a href="https://github.com/ade4569" class="contributor-name">ade4569</a> <span class="contributor-count">(6)</span></span>, <span class="contributor-item"><a href="https://github.com/srcansiz" class="contributor-name">srcansiz</a> <span class="contributor-count">(5)</span></span>, <span class="contributor-item"><a href="https://github.com/michel2323" class="contributor-name">michel2323</a> <span class="contributor-count">(4)</span></span>, <span class="contributor-item"><a href="https://github.com/oameye" class="contributor-name">oameye</a> <span class="contributor-count">(3)</span></span>, <span class="contributor-item"><a href="https://github.com/gdalle" class="contributor-name">gdalle</a> <span class="contributor-count">(3)</span></span>, <span class="contributor-item"><a href="https://github.com/tmigot" class="contributor-name">tmigot</a> <span class="contributor-count">(2)</span></span>, <span class="contributor-item"><a href="https://github.com/loxim3" class="contributor-name">loxim3</a> <span class="contributor-count">(2)</span></span>, <span class="contributor-item"><a href="https://github.com/mjacobse" class="contributor-name">mjacobse</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/vmerc" class="contributor-name">vmerc</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/Lupylune" class="contributor-name">Lupylune</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/frapac" class="contributor-name">frapac</a> <span class="contributor-count">(1)</span></span>, <span class="contributor-item"><a href="https://github.com/BWembe" class="contributor-name">BWembe</a> <span class="contributor-count">(1)</span></span>
 </div>
 </div>
 
 <div class="contributors-section">
 <h2>🏆 Top 10 Contributors</h2>
 <ol class="top-contributors-list">
-<li><a href="https://github.com/ocots" class="contributor-name">ocots</a> — <span class="contributor-stats">7,111 contributions (73.6%)</span></li>
+<li><a href="https://github.com/ocots" class="contributor-name">ocots</a> — <span class="contributor-stats">7,135 contributions (73.6%)</span></li>
 <li><a href="https://github.com/jbcaillau" class="contributor-name">jbcaillau</a> — <span class="contributor-stats">1,170 contributions (12.1%)</span></li>
 <li><a href="https://github.com/PierreMartinon" class="contributor-name">PierreMartinon</a> — <span class="contributor-stats">509 contributions (5.3%)</span></li>
 <li><a href="https://github.com/0Yassine0" class="contributor-name">0Yassine0</a> — <span class="contributor-stats">200 contributions (2.1%)</span></li>
@@ -71,11 +71,11 @@ permalink: /contributors/
 <tr>
 <td><span class="rank-badge top-1">1</span></td>
 <td><a href="https://github.com/ocots" class="contributor-link">ocots</a></td>
-<td>7,111</td>
+<td>7,135</td>
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 73.5595324299162%"></div>
+<div class="bar-fill" style="width: 73.62501289856567%"></div>
 </div>
 <span class="percentage-text">73.6%</span>
 </div>
@@ -88,7 +88,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 12.103030929967932%"></div>
+<div class="bar-fill" style="width: 12.073057476008668%"></div>
 </div>
 <span class="percentage-text">12.1%</span>
 </div>
@@ -101,7 +101,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 5.265335678080066%"></div>
+<div class="bar-fill" style="width: 5.2522959446909505%"></div>
 </div>
 <span class="percentage-text">5.3%</span>
 </div>
@@ -114,7 +114,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 2.0688941760628943%"></div>
+<div class="bar-fill" style="width: 2.0637705087194305%"></div>
 </div>
 <span class="percentage-text">2.1%</span>
 </div>
@@ -127,7 +127,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 1.5620151029274851%"></div>
+<div class="bar-fill" style="width: 1.55814673408317%"></div>
 </div>
 <span class="percentage-text">1.6%</span>
 </div>
@@ -140,7 +140,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 1.448225923244026%"></div>
+<div class="bar-fill" style="width: 1.4446393561036013%"></div>
 </div>
 <span class="percentage-text">1.4%</span>
 </div>
@@ -153,7 +153,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.7344574325023275%"></div>
+<div class="bar-fill" style="width: 0.7326385305953977%"></div>
 </div>
 <span class="percentage-text">0.7%</span>
 </div>
@@ -166,7 +166,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.6723906072204406%"></div>
+<div class="bar-fill" style="width: 0.6707254153338149%"></div>
 </div>
 <span class="percentage-text">0.7%</span>
 </div>
@@ -179,7 +179,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.6723906072204406%"></div>
+<div class="bar-fill" style="width: 0.6707254153338149%"></div>
 </div>
 <span class="percentage-text">0.7%</span>
 </div>
@@ -192,7 +192,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.2482673011275473%"></div>
+<div class="bar-fill" style="width: 0.24765246104633165%"></div>
 </div>
 <span class="percentage-text">0.2%</span>
 </div>
@@ -205,7 +205,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.23792283024723285%"></div>
+<div class="bar-fill" style="width: 0.23733360850273452%"></div>
 </div>
 <span class="percentage-text">0.2%</span>
 </div>
@@ -218,7 +218,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.19654494672597497%"></div>
+<div class="bar-fill" style="width: 0.1960581983283459%"></div>
 </div>
 <span class="percentage-text">0.2%</span>
 </div>
@@ -231,7 +231,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.15516706320471707%"></div>
+<div class="bar-fill" style="width: 0.15478278815395727%"></div>
 </div>
 <span class="percentage-text">0.2%</span>
 </div>
@@ -244,7 +244,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.13447812144408813%"></div>
+<div class="bar-fill" style="width: 0.13414508306676298%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -257,7 +257,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.11378917968345918%"></div>
+<div class="bar-fill" style="width: 0.11350737797956867%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -270,7 +270,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.11378917968345918%"></div>
+<div class="bar-fill" style="width: 0.11350737797956867%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -283,7 +283,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.10344470880314471%"></div>
+<div class="bar-fill" style="width: 0.10318852543597151%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -296,7 +296,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.10344470880314471%"></div>
+<div class="bar-fill" style="width: 0.10318852543597151%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -309,7 +309,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.10344470880314471%"></div>
+<div class="bar-fill" style="width: 0.10318852543597151%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -322,7 +322,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.09310023792283025%"></div>
+<div class="bar-fill" style="width: 0.09286967289237437%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -335,7 +335,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.062066825281886825%"></div>
+<div class="bar-fill" style="width: 0.06191311526158291%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -348,7 +348,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.05172235440157236%"></div>
+<div class="bar-fill" style="width: 0.051594262717985756%"></div>
 </div>
 <span class="percentage-text">0.1%</span>
 </div>
@@ -361,7 +361,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.04137788352125789%"></div>
+<div class="bar-fill" style="width: 0.041275410174388606%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -374,7 +374,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.031033412640943413%"></div>
+<div class="bar-fill" style="width: 0.030956557630791456%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -387,7 +387,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.031033412640943413%"></div>
+<div class="bar-fill" style="width: 0.030956557630791456%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -400,7 +400,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.020688941760628944%"></div>
+<div class="bar-fill" style="width: 0.020637705087194303%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -413,7 +413,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.020688941760628944%"></div>
+<div class="bar-fill" style="width: 0.020637705087194303%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -426,7 +426,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.010344470880314472%"></div>
+<div class="bar-fill" style="width: 0.010318852543597152%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -439,7 +439,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.010344470880314472%"></div>
+<div class="bar-fill" style="width: 0.010318852543597152%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -452,7 +452,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.010344470880314472%"></div>
+<div class="bar-fill" style="width: 0.010318852543597152%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -465,7 +465,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.010344470880314472%"></div>
+<div class="bar-fill" style="width: 0.010318852543597152%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -478,7 +478,7 @@ permalink: /contributors/
 <td>
 <div class="contribution-bar">
 <div class="bar-container">
-<div class="bar-fill" style="width: 0.010344470880314472%"></div>
+<div class="bar-fill" style="width: 0.010318852543597152%"></div>
 </div>
 <span class="percentage-text">0.0%</span>
 </div>
@@ -493,7 +493,7 @@ permalink: /contributors/
 <div class="stats-grid">
 <div class="stat-item">
 <strong>Average contributions</strong>
-<span>302.1 commits per contributor</span>
+<span>302.8 commits per contributor</span>
 </div>
 <div class="stat-item">
 <strong>Median contributions</strong>
@@ -501,7 +501,7 @@ permalink: /contributors/
 </div>
 <div class="stat-item">
 <strong>Top 10 contributions</strong>
-<span>9,506 commits (98.3%)</span>
+<span>9,530 commits (98.3%)</span>
 </div>
 <div class="stat-item">
 <strong>Other contributors</strong>
