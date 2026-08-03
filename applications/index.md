@@ -102,7 +102,7 @@ custom_js:
 <div class="apps-main">
 
 <div class="contributors-header">
-<h1>🚀 Applications</h1>
+<h1>Applications</h1>
 <p class="subtitle">A collection of optimal control applications built with the control-toolbox ecosystem.</p>
 </div>
 

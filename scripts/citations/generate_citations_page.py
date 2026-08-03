@@ -125,27 +125,14 @@ def generate_web_page(citations: List[Dict], scholar_url: str,
         
         # Header
         f.write('<div class="citations-header">\n')
-        f.write('<h1>📚 Citations</h1>\n')
+        f.write('<h1>Citations</h1>\n')
         f.write('<p class="subtitle">Academic papers citing OptimalControl.jl and related control-toolbox projects</p>\n')
         f.write(f'<p class="last-update">Last updated: {datetime.now().strftime("%B %d, %Y at %H:%M UTC")}</p>\n')
         f.write('</div>\n\n')
         
-        # Summary cards
-        f.write('<div class="summary-cards">\n')
-        f.write('<div class="summary-card card-citations">\n')
-        f.write('<div class="card-label">Total Citations</div>\n')
-        f.write(f'<div class="card-value">{len(citations)}</div>\n')
-        f.write('</div>\n')
-        f.write('</div>\n\n')
-        
-        # Info note
-        f.write('<div class="info-box">\n')
-        f.write('<p><strong>Note:</strong> This page lists academic papers that cite OptimalControl.jl and related control-toolbox projects. Data is automatically retrieved from Google Scholar.</p>\n')
-        f.write('</div>\n\n')
-        
         # Citations list
         f.write('<div class="citations-section">\n')
-        f.write('<h2>📖 Citations</h2>\n')
+        f.write(f'<h2>Citations ({len(citations)})</h2>\n')
         f.write('<div class="citations-list">\n')
         
         for i, citation in enumerate(citations, 1):
@@ -185,10 +172,7 @@ def generate_web_page(citations: List[Dict], scholar_url: str,
         f.write('</div>\n\n')
         
         # Footer
-        f.write('<hr>\n')
-        f.write('<p style="text-align: center; color: #6a737d; font-size: 0.9rem;">\n')
-        f.write('<em>🤖 This page is automatically generated from Google Scholar and updated weekly.</em>\n')
-        f.write('</p>\n\n')
+        f.write('<p class="generated-note">Automatically generated from Google Scholar.</p>\n\n')
         
         # Close container
         f.write('</div>\n')

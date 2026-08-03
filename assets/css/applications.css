@@ -40,7 +40,7 @@
 }
 
 /* Mobile portrait ONLY - collapsible filters */
-@media (max-width: 480px) and (orientation: portrait) {
+@media (max-width: 480px) { /* and (orientation: portrait) */
     .apps-layout {
         grid-template-columns: 1fr;
         margin-left: 0;
@@ -199,11 +199,15 @@
     }
 
     .apps-main .contributors-header {
-        display: none;
+        margin-bottom: 1.5rem;
+    }
+
+    .apps-main .contributors-header h1 {
+        font-size: 1.75rem;
     }
 
     .apps-cta {
-        display: none;
+        margin-bottom: 1rem;
     }
 
     .view-toggle-bar {
@@ -260,7 +264,7 @@
 }
 
 /* Landscape mode - drawer sidebar (≤768px in landscape OR small height) */
-@media (max-width: 900px) and (orientation: landscape) {
+@media (max-width: 900px) and (min-width: 480px) { /* and (orientation: landscape) */
     /* Change layout to 1 column since sidebar is fixed */
     .apps-layout {
         grid-template-columns: 1fr;
@@ -371,11 +375,15 @@
     }
 
     .apps-main .contributors-header {
-        display: none;
+        margin-bottom: 1rem;
+    }
+
+    .apps-main .contributors-header h1 {
+        font-size: 1.5rem;
     }
 
     .apps-cta {
-        display: none;
+        margin-bottom: 0.75rem;
     }
 
     .app-grid {
@@ -437,18 +445,17 @@
 }
 
 .filter-counter-box {
-    background: var(--color-canvas-default, #ffffff);
-    border: 1px solid var(--color-border-default, #e1e4e8);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    text-align: center;
     margin-bottom: 1rem;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    text-align: left;
 }
 
 .filter-counter {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-text-primary, #24292e);
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 /* Search box */
@@ -599,10 +606,11 @@
     flex-direction: column;
     background: var(--color-canvas-default, #ffffff);
     border: 1px solid var(--color-border-default, #e1e4e8);
-    border-radius: 12px;
+    border-left: 3px solid #007fa2;
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+    transform-origin: center;
     text-decoration: none;
     color: inherit;
     width: 100%;
@@ -610,8 +618,10 @@
 }
 
 .app-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.01);
+    border-color: #005f73;
+    border-left-color: #005f73;
+    background: #f8fafc;
 }
 
 .app-header {
@@ -627,10 +637,13 @@
     font-family: 'JuliaMono', monospace, 'Courier New', monospace;
     font-size: 1.5rem;
     font-weight: 700;
-    background: var(--app-color, #CB3C33);
-    color: white;
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
+    line-height: 1.2;
+    background: #f8fafc;
+    border: 1px solid #b6dfe5;
+    color: #005f73;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
     width: 125px;
     text-align: center;
     flex-shrink: 0;
@@ -639,25 +652,53 @@
 .app-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--color-text-primary, #24292e);
+    line-height: 1.3;
+    text-align: left;
+    color: #005f73;
     text-decoration: none;
     flex: 1;
 }
 
+.app-card:hover .app-avatar-text {
+    background: #e2e8f0;
+    border-color: #cbd5e1;
+}
+
 .app-card:hover .app-title {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .app-body {
     padding: 1rem 1.75rem 1rem;
-    background: white;
+    background: var(--color-canvas-default, #ffffff);
 }
 
 .app-summary {
     font-size: 0.95rem;
+    text-align: left;
     color: var(--color-text-secondary, #585c60);
     line-height: 1.6;
     margin: 0 !important;
+}
+
+.dark .app-card:hover {
+    background: #172033;
+    border-color: #5ec9d6;
+}
+
+.dark .app-avatar-text {
+    background: #172033;
+    border-color: #347b86;
+    color: #7dd3e0;
+}
+
+.dark .app-card:hover .app-avatar-text {
+    background: #334155;
+    border-color: #5ec9d6;
+}
+
+.dark .app-title {
+    color: #5ec9d6;
 }
 
 /* Compact view */
@@ -684,12 +725,7 @@
 }
 
 .app-grid.compact .app-card {
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-}
-
-.app-grid.compact .app-card:hover {
-    transform: translateY(-2px);
+    border-radius: 4px;
 }
 
 /* Tags on cards */

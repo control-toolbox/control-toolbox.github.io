@@ -9,24 +9,13 @@ permalink: /citations/
 <div class="citations-page">
 
 <div class="citations-header">
-<h1>📚 Citations</h1>
+<h1>Citations</h1>
 <p class="subtitle">Academic papers citing OptimalControl.jl and related control-toolbox projects</p>
 <p class="last-update">Last updated: July 27, 2026 at 00:33 UTC</p>
 </div>
 
-<div class="summary-cards">
-<div class="summary-card card-citations">
-<div class="card-label">Total Citations</div>
-<div class="card-value">10</div>
-</div>
-</div>
-
-<div class="info-box">
-<p><strong>Note:</strong> This page lists academic papers that cite OptimalControl.jl and related control-toolbox projects. Data is automatically retrieved from Google Scholar.</p>
-</div>
-
 <div class="citations-section">
-<h2>📖 Citations</h2>
+<h2>Citations (10)</h2>
 <div class="citations-list">
 <div class="citation-item">
 <h3 class="citation-title"><a href="https://joss.theoj.org/papers/10.21105/joss.10229.pdf" target="_blank">1. Uno: a composable framework for nonlinearly constrained optimization</a></h3>
@@ -81,9 +70,6 @@ permalink: /citations/
 </div>
 </div>
 
-<hr>
-<p style="text-align: center; color: #6a737d; font-size: 0.9rem;">
-<em>🤖 This page is automatically generated from Google Scholar and updated weekly.</em>
-</p>
+<p class="generated-note">Automatically generated from Google Scholar.</p>
 
 </div>
