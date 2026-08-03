@@ -1,6 +1,10 @@
 @import "common.css";
 @import "multidoc.css";
 
+.warning-overlay-base.outdated-warning-overlay {
+    display: none!important;
+}
+
 #documenter .docs-sidebar ul.docs-menu .tocitem {
     padding: 0.3rem 0.5rem;
 }
