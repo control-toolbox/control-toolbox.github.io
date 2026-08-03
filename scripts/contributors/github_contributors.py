@@ -480,145 +480,34 @@ def generate_web_page(contributors: Dict[str, int], packages: List[Tuple[str, st
         
         # Header
         f.write('<div class="contributors-header">\n')
-        f.write('<h1>🌟 Contributors</h1>\n')
-        f.write('<p class="subtitle">Thank you to all the amazing people who have contributed to the control-toolbox ecosystem!</p>\n')
+        f.write('<h1>Contributors</h1>\n')
+        f.write('<p class="subtitle">Contributors to the control-toolbox ecosystem</p>\n')
         france_time = datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Paris"))
         f.write(f'<p class="last-update">Last updated: {france_time.strftime("%B %d, %Y at %H:%M")} (France)</p>\n')
         f.write('</div>\n\n')
         
-        # Summary cards
-        f.write('<div class="summary-cards">\n')
-        f.write('<div class="summary-card card-repos">\n')
-        f.write('<div class="card-label">Repositories</div>\n')
-        f.write(f'<div class="card-value">{len(packages)}</div>\n')
-        f.write('</div>\n')
-        f.write('<div class="summary-card card-contributors">\n')
-        f.write('<div class="card-label">Contributors</div>\n')
-        f.write(f'<div class="card-value">{len(sorted_contributors)}</div>\n')
-        f.write('</div>\n')
-        f.write('<div class="summary-card card-commits">\n')
-        f.write('<div class="card-label">Total Commits</div>\n')
-        f.write(f'<div class="card-value">{total_contributions:,}</div>\n')
-        f.write('</div>\n')
-        f.write('</div>\n\n')
-        
-        # Info note
-        f.write('<div class="info-box">\n')
-        f.write('<p><strong>Note:</strong> Contributions represent commits made to the repositories. ')
-        if exclude_bots:
-            f.write('Bots are excluded from the statistics. ')
-        if exclude_names:
-            f.write(f'Excluded contributors: {", ".join(exclude_names)}.')
-        f.write('</p>\n')
-        f.write('</div>\n\n')
-        
-        # Inline list of contributors
+        # Summary
+        f.write('<dl class="summary">\n')
+        f.write('<div><dt>Repositories</dt>\n')
+        f.write(f'<dd>{len(packages)}</dd></div>\n')
+        f.write('<div><dt>Contributors</dt>\n')
+        f.write(f'<dd>{len(sorted_contributors)}</dd></div>\n')
+        f.write('<div><dt>Total commits</dt>\n')
+        f.write(f'<dd>{total_contributions:,}</dd></div>\n')
+        f.write('</dl>\n\n')
+
+        # Contributor list
         f.write('<div class="contributors-section">\n')
-        f.write('<h2>👥 All Contributors</h2>\n')
-        f.write('<div class="contributors-inline">\n')
-        inline_list = ", ".join([f'<span class="contributor-item"><a href="https://github.com/{name}" class="contributor-name">{name}</a> <span class="contributor-count">({contrib})</span></span>' 
-                                 for name, contrib in sorted_contributors])
-        f.write(f'{inline_list}\n')
-        f.write('</div>\n')
-        f.write('</div>\n\n')
-        
-        # Top 10 contributors
-        f.write('<div class="contributors-section">\n')
-        f.write('<h2>🏆 Top 10 Contributors</h2>\n')
-        f.write('<ol class="top-contributors-list">\n')
-        for i, (name, contrib) in enumerate(sorted_contributors[:10], 1):
-            percentage = (contrib / total_contributions) * 100
-            f.write(f'<li><a href="https://github.com/{name}" class="contributor-name">{name}</a> — ')
-            f.write(f'<span class="contributor-stats">{contrib:,} contributions ({percentage:.1f}%)</span></li>\n')
+        f.write('<h2>Contributors</h2>\n')
+        f.write('<ol class="contributors-list">\n')
+        for name, _ in sorted_contributors:
+            f.write(f'<li><a href="https://github.com/{name}">{name}</a></li>\n')
         f.write('</ol>\n')
         f.write('</div>\n\n')
-        
-        # Detailed ranking
+
+        # Repository list
         f.write('<div class="contributors-section">\n')
-        f.write('<h2>📊 Detailed Ranking</h2>\n')
-        f.write('<table class="contributors-table">\n')
-        f.write('<thead>\n')
-        f.write('<tr>\n')
-        f.write('<th>Rank</th>\n')
-        f.write('<th>Contributor</th>\n')
-        f.write('<th>Contributions</th>\n')
-        f.write('<th>Percentage</th>\n')
-        f.write('</tr>\n')
-        f.write('</thead>\n')
-        f.write('<tbody>\n')
-        
-        for i, (name, contrib) in enumerate(sorted_contributors, 1):
-            percentage = (contrib / total_contributions) * 100
-            
-            # Determine badge class
-            if i == 1:
-                badge_class = "top-1"
-            elif i == 2:
-                badge_class = "top-2"
-            elif i == 3:
-                badge_class = "top-3"
-            elif i <= 10:
-                badge_class = "top-10"
-            else:
-                badge_class = "other"
-            
-            f.write('<tr>\n')
-            f.write(f'<td><span class="rank-badge {badge_class}">{i}</span></td>\n')
-            f.write(f'<td><a href="https://github.com/{name}" class="contributor-link">{name}</a></td>\n')
-            f.write(f'<td>{contrib:,}</td>\n')
-            f.write('<td>\n')
-            f.write('<div class="contribution-bar">\n')
-            f.write('<div class="bar-container">\n')
-            f.write(f'<div class="bar-fill" style="width: {percentage}%"></div>\n')
-            f.write('</div>\n')
-            f.write(f'<span class="percentage-text">{percentage:.1f}%</span>\n')
-            f.write('</div>\n')
-            f.write('</td>\n')
-            f.write('</tr>\n')
-        
-        f.write('</tbody>\n')
-        f.write('</table>\n')
-        f.write('</div>\n\n')
-        
-        # Additional statistics
-        f.write('<div class="contributors-section">\n')
-        f.write('<h2>📈 Additional Statistics</h2>\n')
-        f.write('<div class="stats-grid">\n')
-        
-        avg_contrib = total_contributions / len(sorted_contributors)
-        median_contrib = sorted_contributors[len(sorted_contributors)//2][1]
-        top_10_contrib = sum(contrib for _, contrib in sorted_contributors[:10])
-        top_10_percentage = (top_10_contrib / total_contributions) * 100
-        
-        f.write('<div class="stat-item">\n')
-        f.write('<strong>Average contributions</strong>\n')
-        f.write(f'<span>{avg_contrib:.1f} commits per contributor</span>\n')
-        f.write('</div>\n')
-        
-        f.write('<div class="stat-item">\n')
-        f.write('<strong>Median contributions</strong>\n')
-        f.write(f'<span>{median_contrib} commits</span>\n')
-        f.write('</div>\n')
-        
-        f.write('<div class="stat-item">\n')
-        f.write('<strong>Top 10 contributions</strong>\n')
-        f.write(f'<span>{top_10_contrib:,} commits ({top_10_percentage:.1f}%)</span>\n')
-        f.write('</div>\n')
-        
-        if len(sorted_contributors) > 10:
-            others_contrib = total_contributions - top_10_contrib
-            others_percentage = (others_contrib / total_contributions) * 100
-            f.write('<div class="stat-item">\n')
-            f.write('<strong>Other contributors</strong>\n')
-            f.write(f'<span>{others_contrib:,} commits ({others_percentage:.1f}%)</span>\n')
-            f.write('</div>\n')
-        
-        f.write('</div>\n')
-        f.write('</div>\n\n')
-        
-        # Analyzed repositories
-        f.write('<div class="contributors-section">\n')
-        f.write('<h2>📦 Analyzed Repositories</h2>\n')
+        f.write('<h2>Repositories</h2>\n')
         f.write('<div class="repo-list">\n')
         
         # Group by owner
@@ -637,10 +526,7 @@ def generate_web_page(contributors: Dict[str, int], packages: List[Tuple[str, st
         f.write('</div>\n\n')
         
         # Footer
-        f.write('<hr>\n')
-        f.write('<p style="text-align: center; color: #6a737d; font-size: 0.9rem;">\n')
-        f.write('<em>🤖 This page is automatically generated via the GitHub API and updated weekly.</em>\n')
-        f.write('</p>\n\n')
+        f.write('<p class="generated-note">Automatically generated from GitHub data.</p>\n\n')
         
         # Close container
         f.write('</div>\n')
@@ -761,6 +647,7 @@ Usage examples:
             ("control-toolbox", "CTSolvers.jl"),
             ("control-toolbox", "CTModels.jl"),
             ("control-toolbox", "CTBase.jl"),
+            ("control-toolbox", "CTLie.jl"),
             ("control-toolbox", "CTBenchmarks.jl"),
             ("control-toolbox", "CTDiffFlow.jl"),
             ("control-toolbox", "OptimalControlProblems.jl"),
