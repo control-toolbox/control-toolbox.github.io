@@ -11,16 +11,16 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>Contributors</h1>
 <p class="subtitle">Contributors to the control-toolbox ecosystem</p>
-<p class="last-update">Last updated: August 03, 2026 at 15:03 (France)</p>
+<p class="last-update">Last updated: August 04, 2026 at 03:41 (France)</p>
 </div>
 
 <dl class="summary">
 <div><dt>Repositories</dt>
-<dd>25</dd></div>
+<dd>26</dd></div>
 <div><dt>Contributors</dt>
 <dd>32</dd></div>
 <div><dt>Total commits</dt>
-<dd>10,400</dd></div>
+<dd>10,460</dd></div>
 </dl>
 
 <div class="contributors-section">
@@ -82,6 +82,7 @@ permalink: /contributors/
 <li><a href="https://github.com/control-toolbox/CTDiffFlow.jl">CTDiffFlow.jl</a></li>
 <li><a href="https://github.com/control-toolbox/CTDirect.jl">CTDirect.jl</a></li>
 <li><a href="https://github.com/control-toolbox/CTFlows.jl">CTFlows.jl</a></li>
+<li><a href="https://github.com/control-toolbox/CTLie.jl">CTLie.jl</a></li>
 <li><a href="https://github.com/control-toolbox/CTModels.jl">CTModels.jl</a></li>
 <li><a href="https://github.com/control-toolbox/CTParser.jl">CTParser.jl</a></li>
 <li><a href="https://github.com/control-toolbox/CTProblems.jl">CTProblems.jl</a></li>
