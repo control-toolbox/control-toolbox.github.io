@@ -11,53 +11,38 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>Contributors</h1>
 <p class="subtitle">Contributors to the control-toolbox ecosystem</p>
-<p class="last-update">Last updated: August 11, 2026 at 03:37 (France)</p>
+<p class="last-update">Last updated: August 12, 2026 at 03:37 (France)</p>
 </div>
 
 <dl class="summary">
 <div><dt>Repositories</dt>
 <dd>26</dd></div>
 <div><dt>Contributors</dt>
-<dd>32</dd></div>
+<dd>17</dd></div>
 <div><dt>Total commits</dt>
-<dd>10,482</dd></div>
+<dd>3,489</dd></div>
 </dl>
 
 <div class="contributors-section">
 <h2>Contributors</h2>
 <ol class="contributors-list">
 <li><a href="https://github.com/ocots">ocots</a></li>
-<li><a href="https://github.com/jbcaillau">jbcaillau</a></li>
 <li><a href="https://github.com/PierreMartinon">PierreMartinon</a></li>
-<li><a href="https://github.com/0Yassine0">0Yassine0</a></li>
-<li><a href="https://github.com/BaptisteCbl">BaptisteCbl</a></li>
-<li><a href="https://github.com/j-l-s">j-l-s</a></li>
+<li><a href="https://github.com/jbcaillau">jbcaillau</a></li>
 <li><a href="https://github.com/AnasXbouali">AnasXbouali</a></li>
-<li><a href="https://github.com/gergaud">gergaud</a></li>
 <li><a href="https://github.com/AmielMetier">AmielMetier</a></li>
+<li><a href="https://github.com/gergaud">gergaud</a></li>
 <li><a href="https://github.com/agustinyabo">agustinyabo</a></li>
-<li><a href="https://github.com/antoinepichon03">antoinepichon03</a></li>
 <li><a href="https://github.com/HediChennoufi">HediChennoufi</a></li>
-<li><a href="https://github.com/Yassin-Moukan">Yassin-Moukan</a></li>
 <li><a href="https://github.com/baillietn">baillietn</a></li>
-<li><a href="https://github.com/alegoupil">alegoupil</a></li>
 <li><a href="https://github.com/remydutto">remydutto</a></li>
-<li><a href="https://github.com/abavoil">abavoil</a></li>
+<li><a href="https://github.com/0Yassine0">0Yassine0</a></li>
 <li><a href="https://github.com/amontoison">amontoison</a></li>
-<li><a href="https://github.com/Ousmane-prog">Ousmane-prog</a></li>
-<li><a href="https://github.com/YouriRenoud">YouriRenoud</a></li>
-<li><a href="https://github.com/ade4569">ade4569</a></li>
-<li><a href="https://github.com/srcansiz">srcansiz</a></li>
 <li><a href="https://github.com/michel2323">michel2323</a></li>
 <li><a href="https://github.com/tmigot">tmigot</a></li>
-<li><a href="https://github.com/oameye">oameye</a></li>
-<li><a href="https://github.com/gdalle">gdalle</a></li>
-<li><a href="https://github.com/loxim3">loxim3</a></li>
-<li><a href="https://github.com/mjacobse">mjacobse</a></li>
+<li><a href="https://github.com/antoinepichon03">antoinepichon03</a></li>
+<li><a href="https://github.com/BaptisteCbl">BaptisteCbl</a></li>
 <li><a href="https://github.com/vmerc">vmerc</a></li>
-<li><a href="https://github.com/Lupylune">Lupylune</a></li>
-<li><a href="https://github.com/frapac">frapac</a></li>
-<li><a href="https://github.com/BWembe">BWembe</a></li>
 </ol>
 </div>
 
