@@ -11,16 +11,16 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>Contributors</h1>
 <p class="subtitle">Contributors to the control-toolbox ecosystem</p>
-<p class="last-update">Last updated: September 07, 2026 at 03:34 (France)</p>
+<p class="last-update">Last updated: September 08, 2026 at 03:29 (France)</p>
 </div>
 
 <dl class="summary">
 <div><dt>Repositories</dt>
 <dd>26</dd></div>
 <div><dt>Contributors</dt>
-<dd>33</dd></div>
+<dd>34</dd></div>
 <div><dt>Total commits</dt>
-<dd>10,913</dd></div>
+<dd>10,955</dd></div>
 </dl>
 
 <div class="contributors-section">
@@ -54,6 +54,7 @@ permalink: /contributors/
 <li><a href="https://github.com/oameye">oameye</a></li>
 <li><a href="https://github.com/gdalle">gdalle</a></li>
 <li><a href="https://github.com/loxim3">loxim3</a></li>
+<li><a href="https://github.com/goelakash">goelakash</a></li>
 <li><a href="https://github.com/mjacobse">mjacobse</a></li>
 <li><a href="https://github.com/vmerc">vmerc</a></li>
 <li><a href="https://github.com/Lupylune">Lupylune</a></li>
