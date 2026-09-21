@@ -11,16 +11,16 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>Contributors</h1>
 <p class="subtitle">Contributors to the control-toolbox ecosystem</p>
-<p class="last-update">Last updated: September 20, 2026 at 03:32 (France)</p>
+<p class="last-update">Last updated: September 21, 2026 at 03:35 (France)</p>
 </div>
 
 <dl class="summary">
 <div><dt>Repositories</dt>
 <dd>26</dd></div>
 <div><dt>Contributors</dt>
-<dd>34</dd></div>
+<dd>35</dd></div>
 <div><dt>Total commits</dt>
-<dd>10,964</dd></div>
+<dd>10,980</dd></div>
 </dl>
 
 <div class="contributors-section">
@@ -40,6 +40,7 @@ permalink: /contributors/
 <li><a href="https://github.com/actions-user">actions-user</a></li>
 <li><a href="https://github.com/HediChennoufi">HediChennoufi</a></li>
 <li><a href="https://github.com/Yassin-Moukan">Yassin-Moukan</a></li>
+<li><a href="https://github.com/remydutto-ctrl">remydutto-ctrl</a></li>
 <li><a href="https://github.com/baillietn">baillietn</a></li>
 <li><a href="https://github.com/remydutto">remydutto</a></li>
 <li><a href="https://github.com/alegoupil">alegoupil</a></li>
