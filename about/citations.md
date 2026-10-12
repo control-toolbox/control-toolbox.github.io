@@ -11,7 +11,7 @@ permalink: /citations/
 <div class="citations-header">
 <h1>Citations</h1>
 <p class="subtitle">Academic papers citing OptimalControl.jl and related control-toolbox projects</p>
-<p class="last-update">Last updated: September 14, 2026 at 00:24 UTC</p>
+<p class="last-update">Last updated: October 12, 2026 at 00:27 UTC</p>
 </div>
 
 <div class="citations-section">
