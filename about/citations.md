@@ -11,21 +11,21 @@ permalink: /citations/
 <div class="citations-header">
 <h1>Citations</h1>
 <p class="subtitle">Academic papers citing OptimalControl.jl and related control-toolbox projects</p>
-<p class="last-update">Last updated: October 12, 2026 at 00:27 UTC</p>
+<p class="last-update">Last updated: October 19, 2026 at 00:22 UTC</p>
 </div>
 
 <div class="citations-section">
-<h2>Citations (10)</h2>
+<h2>Citations (9)</h2>
 <div class="citations-list">
 <div class="citation-item">
-<h3 class="citation-title"><a href="https://joss.theoj.org/papers/10.21105/joss.10229.pdf" target="_blank">1. Uno: a composable framework for nonlinearly constrained optimization</a></h3>
-<p class="citation-authors">C Vanaret, A Montoison - Journal of Open Source Software, 2026 - joss.theoj.org</p>
-<p class="citation-snippet">Uno is a composable software framework for nonlinearly constrained optimization written inmodern C++. It unifies the workflows of Lagrange-Newton methods, ie, gradient-based …</p>
-</div>
-<div class="citation-item">
-<h3 class="citation-title"><a href="https://arxiv.org/abs/2603.03901" target="_blank">2. Competitive tumor growth modeling and optimal radiotherapy control via logistic equations</a></h3>
+<h3 class="citation-title"><a href="https://arxiv.org/abs/2603.03901" target="_blank">1. Competitive tumor growth modeling and optimal radiotherapy control via logistic equations</a></h3>
 <p class="citation-authors">J López - Pedrares, A López - Rivas… - arXiv preprint arXiv …, 2026 - arxiv.org</p>
 <p class="citation-snippet">The uncontrolled proliferation of cancer cells and their interaction with healthy tissue posesa major challenge in oncology. This manuscript develops and analyzes mathematical …</p>
+</div>
+<div class="citation-item">
+<h3 class="citation-title"><a href="https://arxiv.org/abs/2610.13451" target="_blank">2. An Optimal Control Approach to Finite-Time Stabilization of Linear Systems</a></h3>
+<p class="citation-authors">W Weng, Y Chitour, P Mason - arXiv preprint arXiv:2610.13451, 2026 - arxiv.org</p>
+<p class="citation-snippet">This paper presents a finite-time stabilization method for the integrator chain via optimalcontrol techniques by introducing a tailored cost function. We analyze key properties of the …</p>
 </div>
 <div class="citation-item">
 <h3 class="citation-title"><a href="https://arxiv.org/abs/2607.22191" target="_blank">3. Finite-Time Stabilization of Linear Systems via Optimal Control</a></h3>
@@ -33,39 +33,34 @@ permalink: /citations/
 <p class="citation-snippet">This paper presents an optimal control framework for achieving finite-time stabilization oflinear systems. By introducing a suitably constructed integral cost function, we derive a new …</p>
 </div>
 <div class="citation-item">
-<h3 class="citation-title"><a href="https://www.sciencedirect.com/science/article/pii/S1751570X26000075" target="_blank">4. Minimum time problem for the double integrator with a loss-of-control region</a></h3>
-<p class="citation-authors">T Bayen, A Bouali, L Bourdin - Nonlinear Analysis: Hybrid Systems, 2026 - Elsevier</p>
-<p class="citation-snippet">In this paper we address the minimum time problem for the double integrator, but here, incontrast with the classical version of this problem, the control is constrained to remain …</p>
+<h3 class="citation-title"><a href="https://arxiv.org/abs/2608.08956" target="_blank">4. Regional factors determine the feasibility of an elimination strategy</a></h3>
+<p class="citation-authors">G Adu - Boahen, T Day, MJ Plank, A Hurford - arXiv preprint arXiv …, 2026 - arxiv.org</p>
+<p class="citation-snippet">We provide an explicit mathematical characterization of regional characteristics and theresulting epidemiology to evaluate whether elimination or suppression is feasible using …</p>
 </div>
 <div class="citation-item">
-<h3 class="citation-title"><a href="https://arxiv.org/abs/2604.22487" target="_blank">5. Non static exponential turnpike property for optimal control problems with symmetries and boundary conditions</a></h3>
-<p class="citation-authors">S Maslovskaya, S Ober - Blöbaum, B Wembe - arXiv preprint arXiv …, 2026 - arxiv.org</p>
-<p class="citation-snippet">Optimal control problems with symmetries often admit a non stationary turnpike propertycalled trim turnpike, which characterizes the convergence of optimal solutions to certain …</p>
+<h3 class="citation-title"><a href="https://iopscience.iop.org/article/10.1088/1361-6544/ae2cd9/meta" target="_blank">5. The Zermelo navigation problem on the 2-sphere of revolution: an optimal control perspective with applications to micromagnetism</a></h3>
+<p class="citation-authors">B Bonnard, O Cots, Y Privat - Nonlinearity, 2026 - iopscience.iop.org</p>
+<p class="citation-snippet">This article presents geometric optimal control techniques for analyzing geodesics in time-optimal Zermelo navigation problems on 2-spheres of revolution. We classify the problem by …</p>
 </div>
 <div class="citation-item">
-<h3 class="citation-title"><a href="https://ieeexplore.ieee.org/abstract/document/11128790/" target="_blank">6. One net to rule them all: Domain randomization in quadcopter racing across different platforms</a></h3>
-<p class="citation-authors">R Ferede, T Blaha, E Lucassen… - … on Robotics and …, 2025 - ieeexplore.ieee.org</p>
-<p class="citation-snippet">In high-speed quadcopter racing, finding a single controller that works well across differentplatforms remains challenging. This work presents the first neural network controller for …</p>
-</div>
-<div class="citation-item">
-<h3 class="citation-title"><a href="https://www.nature.com/articles/s41598-025-30354-1" target="_blank">7. Fast protocols for charging a three-spin-chain quantum battery: V. Evangelakos et al.</a></h3>
-<p class="citation-authors">V Evangelakos, E Paspalakis, D Stefanatos - Scientific Reports, 2025 - nature.com</p>
-<p class="citation-snippet">We derive fast protocols for charging a three-qubit Ising spin-chain quantum battery, usingamplitude and phase control of the global transverse field. For weak coupling between the …</p>
-</div>
-<div class="citation-item">
-<h3 class="citation-title"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0333087" target="_blank">8. Optimal harvesting of a continuously age-structured population with density dependence</a></h3>
+<h3 class="citation-title"><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0333087" target="_blank">6. Optimal harvesting of a continuously age-structured population with density dependence</a></h3>
 <p class="citation-authors">M Opmeer - Plos one, 2025 - journals.plos.org</p>
 <p class="citation-snippet">We consider harvesting of a population with continuous age-structure and where densitydependence is implemented through interaction of the population with a food source. Using …</p>
 </div>
 <div class="citation-item">
-<h3 class="citation-title"><a href="https://link.springer.com/article/10.1007/s11538-025-01436-y" target="_blank">9. Vaccination and Collective Action Under Social Norms: B. Morsky</a></h3>
-<p class="citation-authors">B Morsky - Bulletin of mathematical biology, 2025 - Springer</p>
-<p class="citation-snippet">Social dynamics are an integral part of the spread of disease affecting contact rates as wellas the adoption of pharmaceutical and non-pharmaceutical interventions. When vaccines …</p>
+<h3 class="citation-title"><a href="https://link.springer.com/chapter/10.1007/978-3-032-22221-3_3" target="_blank">7. Analysis of Necessary Optimality Conditions for Impulsive Lotka–Volterra Control Systems</a></h3>
+<p class="citation-authors">P Bettiol, P Bruneau, J Rouot - International Conference on Large - Scale …, 2025 - Springer</p>
+<p class="citation-snippet">We consider an optimal control problem characterized by a unique discontinuity in the statetrajectory occurring at an undetermined junction time. While the overall time interval is fixed …</p>
 </div>
 <div class="citation-item">
-<h3 class="citation-title"><a href="https://arxiv.org/abs/2510.03932" target="_blank">10. Modeling and optimization of control problems on GPUs</a></h3>
-<p class="citation-authors">A Montoison, JB Caillau - arXiv preprint arXiv:2510.03932, 2025 - arxiv.org</p>
-<p class="citation-snippet">We present a fully Julia-based, GPU-accelerated workflow for solving large-scale sparsenonlinear optimal control problems. Continuous-time dynamics are modeled and then …</p>
+<h3 class="citation-title"><a href="https://hal.science/hal-05295809/" target="_blank">8. Modeling and Optimization of Control Problems on GPUs</a></h3>
+<p class="citation-authors">JB Caillau, A Montoison - 2025 - hal.science</p>
+<p class="citation-snippet">We present a fully Julia-based, GPUaccelerated workflow for solving large-scale sparsenonlinear optimal control problems. Continuous-time dynamics are modeled and then …</p>
+</div>
+<div class="citation-item">
+<h3 class="citation-title"><a href="https://archimer.ifremer.fr/doc/01079/119095/133891.pdf" target="_blank">9. Optimal allocation control in microbial growth under a heat-shock</a></h3>
+<p class="citation-authors">II Javier, G Yabo Agustín, D Walid, M Francis… - archimer.ifremer.fr</p>
+<p class="citation-snippet">Resource allocation models are a highly useful tool to study microbial growth in a variety ofcontexts. We consider a resource allocation model describing the metabolism of a micro …</p>
 </div>
 </div>
 </div>
