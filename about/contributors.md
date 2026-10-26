@@ -11,7 +11,7 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>Contributors</h1>
 <p class="subtitle">Contributors to the control-toolbox ecosystem</p>
-<p class="last-update">Last updated: October 25, 2026 at 02:30 (France)</p>
+<p class="last-update">Last updated: October 26, 2026 at 02:34 (France)</p>
 </div>
 
 <dl class="summary">
@@ -20,7 +20,7 @@ permalink: /contributors/
 <div><dt>Contributors</dt>
 <dd>36</dd></div>
 <div><dt>Total commits</dt>
-<dd>11,935</dd></div>
+<dd>11,870</dd></div>
 </dl>
 
 <div class="contributors-section">
@@ -32,7 +32,6 @@ permalink: /contributors/
 <li><a href="https://github.com/0Yassine0">0Yassine0</a></li>
 <li><a href="https://github.com/BaptisteCbl">BaptisteCbl</a></li>
 <li><a href="https://github.com/j-l-s">j-l-s</a></li>
-<li><a href="https://github.com/AnasXbouali">AnasXbouali</a></li>
 <li><a href="https://github.com/gergaud">gergaud</a></li>
 <li><a href="https://github.com/AmielMetier">AmielMetier</a></li>
 <li><a href="https://github.com/agustinyabo">agustinyabo</a></li>
@@ -51,6 +50,7 @@ permalink: /contributors/
 <li><a href="https://github.com/ade4569">ade4569</a></li>
 <li><a href="https://github.com/srcansiz">srcansiz</a></li>
 <li><a href="https://github.com/michel2323">michel2323</a></li>
+<li><a href="https://github.com/AnasXbouali">AnasXbouali</a></li>
 <li><a href="https://github.com/tmigot">tmigot</a></li>
 <li><a href="https://github.com/oameye">oameye</a></li>
 <li><a href="https://github.com/gdalle">gdalle</a></li>
