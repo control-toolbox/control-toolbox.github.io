@@ -4,6 +4,10 @@
         if (document.getElementById('ct-banner')) return;
         var banner = document.createElement('nav');
         banner.id = 'ct-banner';
+        // vp-raw: opt the banner links out of VitePress's same-origin click
+        // interception (its router would preventDefault and fail to resolve
+        // paths outside this docs site, e.g. /OptimalControl.jl).
+        banner.className = 'vp-raw';
         banner.innerHTML =
             '<a class="ct-brand" href="https://control-toolbox.org/">' +
                 '<img src="https://control-toolbox.org/assets/img/ct-logo-white.svg" alt="control-toolbox">' +
