@@ -11,16 +11,16 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>Contributors</h1>
 <p class="subtitle">Contributors to the control-toolbox ecosystem</p>
-<p class="last-update">Last updated: November 11, 2026 at 02:13 (France)</p>
+<p class="last-update">Last updated: November 12, 2026 at 02:14 (France)</p>
 </div>
 
 <dl class="summary">
 <div><dt>Repositories</dt>
 <dd>26</dd></div>
 <div><dt>Contributors</dt>
-<dd>36</dd></div>
+<dd>37</dd></div>
 <div><dt>Total commits</dt>
-<dd>12,310</dd></div>
+<dd>12,452</dd></div>
 </dl>
 
 <div class="contributors-section">
@@ -47,6 +47,7 @@ permalink: /contributors/
 <li><a href="https://github.com/amontoison">amontoison</a></li>
 <li><a href="https://github.com/Ousmane-prog">Ousmane-prog</a></li>
 <li><a href="https://github.com/YouriRenoud">YouriRenoud</a></li>
+<li><a href="https://github.com/claude">claude</a></li>
 <li><a href="https://github.com/ade4569">ade4569</a></li>
 <li><a href="https://github.com/srcansiz">srcansiz</a></li>
 <li><a href="https://github.com/michel2323">michel2323</a></li>
