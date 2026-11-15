@@ -103,6 +103,31 @@ a img {
 .dark .vp-doc h5 { color: #ff6b6b; }
 .dark .vp-doc h6 { color: #c77dff; }
 
+/* ─── Inline math ────────────────────────────────────────────────────────── */
+
+/*
+ * The theme template of DocumenterVitepress, copied into every docs site, gives every
+ * MathJax container `padding: 0.5rem 0`, inline math included: each line of text that
+ * holds a formula grows taller than the others. Inline math gets no padding; display
+ * math (display="true") keeps the template's. The attribute selector outranks the
+ * template's bare `mjx-container`, whatever the order the two sheets load in.
+ */
+mjx-container:not([display="true"]) {
+    padding: 0;
+    margin: 0 1px;
+}
+
+/* ─── Lists ──────────────────────────────────────────────────────────────── */
+
+/*
+ * DocumenterVitepress separates the items of every list by a blank line, which makes it
+ * a "loose" list: each item is a paragraph, with the margins of a paragraph, and the
+ * list reads double-spaced. Drop the outer margins of those paragraphs; an item of
+ * several paragraphs keeps the space between them.
+ */
+.vp-doc li > p:first-child { margin-top: 0; }
+.vp-doc li > p:last-child { margin-bottom: 0; }
+
 /* ─── Sticky footer ──────────────────────────────────────────────────────── */
 
 .VPDoc {
