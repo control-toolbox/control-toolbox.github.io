@@ -11,7 +11,7 @@ permalink: /contributors/
 <div class="contributors-header">
 <h1>Contributors</h1>
 <p class="subtitle">Contributors to the control-toolbox ecosystem</p>
-<p class="last-update">Last updated: November 15, 2026 at 02:13 (France)</p>
+<p class="last-update">Last updated: November 16, 2026 at 02:15 (France)</p>
 </div>
 
 <dl class="summary">
@@ -20,7 +20,7 @@ permalink: /contributors/
 <div><dt>Contributors</dt>
 <dd>37</dd></div>
 <div><dt>Total commits</dt>
-<dd>12,651</dd></div>
+<dd>12,667</dd></div>
 </dl>
 
 <div class="contributors-section">
