@@ -103,6 +103,18 @@ a img {
 .dark .vp-doc h5 { color: #ff6b6b; }
 .dark .vp-doc h6 { color: #c77dff; }
 
+/* ─── Scrolling ──────────────────────────────────────────────────────────── */
+
+/*
+ * The theme template of DocumenterVitepress sets `scroll-behavior: smooth` on `:root`.
+ * The tabs plugin keeps the clicked tab in place by writing `scrollTop` after a synced
+ * group above the viewport has changed height; with smooth scrolling that correction is
+ * animated, so the page jumps and then glides back. Scrolling is instant.
+ */
+:root {
+    scroll-behavior: auto;
+}
+
 /* ─── Math ───────────────────────────────────────────────────────────────── */
 
 /*
