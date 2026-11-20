@@ -103,18 +103,29 @@ a img {
 .dark .vp-doc h5 { color: #ff6b6b; }
 .dark .vp-doc h6 { color: #c77dff; }
 
-/* ─── Inline math ────────────────────────────────────────────────────────── */
+/* ─── Math ───────────────────────────────────────────────────────────────── */
 
 /*
  * The theme template of DocumenterVitepress, copied into every docs site, gives every
  * MathJax container `padding: 0.5rem 0`, inline math included: each line of text that
- * holds a formula grows taller than the others. Inline math gets no padding; display
- * math (display="true") keeps the template's. The attribute selector outranks the
- * template's bare `mjx-container`, whatever the order the two sheets load in.
+ * holds a formula grows taller than the others. Inline math gets no padding. The
+ * attribute selector outranks the template's bare `mjx-container`, whatever the order
+ * the two sheets load in.
  */
 mjx-container:not([display="true"]) {
     padding: 0;
     margin: 0 1px;
+}
+
+/*
+ * Display math already gets `margin: .7em 0; padding: .3em 2px` from the MathJax SVG
+ * stylesheet, on top of the margins of the paragraphs around it (and the scroll wrapper
+ * stops them from collapsing): about 2em of blank above and below each formula. The
+ * paragraphs space it; the container adds nothing.
+ */
+mjx-container[display="true"] {
+    margin: 0;
+    padding: 0;
 }
 
 /* ─── Lists ──────────────────────────────────────────────────────────────── */
